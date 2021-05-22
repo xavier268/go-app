@@ -329,7 +329,8 @@ func (e *elem) resolveURLAttr(k, v string) string {
 
 func (e *elem) setJsAttr(k, v string) {
 	switch k {
-	case "value":
+	case "id",
+		"value":
 		e.JSValue().Set("value", v)
 
 	case "class":
