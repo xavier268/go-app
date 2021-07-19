@@ -242,7 +242,11 @@ func onAnchorClick(d Dispatcher) func(Value, []Value) interface{} {
 
 				event.PreventDefault()
 				if href := elem.Get("href"); href.Truthy() {
-					navigate(d, elem.Get("href").String())
+					href := href.String()
+					if strings.HasPrefix(href, "#") {
+						href = Window().URL().Path + href
+					}
+					navigate(d, href)
 				}
 				return nil
 
@@ -276,6 +280,7 @@ func navigate(d Dispatcher, rawURL string) {
 			Wrap(err))
 		return
 	}
+
 	navigateTo(d, u, true)
 }
 
