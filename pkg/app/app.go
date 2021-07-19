@@ -242,11 +242,7 @@ func onAnchorClick(d Dispatcher) func(Value, []Value) interface{} {
 
 				event.PreventDefault()
 				if href := elem.Get("href"); href.Truthy() {
-					href := href.String()
-					if strings.HasPrefix(href, "#") {
-						href = Window().URL().Path + href
-					}
-					navigate(d, href)
+					navigate(d, elem.Get("href").String())
 				}
 				return nil
 
@@ -273,6 +269,8 @@ func onPopState(d Dispatcher) func(this Value, args []Value) interface{} {
 }
 
 func navigate(d Dispatcher, rawURL string) {
+	fmt.Println("navigate:", rawURL)
+
 	u, err := url.Parse(rawURL)
 	if err != nil {
 		Log(errors.New("navigating to URL failed").
@@ -289,7 +287,7 @@ func navigateTo(d Dispatcher, u *url.URL, updateHistory bool) {
 		return
 	}
 
-	fmt.Println("navigateTo:", u.String(), "path:", u.Path)
+	fmt.Println("navigateTo:", u.String())
 
 	if isExternalNavigation(u) {
 		if rawurl := u.String(); isInternalURL(rawurl) {
