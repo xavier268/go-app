@@ -284,6 +284,8 @@ func navigateTo(d Dispatcher, u *url.URL, updateHistory bool) {
 		return
 	}
 
+	fmt.Println("navigateTo:", u.String())
+
 	if isExternalNavigation(u) {
 		if rawurl := u.String(); isInternalURL(rawurl) {
 			Window().Get("location").Set("href", u.String())
