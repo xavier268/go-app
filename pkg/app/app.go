@@ -126,9 +126,9 @@ func RunWhenOnBrowser() {
 
 	window.setBody(disp.Body)
 
-	onAchorClick := FuncOf(onAchorClick(&disp))
-	defer onAchorClick.Release()
-	Window().Set("onclick", onAchorClick)
+	onAnchorClick := FuncOf(onAnchorClick(&disp))
+	defer onAnchorClick.Release()
+	Window().Set("onclick", onAnchorClick)
 
 	onPopState := FuncOf(onPopState(&disp))
 	defer onPopState.Release()
@@ -220,7 +220,7 @@ func newClientBody(d Dispatcher) *htmlBody {
 	return body
 }
 
-func onAchorClick(d Dispatcher) func(Value, []Value) interface{} {
+func onAnchorClick(d Dispatcher) func(Value, []Value) interface{} {
 	return func(this Value, args []Value) interface{} {
 		event := Event{Value: args[0]}
 		elem := event.Get("target")
@@ -284,7 +284,7 @@ func navigateTo(d Dispatcher, u *url.URL, updateHistory bool) {
 		return
 	}
 
-	fmt.Println("navigateTo:", u.String())
+	fmt.Println("navigateTo:", u.String(), "path:", u.Path)
 
 	if isExternalNavigation(u) {
 		if rawurl := u.String(); isInternalURL(rawurl) {
