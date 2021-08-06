@@ -54,9 +54,6 @@ func (s *State) isExpired(now time.Time) bool {
 	return s.ExpiresAt != time.Time{} && now.After(s.ExpiresAt)
 }
 
-// StateOption represents an option applied when a state is set.
-type StateOption func(*State)
-
 // Persist is a state option that persists a state in local storage.
 //
 // Be mindful to not use this option as a cache since local storage is limited
