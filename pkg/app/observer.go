@@ -37,11 +37,13 @@ type observer2 struct {
 	status     *int
 	err        *error
 	value      interface{}
+	subscribe  func(*observer2)
 }
 
-func newObserver2(source UI) *observer2 {
+func newObserver2(source UI, subscribe func(*observer2)) *observer2 {
 	return &observer2{
-		source: source,
+		source:    source,
+		subscribe: subscribe,
 	}
 }
 
@@ -75,8 +77,11 @@ func (o *observer2) Value(v interface{}) {
 	if v == nil {
 		panic("observer value is nil")
 	}
+
 	if reflect.ValueOf(v).Kind() != reflect.Ptr {
 		panic("observer value is not a pointer")
 	}
+
 	o.value = v
+	o.subscribe(o)
 }
