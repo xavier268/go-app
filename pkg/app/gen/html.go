@@ -1341,7 +1341,7 @@ var attrs = map[string]attr{
 	// M:
 	"max": {
 		Name: "Max",
-		Type: "interface{}",
+		Type: "any",
 		Doc:  "Specifies the maximum value.",
 	},
 	"maxlength": {
@@ -1361,7 +1361,7 @@ var attrs = map[string]attr{
 	},
 	"min": {
 		Name: "Min",
-		Type: "interface{}",
+		Type: "any",
 		Doc:  "specifies a minimum value.",
 	},
 	"multiple": {
@@ -1476,7 +1476,7 @@ var attrs = map[string]attr{
 	// S:
 	"sandbox": {
 		Name: "Sandbox",
-		Type: "interface{}",
+		Type: "any",
 		Doc:  "enables an extra set of restrictions for the content in an iframe.",
 	},
 	"scope": {
@@ -1587,7 +1587,7 @@ var attrs = map[string]attr{
 	// V:
 	"value": {
 		Name: "Value",
-		Type: "interface{}",
+		Type: "any",
 		Doc:  "specifies the value of the element.",
 	},
 
@@ -2113,7 +2113,7 @@ func writeInterface(w io.Writer, t tag) {
 	case parent:
 		fmt.Fprintf(w, `
 			// Text sets the content of the element with a text node containing the stringified given value.
-			Text(v interface{}) HTML%s
+			Text(v any) HTML%s
 		`, t.Name)
 
 		fmt.Fprintf(w, `
@@ -2198,7 +2198,7 @@ func writeAttrFunction(w io.Writer, a attr, t tag, isInterface bool) {
 
 	switch a.Type {
 	case "data|value":
-		fmt.Fprintf(w, `%s %s(k string, v interface{}) %s`, funcType, a.Name, returnType)
+		fmt.Fprintf(w, `%s %s(k string, v any) %s`, funcType, a.Name, returnType)
 		if !isInterface {
 			fmt.Fprintf(w, `{
 				return e.Attr("data-"+k, fmt.Sprintf("%s", v))
@@ -2206,7 +2206,7 @@ func writeAttrFunction(w io.Writer, a attr, t tag, isInterface bool) {
 		}
 
 	case "aria|value":
-		fmt.Fprintf(w, `%s %s(k string, v interface{}) %s`, funcType, a.Name, returnType)
+		fmt.Fprintf(w, `%s %s(k string, v any) %s`, funcType, a.Name, returnType)
 		if !isInterface {
 			fmt.Fprintf(w, `{
 				return e.Attr("aria-"+k, fmt.Sprintf("%s", v))
@@ -2298,7 +2298,7 @@ func writeEventFunction(w io.Writer, e eventHandler, t tag, isInterface bool) {
 		returnType = "T"
 	}
 
-	fmt.Fprintf(w, `%s %s (h EventHandler, scope ...interface{}) %s`, funcType, e.Name, returnType)
+	fmt.Fprintf(w, `%s %s (h EventHandler, scope ...any) %s`, funcType, e.Name, returnType)
 	if !isInterface {
 		fmt.Fprintf(w, `{
 			return e.On("%s", h, scope...)

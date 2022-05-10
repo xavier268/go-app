@@ -12,7 +12,7 @@ type HTMLA interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLA
+	Text(v any) HTMLA
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLA
@@ -24,7 +24,7 @@ type HTMLA interface {
 	AccessKey(v string) HTMLA
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLA
+	Aria(k string, v any) HTMLA
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLA
@@ -33,7 +33,7 @@ type HTMLA interface {
 	ContentEditable(v bool) HTMLA
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLA
+	DataSet(k string, v any) HTMLA
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLA
@@ -96,100 +96,100 @@ type HTMLA interface {
 	On(event string, h EventHandler, scope ...any) HTMLA
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLA
+	OnBlur(h EventHandler, scope ...any) HTMLA
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLA
+	OnChange(h EventHandler, scope ...any) HTMLA
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLA
+	OnClick(h EventHandler, scope ...any) HTMLA
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLA
+	OnContextMenu(h EventHandler, scope ...any) HTMLA
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLA
+	OnCopy(h EventHandler, scope ...any) HTMLA
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLA
+	OnCut(h EventHandler, scope ...any) HTMLA
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLA
+	OnDblClick(h EventHandler, scope ...any) HTMLA
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLA
+	OnDrag(h EventHandler, scope ...any) HTMLA
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLA
+	OnDragEnd(h EventHandler, scope ...any) HTMLA
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLA
+	OnDragEnter(h EventHandler, scope ...any) HTMLA
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLA
+	OnDragLeave(h EventHandler, scope ...any) HTMLA
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLA
+	OnDragOver(h EventHandler, scope ...any) HTMLA
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLA
+	OnDragStart(h EventHandler, scope ...any) HTMLA
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLA
+	OnDrop(h EventHandler, scope ...any) HTMLA
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLA
+	OnFocus(h EventHandler, scope ...any) HTMLA
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLA
+	OnInput(h EventHandler, scope ...any) HTMLA
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLA
+	OnInvalid(h EventHandler, scope ...any) HTMLA
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLA
+	OnKeyDown(h EventHandler, scope ...any) HTMLA
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLA
+	OnKeyPress(h EventHandler, scope ...any) HTMLA
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLA
+	OnKeyUp(h EventHandler, scope ...any) HTMLA
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLA
+	OnMouseDown(h EventHandler, scope ...any) HTMLA
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLA
+	OnMouseMove(h EventHandler, scope ...any) HTMLA
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLA
+	OnMouseOut(h EventHandler, scope ...any) HTMLA
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLA
+	OnMouseOver(h EventHandler, scope ...any) HTMLA
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLA
+	OnMouseUp(h EventHandler, scope ...any) HTMLA
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLA
+	OnPaste(h EventHandler, scope ...any) HTMLA
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLA
+	OnReset(h EventHandler, scope ...any) HTMLA
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLA
+	OnScroll(h EventHandler, scope ...any) HTMLA
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLA
+	OnSearch(h EventHandler, scope ...any) HTMLA
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLA
+	OnSelect(h EventHandler, scope ...any) HTMLA
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLA
+	OnSubmit(h EventHandler, scope ...any) HTMLA
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLA
+	OnWheel(h EventHandler, scope ...any) HTMLA
 }
 
 // A returns an HTML element that defines a hyperlink.
@@ -205,7 +205,7 @@ type HTMLAbbr interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLAbbr
+	Text(v any) HTMLAbbr
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLAbbr
@@ -217,7 +217,7 @@ type HTMLAbbr interface {
 	AccessKey(v string) HTMLAbbr
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLAbbr
+	Aria(k string, v any) HTMLAbbr
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLAbbr
@@ -226,7 +226,7 @@ type HTMLAbbr interface {
 	ContentEditable(v bool) HTMLAbbr
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLAbbr
+	DataSet(k string, v any) HTMLAbbr
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLAbbr
@@ -265,100 +265,100 @@ type HTMLAbbr interface {
 	On(event string, h EventHandler, scope ...any) HTMLAbbr
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnBlur(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnChange(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnClick(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnContextMenu(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnCopy(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnCut(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnDblClick(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnDrag(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnDragEnd(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnDragEnter(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnDragLeave(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnDragOver(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnDragStart(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnDrop(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnFocus(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnInput(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnInvalid(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnKeyDown(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnKeyPress(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnKeyUp(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnMouseDown(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnMouseMove(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnMouseOut(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnMouseOver(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnMouseUp(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnPaste(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnReset(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnScroll(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnSearch(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnSelect(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnSubmit(h EventHandler, scope ...any) HTMLAbbr
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLAbbr
+	OnWheel(h EventHandler, scope ...any) HTMLAbbr
 }
 
 // Abbr returns an HTML element that defines an abbreviation or an acronym.
@@ -374,7 +374,7 @@ type HTMLAddress interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLAddress
+	Text(v any) HTMLAddress
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLAddress
@@ -386,7 +386,7 @@ type HTMLAddress interface {
 	AccessKey(v string) HTMLAddress
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLAddress
+	Aria(k string, v any) HTMLAddress
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLAddress
@@ -395,7 +395,7 @@ type HTMLAddress interface {
 	ContentEditable(v bool) HTMLAddress
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLAddress
+	DataSet(k string, v any) HTMLAddress
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLAddress
@@ -434,100 +434,100 @@ type HTMLAddress interface {
 	On(event string, h EventHandler, scope ...any) HTMLAddress
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLAddress
+	OnBlur(h EventHandler, scope ...any) HTMLAddress
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLAddress
+	OnChange(h EventHandler, scope ...any) HTMLAddress
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLAddress
+	OnClick(h EventHandler, scope ...any) HTMLAddress
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLAddress
+	OnContextMenu(h EventHandler, scope ...any) HTMLAddress
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLAddress
+	OnCopy(h EventHandler, scope ...any) HTMLAddress
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLAddress
+	OnCut(h EventHandler, scope ...any) HTMLAddress
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLAddress
+	OnDblClick(h EventHandler, scope ...any) HTMLAddress
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLAddress
+	OnDrag(h EventHandler, scope ...any) HTMLAddress
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLAddress
+	OnDragEnd(h EventHandler, scope ...any) HTMLAddress
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLAddress
+	OnDragEnter(h EventHandler, scope ...any) HTMLAddress
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLAddress
+	OnDragLeave(h EventHandler, scope ...any) HTMLAddress
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLAddress
+	OnDragOver(h EventHandler, scope ...any) HTMLAddress
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLAddress
+	OnDragStart(h EventHandler, scope ...any) HTMLAddress
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLAddress
+	OnDrop(h EventHandler, scope ...any) HTMLAddress
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLAddress
+	OnFocus(h EventHandler, scope ...any) HTMLAddress
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLAddress
+	OnInput(h EventHandler, scope ...any) HTMLAddress
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLAddress
+	OnInvalid(h EventHandler, scope ...any) HTMLAddress
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLAddress
+	OnKeyDown(h EventHandler, scope ...any) HTMLAddress
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLAddress
+	OnKeyPress(h EventHandler, scope ...any) HTMLAddress
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLAddress
+	OnKeyUp(h EventHandler, scope ...any) HTMLAddress
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLAddress
+	OnMouseDown(h EventHandler, scope ...any) HTMLAddress
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLAddress
+	OnMouseMove(h EventHandler, scope ...any) HTMLAddress
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLAddress
+	OnMouseOut(h EventHandler, scope ...any) HTMLAddress
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLAddress
+	OnMouseOver(h EventHandler, scope ...any) HTMLAddress
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLAddress
+	OnMouseUp(h EventHandler, scope ...any) HTMLAddress
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLAddress
+	OnPaste(h EventHandler, scope ...any) HTMLAddress
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLAddress
+	OnReset(h EventHandler, scope ...any) HTMLAddress
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLAddress
+	OnScroll(h EventHandler, scope ...any) HTMLAddress
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLAddress
+	OnSearch(h EventHandler, scope ...any) HTMLAddress
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLAddress
+	OnSelect(h EventHandler, scope ...any) HTMLAddress
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLAddress
+	OnSubmit(h EventHandler, scope ...any) HTMLAddress
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLAddress
+	OnWheel(h EventHandler, scope ...any) HTMLAddress
 }
 
 // Address returns an HTML element that defines contact information for the author/owner of a document.
@@ -552,7 +552,7 @@ type HTMLArea interface {
 	Alt(v string) HTMLArea
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLArea
+	Aria(k string, v any) HTMLArea
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLArea
@@ -564,7 +564,7 @@ type HTMLArea interface {
 	Coords(v string) HTMLArea
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLArea
+	DataSet(k string, v any) HTMLArea
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLArea
@@ -627,100 +627,100 @@ type HTMLArea interface {
 	On(event string, h EventHandler, scope ...any) HTMLArea
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLArea
+	OnBlur(h EventHandler, scope ...any) HTMLArea
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLArea
+	OnChange(h EventHandler, scope ...any) HTMLArea
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLArea
+	OnClick(h EventHandler, scope ...any) HTMLArea
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLArea
+	OnContextMenu(h EventHandler, scope ...any) HTMLArea
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLArea
+	OnCopy(h EventHandler, scope ...any) HTMLArea
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLArea
+	OnCut(h EventHandler, scope ...any) HTMLArea
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLArea
+	OnDblClick(h EventHandler, scope ...any) HTMLArea
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLArea
+	OnDrag(h EventHandler, scope ...any) HTMLArea
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLArea
+	OnDragEnd(h EventHandler, scope ...any) HTMLArea
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLArea
+	OnDragEnter(h EventHandler, scope ...any) HTMLArea
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLArea
+	OnDragLeave(h EventHandler, scope ...any) HTMLArea
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLArea
+	OnDragOver(h EventHandler, scope ...any) HTMLArea
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLArea
+	OnDragStart(h EventHandler, scope ...any) HTMLArea
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLArea
+	OnDrop(h EventHandler, scope ...any) HTMLArea
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLArea
+	OnFocus(h EventHandler, scope ...any) HTMLArea
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLArea
+	OnInput(h EventHandler, scope ...any) HTMLArea
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLArea
+	OnInvalid(h EventHandler, scope ...any) HTMLArea
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLArea
+	OnKeyDown(h EventHandler, scope ...any) HTMLArea
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLArea
+	OnKeyPress(h EventHandler, scope ...any) HTMLArea
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLArea
+	OnKeyUp(h EventHandler, scope ...any) HTMLArea
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLArea
+	OnMouseDown(h EventHandler, scope ...any) HTMLArea
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLArea
+	OnMouseMove(h EventHandler, scope ...any) HTMLArea
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLArea
+	OnMouseOut(h EventHandler, scope ...any) HTMLArea
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLArea
+	OnMouseOver(h EventHandler, scope ...any) HTMLArea
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLArea
+	OnMouseUp(h EventHandler, scope ...any) HTMLArea
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLArea
+	OnPaste(h EventHandler, scope ...any) HTMLArea
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLArea
+	OnReset(h EventHandler, scope ...any) HTMLArea
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLArea
+	OnScroll(h EventHandler, scope ...any) HTMLArea
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLArea
+	OnSearch(h EventHandler, scope ...any) HTMLArea
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLArea
+	OnSelect(h EventHandler, scope ...any) HTMLArea
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLArea
+	OnSubmit(h EventHandler, scope ...any) HTMLArea
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLArea
+	OnWheel(h EventHandler, scope ...any) HTMLArea
 }
 
 // Area returns an HTML element that defines an area inside an image-map.
@@ -736,7 +736,7 @@ type HTMLArticle interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLArticle
+	Text(v any) HTMLArticle
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLArticle
@@ -748,7 +748,7 @@ type HTMLArticle interface {
 	AccessKey(v string) HTMLArticle
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLArticle
+	Aria(k string, v any) HTMLArticle
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLArticle
@@ -757,7 +757,7 @@ type HTMLArticle interface {
 	ContentEditable(v bool) HTMLArticle
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLArticle
+	DataSet(k string, v any) HTMLArticle
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLArticle
@@ -796,100 +796,100 @@ type HTMLArticle interface {
 	On(event string, h EventHandler, scope ...any) HTMLArticle
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLArticle
+	OnBlur(h EventHandler, scope ...any) HTMLArticle
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLArticle
+	OnChange(h EventHandler, scope ...any) HTMLArticle
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLArticle
+	OnClick(h EventHandler, scope ...any) HTMLArticle
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLArticle
+	OnContextMenu(h EventHandler, scope ...any) HTMLArticle
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLArticle
+	OnCopy(h EventHandler, scope ...any) HTMLArticle
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLArticle
+	OnCut(h EventHandler, scope ...any) HTMLArticle
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLArticle
+	OnDblClick(h EventHandler, scope ...any) HTMLArticle
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLArticle
+	OnDrag(h EventHandler, scope ...any) HTMLArticle
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLArticle
+	OnDragEnd(h EventHandler, scope ...any) HTMLArticle
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLArticle
+	OnDragEnter(h EventHandler, scope ...any) HTMLArticle
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLArticle
+	OnDragLeave(h EventHandler, scope ...any) HTMLArticle
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLArticle
+	OnDragOver(h EventHandler, scope ...any) HTMLArticle
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLArticle
+	OnDragStart(h EventHandler, scope ...any) HTMLArticle
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLArticle
+	OnDrop(h EventHandler, scope ...any) HTMLArticle
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLArticle
+	OnFocus(h EventHandler, scope ...any) HTMLArticle
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLArticle
+	OnInput(h EventHandler, scope ...any) HTMLArticle
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLArticle
+	OnInvalid(h EventHandler, scope ...any) HTMLArticle
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLArticle
+	OnKeyDown(h EventHandler, scope ...any) HTMLArticle
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLArticle
+	OnKeyPress(h EventHandler, scope ...any) HTMLArticle
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLArticle
+	OnKeyUp(h EventHandler, scope ...any) HTMLArticle
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLArticle
+	OnMouseDown(h EventHandler, scope ...any) HTMLArticle
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLArticle
+	OnMouseMove(h EventHandler, scope ...any) HTMLArticle
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLArticle
+	OnMouseOut(h EventHandler, scope ...any) HTMLArticle
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLArticle
+	OnMouseOver(h EventHandler, scope ...any) HTMLArticle
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLArticle
+	OnMouseUp(h EventHandler, scope ...any) HTMLArticle
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLArticle
+	OnPaste(h EventHandler, scope ...any) HTMLArticle
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLArticle
+	OnReset(h EventHandler, scope ...any) HTMLArticle
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLArticle
+	OnScroll(h EventHandler, scope ...any) HTMLArticle
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLArticle
+	OnSearch(h EventHandler, scope ...any) HTMLArticle
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLArticle
+	OnSelect(h EventHandler, scope ...any) HTMLArticle
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLArticle
+	OnSubmit(h EventHandler, scope ...any) HTMLArticle
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLArticle
+	OnWheel(h EventHandler, scope ...any) HTMLArticle
 }
 
 // Article returns an HTML element that defines an article.
@@ -905,7 +905,7 @@ type HTMLAside interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLAside
+	Text(v any) HTMLAside
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLAside
@@ -917,7 +917,7 @@ type HTMLAside interface {
 	AccessKey(v string) HTMLAside
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLAside
+	Aria(k string, v any) HTMLAside
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLAside
@@ -926,7 +926,7 @@ type HTMLAside interface {
 	ContentEditable(v bool) HTMLAside
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLAside
+	DataSet(k string, v any) HTMLAside
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLAside
@@ -965,100 +965,100 @@ type HTMLAside interface {
 	On(event string, h EventHandler, scope ...any) HTMLAside
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLAside
+	OnBlur(h EventHandler, scope ...any) HTMLAside
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLAside
+	OnChange(h EventHandler, scope ...any) HTMLAside
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLAside
+	OnClick(h EventHandler, scope ...any) HTMLAside
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLAside
+	OnContextMenu(h EventHandler, scope ...any) HTMLAside
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLAside
+	OnCopy(h EventHandler, scope ...any) HTMLAside
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLAside
+	OnCut(h EventHandler, scope ...any) HTMLAside
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLAside
+	OnDblClick(h EventHandler, scope ...any) HTMLAside
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLAside
+	OnDrag(h EventHandler, scope ...any) HTMLAside
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLAside
+	OnDragEnd(h EventHandler, scope ...any) HTMLAside
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLAside
+	OnDragEnter(h EventHandler, scope ...any) HTMLAside
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLAside
+	OnDragLeave(h EventHandler, scope ...any) HTMLAside
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLAside
+	OnDragOver(h EventHandler, scope ...any) HTMLAside
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLAside
+	OnDragStart(h EventHandler, scope ...any) HTMLAside
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLAside
+	OnDrop(h EventHandler, scope ...any) HTMLAside
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLAside
+	OnFocus(h EventHandler, scope ...any) HTMLAside
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLAside
+	OnInput(h EventHandler, scope ...any) HTMLAside
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLAside
+	OnInvalid(h EventHandler, scope ...any) HTMLAside
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLAside
+	OnKeyDown(h EventHandler, scope ...any) HTMLAside
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLAside
+	OnKeyPress(h EventHandler, scope ...any) HTMLAside
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLAside
+	OnKeyUp(h EventHandler, scope ...any) HTMLAside
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLAside
+	OnMouseDown(h EventHandler, scope ...any) HTMLAside
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLAside
+	OnMouseMove(h EventHandler, scope ...any) HTMLAside
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLAside
+	OnMouseOut(h EventHandler, scope ...any) HTMLAside
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLAside
+	OnMouseOver(h EventHandler, scope ...any) HTMLAside
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLAside
+	OnMouseUp(h EventHandler, scope ...any) HTMLAside
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLAside
+	OnPaste(h EventHandler, scope ...any) HTMLAside
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLAside
+	OnReset(h EventHandler, scope ...any) HTMLAside
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLAside
+	OnScroll(h EventHandler, scope ...any) HTMLAside
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLAside
+	OnSearch(h EventHandler, scope ...any) HTMLAside
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLAside
+	OnSelect(h EventHandler, scope ...any) HTMLAside
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLAside
+	OnSubmit(h EventHandler, scope ...any) HTMLAside
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLAside
+	OnWheel(h EventHandler, scope ...any) HTMLAside
 }
 
 // Aside returns an HTML element that defines content aside from the page content.
@@ -1074,7 +1074,7 @@ type HTMLAudio interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLAudio
+	Text(v any) HTMLAudio
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLAudio
@@ -1086,7 +1086,7 @@ type HTMLAudio interface {
 	AccessKey(v string) HTMLAudio
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLAudio
+	Aria(k string, v any) HTMLAudio
 
 	// AutoPlay specifies that the audio/video will start playing as soon as it is ready.
 	AutoPlay(v bool) HTMLAudio
@@ -1104,7 +1104,7 @@ type HTMLAudio interface {
 	CrossOrigin(v string) HTMLAudio
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLAudio
+	DataSet(k string, v any) HTMLAudio
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLAudio
@@ -1155,169 +1155,169 @@ type HTMLAudio interface {
 	On(event string, h EventHandler, scope ...any) HTMLAudio
 
 	// OnAbort calls the given handler on abort.
-	OnAbort(h EventHandler, scope ...interface{}) HTMLAudio
+	OnAbort(h EventHandler, scope ...any) HTMLAudio
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLAudio
+	OnBlur(h EventHandler, scope ...any) HTMLAudio
 
 	// OnCanPlay calls the given handler when a file is ready to start playing (when it has buffered enough to begin).
-	OnCanPlay(h EventHandler, scope ...interface{}) HTMLAudio
+	OnCanPlay(h EventHandler, scope ...any) HTMLAudio
 
 	// OnCanPlayThrough calls the given handler when a file can be played all the way to the end without pausing for buffering.
-	OnCanPlayThrough(h EventHandler, scope ...interface{}) HTMLAudio
+	OnCanPlayThrough(h EventHandler, scope ...any) HTMLAudio
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLAudio
+	OnChange(h EventHandler, scope ...any) HTMLAudio
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLAudio
+	OnClick(h EventHandler, scope ...any) HTMLAudio
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLAudio
+	OnContextMenu(h EventHandler, scope ...any) HTMLAudio
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLAudio
+	OnCopy(h EventHandler, scope ...any) HTMLAudio
 
 	// OnCueChange calls the given handler when the cue changes in a track element.
-	OnCueChange(h EventHandler, scope ...interface{}) HTMLAudio
+	OnCueChange(h EventHandler, scope ...any) HTMLAudio
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLAudio
+	OnCut(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDblClick(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDrag(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDragEnd(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDragEnter(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDragLeave(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDragOver(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDragStart(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDrop(h EventHandler, scope ...any) HTMLAudio
 
 	// OnDurationChange calls the given handler when the length of the media changes.
-	OnDurationChange(h EventHandler, scope ...interface{}) HTMLAudio
+	OnDurationChange(h EventHandler, scope ...any) HTMLAudio
 
 	// OnEmptied calls the given handler when something bad happens and the file is suddenly unavailable (like unexpectedly disconnects).
-	OnEmptied(h EventHandler, scope ...interface{}) HTMLAudio
+	OnEmptied(h EventHandler, scope ...any) HTMLAudio
 
 	// OnEnded calls the given handler when the media has reach the end.
-	OnEnded(h EventHandler, scope ...interface{}) HTMLAudio
+	OnEnded(h EventHandler, scope ...any) HTMLAudio
 
 	// OnError calls the given handler when an error occurs.
-	OnError(h EventHandler, scope ...interface{}) HTMLAudio
+	OnError(h EventHandler, scope ...any) HTMLAudio
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLAudio
+	OnFocus(h EventHandler, scope ...any) HTMLAudio
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLAudio
+	OnInput(h EventHandler, scope ...any) HTMLAudio
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLAudio
+	OnInvalid(h EventHandler, scope ...any) HTMLAudio
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLAudio
+	OnKeyDown(h EventHandler, scope ...any) HTMLAudio
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLAudio
+	OnKeyPress(h EventHandler, scope ...any) HTMLAudio
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLAudio
+	OnKeyUp(h EventHandler, scope ...any) HTMLAudio
 
 	// OnLoadStart calls the given handler just as the file begins to load before anything is actually loaded.
-	OnLoadStart(h EventHandler, scope ...interface{}) HTMLAudio
+	OnLoadStart(h EventHandler, scope ...any) HTMLAudio
 
 	// OnLoadedData calls the given handler when media data is loaded.
-	OnLoadedData(h EventHandler, scope ...interface{}) HTMLAudio
+	OnLoadedData(h EventHandler, scope ...any) HTMLAudio
 
 	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLAudio
+	OnLoadedMetaData(h EventHandler, scope ...any) HTMLAudio
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLAudio
+	OnMouseDown(h EventHandler, scope ...any) HTMLAudio
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLAudio
+	OnMouseMove(h EventHandler, scope ...any) HTMLAudio
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLAudio
+	OnMouseOut(h EventHandler, scope ...any) HTMLAudio
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLAudio
+	OnMouseOver(h EventHandler, scope ...any) HTMLAudio
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLAudio
+	OnMouseUp(h EventHandler, scope ...any) HTMLAudio
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLAudio
+	OnPaste(h EventHandler, scope ...any) HTMLAudio
 
 	// OnPause calls the given handler when the media is paused either by the user or programmatically.
-	OnPause(h EventHandler, scope ...interface{}) HTMLAudio
+	OnPause(h EventHandler, scope ...any) HTMLAudio
 
 	// OnPlay calls the given handler when the media is ready to start playing.
-	OnPlay(h EventHandler, scope ...interface{}) HTMLAudio
+	OnPlay(h EventHandler, scope ...any) HTMLAudio
 
 	// OnPlaying calls the given handler when the media actually has started playing.
-	OnPlaying(h EventHandler, scope ...interface{}) HTMLAudio
+	OnPlaying(h EventHandler, scope ...any) HTMLAudio
 
 	// OnProgress calls the given handler when the browser is in the process of getting the media data.
-	OnProgress(h EventHandler, scope ...interface{}) HTMLAudio
+	OnProgress(h EventHandler, scope ...any) HTMLAudio
 
 	// OnRateChange calls the given handler each time the playback rate changes (like when a user switches to a slow motion or fast forward mode).
-	OnRateChange(h EventHandler, scope ...interface{}) HTMLAudio
+	OnRateChange(h EventHandler, scope ...any) HTMLAudio
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLAudio
+	OnReset(h EventHandler, scope ...any) HTMLAudio
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLAudio
+	OnScroll(h EventHandler, scope ...any) HTMLAudio
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLAudio
+	OnSearch(h EventHandler, scope ...any) HTMLAudio
 
 	// OnSeeked calls the given handler when the seeking attribute is set to false indicating that seeking has ended.
-	OnSeeked(h EventHandler, scope ...interface{}) HTMLAudio
+	OnSeeked(h EventHandler, scope ...any) HTMLAudio
 
 	// OnSeeking calls the given handler when the seeking attribute is set to true indicating that seeking is active.
-	OnSeeking(h EventHandler, scope ...interface{}) HTMLAudio
+	OnSeeking(h EventHandler, scope ...any) HTMLAudio
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLAudio
+	OnSelect(h EventHandler, scope ...any) HTMLAudio
 
 	// OnStalled calls the given handler when the browser is unable to fetch the media data for whatever reason.
-	OnStalled(h EventHandler, scope ...interface{}) HTMLAudio
+	OnStalled(h EventHandler, scope ...any) HTMLAudio
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLAudio
+	OnSubmit(h EventHandler, scope ...any) HTMLAudio
 
 	// OnSuspend calls the given handler when fetching the media data is stopped before it is completely loaded for whatever reason.
-	OnSuspend(h EventHandler, scope ...interface{}) HTMLAudio
+	OnSuspend(h EventHandler, scope ...any) HTMLAudio
 
 	// OnTimeUpdate calls the given handler when the playing position has changed (like when the user fast forwards to a different point in the media).
-	OnTimeUpdate(h EventHandler, scope ...interface{}) HTMLAudio
+	OnTimeUpdate(h EventHandler, scope ...any) HTMLAudio
 
 	// OnVolumeChange calls the given handler each time the volume is changed which (includes setting the volume to "mute").
-	OnVolumeChange(h EventHandler, scope ...interface{}) HTMLAudio
+	OnVolumeChange(h EventHandler, scope ...any) HTMLAudio
 
 	// OnWaiting calls the given handler when the media has paused but is expected to resume (like when the media pauses to buffer more data).
-	OnWaiting(h EventHandler, scope ...interface{}) HTMLAudio
+	OnWaiting(h EventHandler, scope ...any) HTMLAudio
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLAudio
+	OnWheel(h EventHandler, scope ...any) HTMLAudio
 }
 
 // Audio returns an HTML element that defines sound content.
@@ -1333,7 +1333,7 @@ type HTMLB interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLB
+	Text(v any) HTMLB
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLB
@@ -1345,7 +1345,7 @@ type HTMLB interface {
 	AccessKey(v string) HTMLB
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLB
+	Aria(k string, v any) HTMLB
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLB
@@ -1354,7 +1354,7 @@ type HTMLB interface {
 	ContentEditable(v bool) HTMLB
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLB
+	DataSet(k string, v any) HTMLB
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLB
@@ -1393,100 +1393,100 @@ type HTMLB interface {
 	On(event string, h EventHandler, scope ...any) HTMLB
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLB
+	OnBlur(h EventHandler, scope ...any) HTMLB
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLB
+	OnChange(h EventHandler, scope ...any) HTMLB
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLB
+	OnClick(h EventHandler, scope ...any) HTMLB
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLB
+	OnContextMenu(h EventHandler, scope ...any) HTMLB
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLB
+	OnCopy(h EventHandler, scope ...any) HTMLB
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLB
+	OnCut(h EventHandler, scope ...any) HTMLB
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLB
+	OnDblClick(h EventHandler, scope ...any) HTMLB
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLB
+	OnDrag(h EventHandler, scope ...any) HTMLB
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLB
+	OnDragEnd(h EventHandler, scope ...any) HTMLB
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLB
+	OnDragEnter(h EventHandler, scope ...any) HTMLB
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLB
+	OnDragLeave(h EventHandler, scope ...any) HTMLB
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLB
+	OnDragOver(h EventHandler, scope ...any) HTMLB
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLB
+	OnDragStart(h EventHandler, scope ...any) HTMLB
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLB
+	OnDrop(h EventHandler, scope ...any) HTMLB
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLB
+	OnFocus(h EventHandler, scope ...any) HTMLB
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLB
+	OnInput(h EventHandler, scope ...any) HTMLB
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLB
+	OnInvalid(h EventHandler, scope ...any) HTMLB
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLB
+	OnKeyDown(h EventHandler, scope ...any) HTMLB
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLB
+	OnKeyPress(h EventHandler, scope ...any) HTMLB
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLB
+	OnKeyUp(h EventHandler, scope ...any) HTMLB
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLB
+	OnMouseDown(h EventHandler, scope ...any) HTMLB
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLB
+	OnMouseMove(h EventHandler, scope ...any) HTMLB
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLB
+	OnMouseOut(h EventHandler, scope ...any) HTMLB
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLB
+	OnMouseOver(h EventHandler, scope ...any) HTMLB
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLB
+	OnMouseUp(h EventHandler, scope ...any) HTMLB
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLB
+	OnPaste(h EventHandler, scope ...any) HTMLB
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLB
+	OnReset(h EventHandler, scope ...any) HTMLB
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLB
+	OnScroll(h EventHandler, scope ...any) HTMLB
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLB
+	OnSearch(h EventHandler, scope ...any) HTMLB
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLB
+	OnSelect(h EventHandler, scope ...any) HTMLB
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLB
+	OnSubmit(h EventHandler, scope ...any) HTMLB
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLB
+	OnWheel(h EventHandler, scope ...any) HTMLB
 }
 
 // B returns an HTML element that defines bold text.
@@ -1508,7 +1508,7 @@ type HTMLBase interface {
 	AccessKey(v string) HTMLBase
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLBase
+	Aria(k string, v any) HTMLBase
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLBase
@@ -1517,7 +1517,7 @@ type HTMLBase interface {
 	ContentEditable(v bool) HTMLBase
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLBase
+	DataSet(k string, v any) HTMLBase
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLBase
@@ -1562,100 +1562,100 @@ type HTMLBase interface {
 	On(event string, h EventHandler, scope ...any) HTMLBase
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLBase
+	OnBlur(h EventHandler, scope ...any) HTMLBase
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLBase
+	OnChange(h EventHandler, scope ...any) HTMLBase
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLBase
+	OnClick(h EventHandler, scope ...any) HTMLBase
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLBase
+	OnContextMenu(h EventHandler, scope ...any) HTMLBase
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLBase
+	OnCopy(h EventHandler, scope ...any) HTMLBase
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLBase
+	OnCut(h EventHandler, scope ...any) HTMLBase
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLBase
+	OnDblClick(h EventHandler, scope ...any) HTMLBase
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLBase
+	OnDrag(h EventHandler, scope ...any) HTMLBase
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLBase
+	OnDragEnd(h EventHandler, scope ...any) HTMLBase
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLBase
+	OnDragEnter(h EventHandler, scope ...any) HTMLBase
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLBase
+	OnDragLeave(h EventHandler, scope ...any) HTMLBase
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLBase
+	OnDragOver(h EventHandler, scope ...any) HTMLBase
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLBase
+	OnDragStart(h EventHandler, scope ...any) HTMLBase
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLBase
+	OnDrop(h EventHandler, scope ...any) HTMLBase
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLBase
+	OnFocus(h EventHandler, scope ...any) HTMLBase
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLBase
+	OnInput(h EventHandler, scope ...any) HTMLBase
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLBase
+	OnInvalid(h EventHandler, scope ...any) HTMLBase
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLBase
+	OnKeyDown(h EventHandler, scope ...any) HTMLBase
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLBase
+	OnKeyPress(h EventHandler, scope ...any) HTMLBase
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLBase
+	OnKeyUp(h EventHandler, scope ...any) HTMLBase
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLBase
+	OnMouseDown(h EventHandler, scope ...any) HTMLBase
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLBase
+	OnMouseMove(h EventHandler, scope ...any) HTMLBase
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLBase
+	OnMouseOut(h EventHandler, scope ...any) HTMLBase
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLBase
+	OnMouseOver(h EventHandler, scope ...any) HTMLBase
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLBase
+	OnMouseUp(h EventHandler, scope ...any) HTMLBase
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLBase
+	OnPaste(h EventHandler, scope ...any) HTMLBase
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLBase
+	OnReset(h EventHandler, scope ...any) HTMLBase
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLBase
+	OnScroll(h EventHandler, scope ...any) HTMLBase
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLBase
+	OnSearch(h EventHandler, scope ...any) HTMLBase
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLBase
+	OnSelect(h EventHandler, scope ...any) HTMLBase
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLBase
+	OnSubmit(h EventHandler, scope ...any) HTMLBase
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLBase
+	OnWheel(h EventHandler, scope ...any) HTMLBase
 }
 
 // Base returns an HTML element that specifies the base URL/target for all relative URLs in a document.
@@ -1671,7 +1671,7 @@ type HTMLBdi interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLBdi
+	Text(v any) HTMLBdi
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLBdi
@@ -1683,7 +1683,7 @@ type HTMLBdi interface {
 	AccessKey(v string) HTMLBdi
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLBdi
+	Aria(k string, v any) HTMLBdi
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLBdi
@@ -1692,7 +1692,7 @@ type HTMLBdi interface {
 	ContentEditable(v bool) HTMLBdi
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLBdi
+	DataSet(k string, v any) HTMLBdi
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLBdi
@@ -1731,100 +1731,100 @@ type HTMLBdi interface {
 	On(event string, h EventHandler, scope ...any) HTMLBdi
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLBdi
+	OnBlur(h EventHandler, scope ...any) HTMLBdi
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLBdi
+	OnChange(h EventHandler, scope ...any) HTMLBdi
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLBdi
+	OnClick(h EventHandler, scope ...any) HTMLBdi
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLBdi
+	OnContextMenu(h EventHandler, scope ...any) HTMLBdi
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLBdi
+	OnCopy(h EventHandler, scope ...any) HTMLBdi
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLBdi
+	OnCut(h EventHandler, scope ...any) HTMLBdi
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLBdi
+	OnDblClick(h EventHandler, scope ...any) HTMLBdi
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLBdi
+	OnDrag(h EventHandler, scope ...any) HTMLBdi
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLBdi
+	OnDragEnd(h EventHandler, scope ...any) HTMLBdi
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLBdi
+	OnDragEnter(h EventHandler, scope ...any) HTMLBdi
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLBdi
+	OnDragLeave(h EventHandler, scope ...any) HTMLBdi
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLBdi
+	OnDragOver(h EventHandler, scope ...any) HTMLBdi
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLBdi
+	OnDragStart(h EventHandler, scope ...any) HTMLBdi
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLBdi
+	OnDrop(h EventHandler, scope ...any) HTMLBdi
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLBdi
+	OnFocus(h EventHandler, scope ...any) HTMLBdi
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLBdi
+	OnInput(h EventHandler, scope ...any) HTMLBdi
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLBdi
+	OnInvalid(h EventHandler, scope ...any) HTMLBdi
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLBdi
+	OnKeyDown(h EventHandler, scope ...any) HTMLBdi
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLBdi
+	OnKeyPress(h EventHandler, scope ...any) HTMLBdi
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLBdi
+	OnKeyUp(h EventHandler, scope ...any) HTMLBdi
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLBdi
+	OnMouseDown(h EventHandler, scope ...any) HTMLBdi
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLBdi
+	OnMouseMove(h EventHandler, scope ...any) HTMLBdi
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLBdi
+	OnMouseOut(h EventHandler, scope ...any) HTMLBdi
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLBdi
+	OnMouseOver(h EventHandler, scope ...any) HTMLBdi
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLBdi
+	OnMouseUp(h EventHandler, scope ...any) HTMLBdi
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLBdi
+	OnPaste(h EventHandler, scope ...any) HTMLBdi
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLBdi
+	OnReset(h EventHandler, scope ...any) HTMLBdi
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLBdi
+	OnScroll(h EventHandler, scope ...any) HTMLBdi
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLBdi
+	OnSearch(h EventHandler, scope ...any) HTMLBdi
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLBdi
+	OnSelect(h EventHandler, scope ...any) HTMLBdi
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLBdi
+	OnSubmit(h EventHandler, scope ...any) HTMLBdi
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLBdi
+	OnWheel(h EventHandler, scope ...any) HTMLBdi
 }
 
 // Bdi returns an HTML element that isolates a part of text that might be formatted in a different direction from other text outside it.
@@ -1840,7 +1840,7 @@ type HTMLBdo interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLBdo
+	Text(v any) HTMLBdo
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLBdo
@@ -1852,7 +1852,7 @@ type HTMLBdo interface {
 	AccessKey(v string) HTMLBdo
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLBdo
+	Aria(k string, v any) HTMLBdo
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLBdo
@@ -1861,7 +1861,7 @@ type HTMLBdo interface {
 	ContentEditable(v bool) HTMLBdo
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLBdo
+	DataSet(k string, v any) HTMLBdo
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLBdo
@@ -1900,100 +1900,100 @@ type HTMLBdo interface {
 	On(event string, h EventHandler, scope ...any) HTMLBdo
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLBdo
+	OnBlur(h EventHandler, scope ...any) HTMLBdo
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLBdo
+	OnChange(h EventHandler, scope ...any) HTMLBdo
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLBdo
+	OnClick(h EventHandler, scope ...any) HTMLBdo
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLBdo
+	OnContextMenu(h EventHandler, scope ...any) HTMLBdo
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLBdo
+	OnCopy(h EventHandler, scope ...any) HTMLBdo
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLBdo
+	OnCut(h EventHandler, scope ...any) HTMLBdo
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLBdo
+	OnDblClick(h EventHandler, scope ...any) HTMLBdo
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLBdo
+	OnDrag(h EventHandler, scope ...any) HTMLBdo
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLBdo
+	OnDragEnd(h EventHandler, scope ...any) HTMLBdo
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLBdo
+	OnDragEnter(h EventHandler, scope ...any) HTMLBdo
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLBdo
+	OnDragLeave(h EventHandler, scope ...any) HTMLBdo
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLBdo
+	OnDragOver(h EventHandler, scope ...any) HTMLBdo
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLBdo
+	OnDragStart(h EventHandler, scope ...any) HTMLBdo
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLBdo
+	OnDrop(h EventHandler, scope ...any) HTMLBdo
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLBdo
+	OnFocus(h EventHandler, scope ...any) HTMLBdo
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLBdo
+	OnInput(h EventHandler, scope ...any) HTMLBdo
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLBdo
+	OnInvalid(h EventHandler, scope ...any) HTMLBdo
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLBdo
+	OnKeyDown(h EventHandler, scope ...any) HTMLBdo
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLBdo
+	OnKeyPress(h EventHandler, scope ...any) HTMLBdo
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLBdo
+	OnKeyUp(h EventHandler, scope ...any) HTMLBdo
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLBdo
+	OnMouseDown(h EventHandler, scope ...any) HTMLBdo
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLBdo
+	OnMouseMove(h EventHandler, scope ...any) HTMLBdo
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLBdo
+	OnMouseOut(h EventHandler, scope ...any) HTMLBdo
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLBdo
+	OnMouseOver(h EventHandler, scope ...any) HTMLBdo
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLBdo
+	OnMouseUp(h EventHandler, scope ...any) HTMLBdo
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLBdo
+	OnPaste(h EventHandler, scope ...any) HTMLBdo
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLBdo
+	OnReset(h EventHandler, scope ...any) HTMLBdo
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLBdo
+	OnScroll(h EventHandler, scope ...any) HTMLBdo
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLBdo
+	OnSearch(h EventHandler, scope ...any) HTMLBdo
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLBdo
+	OnSelect(h EventHandler, scope ...any) HTMLBdo
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLBdo
+	OnSubmit(h EventHandler, scope ...any) HTMLBdo
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLBdo
+	OnWheel(h EventHandler, scope ...any) HTMLBdo
 }
 
 // Bdo returns an HTML element that overrides the current text direction.
@@ -2009,7 +2009,7 @@ type HTMLBlockquote interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLBlockquote
+	Text(v any) HTMLBlockquote
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLBlockquote
@@ -2021,7 +2021,7 @@ type HTMLBlockquote interface {
 	AccessKey(v string) HTMLBlockquote
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLBlockquote
+	Aria(k string, v any) HTMLBlockquote
 
 	// Cite specifies a URL which explains the quote/deleted/inserted text.
 	Cite(v string) HTMLBlockquote
@@ -2033,7 +2033,7 @@ type HTMLBlockquote interface {
 	ContentEditable(v bool) HTMLBlockquote
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLBlockquote
+	DataSet(k string, v any) HTMLBlockquote
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLBlockquote
@@ -2072,100 +2072,100 @@ type HTMLBlockquote interface {
 	On(event string, h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnBlur(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnChange(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnClick(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnContextMenu(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnCopy(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnCut(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnDblClick(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnDrag(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnDragEnd(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnDragEnter(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnDragLeave(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnDragOver(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnDragStart(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnDrop(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnFocus(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnInput(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnInvalid(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnKeyDown(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnKeyPress(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnKeyUp(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnMouseDown(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnMouseMove(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnMouseOut(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnMouseOver(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnMouseUp(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnPaste(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnReset(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnScroll(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnSearch(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnSelect(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnSubmit(h EventHandler, scope ...any) HTMLBlockquote
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLBlockquote
+	OnWheel(h EventHandler, scope ...any) HTMLBlockquote
 }
 
 // Blockquote returns an HTML element that defines a section that is quoted from another source.
@@ -2187,7 +2187,7 @@ type HTMLBody interface {
 	AccessKey(v string) HTMLBody
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLBody
+	Aria(k string, v any) HTMLBody
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLBody
@@ -2196,7 +2196,7 @@ type HTMLBody interface {
 	ContentEditable(v bool) HTMLBody
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLBody
+	DataSet(k string, v any) HTMLBody
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLBody
@@ -2235,145 +2235,145 @@ type HTMLBody interface {
 	On(event string, h EventHandler, scope ...any) HTMLBody
 
 	// OnAfterPrint runs the given handler after the document is printed.
-	OnAfterPrint(h EventHandler, scope ...interface{}) HTMLBody
+	OnAfterPrint(h EventHandler, scope ...any) HTMLBody
 
 	// OnBeforePrint calls the given handler before the document is printed.
-	OnBeforePrint(h EventHandler, scope ...interface{}) HTMLBody
+	OnBeforePrint(h EventHandler, scope ...any) HTMLBody
 
 	// OnBeforeUnload calls the given handler when the document is about to be unloaded.
-	OnBeforeUnload(h EventHandler, scope ...interface{}) HTMLBody
+	OnBeforeUnload(h EventHandler, scope ...any) HTMLBody
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLBody
+	OnBlur(h EventHandler, scope ...any) HTMLBody
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLBody
+	OnChange(h EventHandler, scope ...any) HTMLBody
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLBody
+	OnClick(h EventHandler, scope ...any) HTMLBody
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLBody
+	OnContextMenu(h EventHandler, scope ...any) HTMLBody
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLBody
+	OnCopy(h EventHandler, scope ...any) HTMLBody
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLBody
+	OnCut(h EventHandler, scope ...any) HTMLBody
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLBody
+	OnDblClick(h EventHandler, scope ...any) HTMLBody
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLBody
+	OnDrag(h EventHandler, scope ...any) HTMLBody
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLBody
+	OnDragEnd(h EventHandler, scope ...any) HTMLBody
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLBody
+	OnDragEnter(h EventHandler, scope ...any) HTMLBody
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLBody
+	OnDragLeave(h EventHandler, scope ...any) HTMLBody
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLBody
+	OnDragOver(h EventHandler, scope ...any) HTMLBody
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLBody
+	OnDragStart(h EventHandler, scope ...any) HTMLBody
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLBody
+	OnDrop(h EventHandler, scope ...any) HTMLBody
 
 	// OnError calls the given handler when an error occurs.
-	OnError(h EventHandler, scope ...interface{}) HTMLBody
+	OnError(h EventHandler, scope ...any) HTMLBody
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLBody
+	OnFocus(h EventHandler, scope ...any) HTMLBody
 
 	// OnHashChange calls the given handler when there has been changes to the anchor part of the a URL.
-	OnHashChange(h EventHandler, scope ...interface{}) HTMLBody
+	OnHashChange(h EventHandler, scope ...any) HTMLBody
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLBody
+	OnInput(h EventHandler, scope ...any) HTMLBody
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLBody
+	OnInvalid(h EventHandler, scope ...any) HTMLBody
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLBody
+	OnKeyDown(h EventHandler, scope ...any) HTMLBody
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLBody
+	OnKeyPress(h EventHandler, scope ...any) HTMLBody
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLBody
+	OnKeyUp(h EventHandler, scope ...any) HTMLBody
 
 	// OnLoad calls the given handler after the element is finished loading.
-	OnLoad(h EventHandler, scope ...interface{}) HTMLBody
+	OnLoad(h EventHandler, scope ...any) HTMLBody
 
 	// OnMessage calls then given handler when a message is triggered.
-	OnMessage(h EventHandler, scope ...interface{}) HTMLBody
+	OnMessage(h EventHandler, scope ...any) HTMLBody
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLBody
+	OnMouseDown(h EventHandler, scope ...any) HTMLBody
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLBody
+	OnMouseMove(h EventHandler, scope ...any) HTMLBody
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLBody
+	OnMouseOut(h EventHandler, scope ...any) HTMLBody
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLBody
+	OnMouseOver(h EventHandler, scope ...any) HTMLBody
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLBody
+	OnMouseUp(h EventHandler, scope ...any) HTMLBody
 
 	// OnOffline calls the given handler when the browser starts to work offline.
-	OnOffline(h EventHandler, scope ...interface{}) HTMLBody
+	OnOffline(h EventHandler, scope ...any) HTMLBody
 
 	// OnOnline calls the given handler when the browser starts to work online.
-	OnOnline(h EventHandler, scope ...interface{}) HTMLBody
+	OnOnline(h EventHandler, scope ...any) HTMLBody
 
 	// OnPageHide calls the given handler when a user navigates away from a page.
-	OnPageHide(h EventHandler, scope ...interface{}) HTMLBody
+	OnPageHide(h EventHandler, scope ...any) HTMLBody
 
 	// OnPageShow calls the given handler when a user navigates to a page.
-	OnPageShow(h EventHandler, scope ...interface{}) HTMLBody
+	OnPageShow(h EventHandler, scope ...any) HTMLBody
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLBody
+	OnPaste(h EventHandler, scope ...any) HTMLBody
 
 	// OnPopState calls the given handler when the window's history changes.
-	OnPopState(h EventHandler, scope ...interface{}) HTMLBody
+	OnPopState(h EventHandler, scope ...any) HTMLBody
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLBody
+	OnReset(h EventHandler, scope ...any) HTMLBody
 
 	// OnResize calls the given handler when the browser window is resized.
-	OnResize(h EventHandler, scope ...interface{}) HTMLBody
+	OnResize(h EventHandler, scope ...any) HTMLBody
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLBody
+	OnScroll(h EventHandler, scope ...any) HTMLBody
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLBody
+	OnSearch(h EventHandler, scope ...any) HTMLBody
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLBody
+	OnSelect(h EventHandler, scope ...any) HTMLBody
 
 	// OnStorage calls the given handler when a Web Storage area is updated.
-	OnStorage(h EventHandler, scope ...interface{}) HTMLBody
+	OnStorage(h EventHandler, scope ...any) HTMLBody
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLBody
+	OnSubmit(h EventHandler, scope ...any) HTMLBody
 
 	// OnUnload calls the given handler once a page has unloaded (or the browser window has been closed).
-	OnUnload(h EventHandler, scope ...interface{}) HTMLBody
+	OnUnload(h EventHandler, scope ...any) HTMLBody
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLBody
+	OnWheel(h EventHandler, scope ...any) HTMLBody
 }
 
 // Body returns an HTML element that defines the document's body.
@@ -2395,7 +2395,7 @@ type HTMLBr interface {
 	AccessKey(v string) HTMLBr
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLBr
+	Aria(k string, v any) HTMLBr
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLBr
@@ -2404,7 +2404,7 @@ type HTMLBr interface {
 	ContentEditable(v bool) HTMLBr
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLBr
+	DataSet(k string, v any) HTMLBr
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLBr
@@ -2443,100 +2443,100 @@ type HTMLBr interface {
 	On(event string, h EventHandler, scope ...any) HTMLBr
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLBr
+	OnBlur(h EventHandler, scope ...any) HTMLBr
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLBr
+	OnChange(h EventHandler, scope ...any) HTMLBr
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLBr
+	OnClick(h EventHandler, scope ...any) HTMLBr
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLBr
+	OnContextMenu(h EventHandler, scope ...any) HTMLBr
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLBr
+	OnCopy(h EventHandler, scope ...any) HTMLBr
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLBr
+	OnCut(h EventHandler, scope ...any) HTMLBr
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLBr
+	OnDblClick(h EventHandler, scope ...any) HTMLBr
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLBr
+	OnDrag(h EventHandler, scope ...any) HTMLBr
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLBr
+	OnDragEnd(h EventHandler, scope ...any) HTMLBr
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLBr
+	OnDragEnter(h EventHandler, scope ...any) HTMLBr
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLBr
+	OnDragLeave(h EventHandler, scope ...any) HTMLBr
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLBr
+	OnDragOver(h EventHandler, scope ...any) HTMLBr
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLBr
+	OnDragStart(h EventHandler, scope ...any) HTMLBr
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLBr
+	OnDrop(h EventHandler, scope ...any) HTMLBr
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLBr
+	OnFocus(h EventHandler, scope ...any) HTMLBr
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLBr
+	OnInput(h EventHandler, scope ...any) HTMLBr
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLBr
+	OnInvalid(h EventHandler, scope ...any) HTMLBr
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLBr
+	OnKeyDown(h EventHandler, scope ...any) HTMLBr
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLBr
+	OnKeyPress(h EventHandler, scope ...any) HTMLBr
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLBr
+	OnKeyUp(h EventHandler, scope ...any) HTMLBr
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLBr
+	OnMouseDown(h EventHandler, scope ...any) HTMLBr
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLBr
+	OnMouseMove(h EventHandler, scope ...any) HTMLBr
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLBr
+	OnMouseOut(h EventHandler, scope ...any) HTMLBr
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLBr
+	OnMouseOver(h EventHandler, scope ...any) HTMLBr
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLBr
+	OnMouseUp(h EventHandler, scope ...any) HTMLBr
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLBr
+	OnPaste(h EventHandler, scope ...any) HTMLBr
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLBr
+	OnReset(h EventHandler, scope ...any) HTMLBr
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLBr
+	OnScroll(h EventHandler, scope ...any) HTMLBr
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLBr
+	OnSearch(h EventHandler, scope ...any) HTMLBr
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLBr
+	OnSelect(h EventHandler, scope ...any) HTMLBr
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLBr
+	OnSubmit(h EventHandler, scope ...any) HTMLBr
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLBr
+	OnWheel(h EventHandler, scope ...any) HTMLBr
 }
 
 // Br returns an HTML element that defines a single line break.
@@ -2552,7 +2552,7 @@ type HTMLButton interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLButton
+	Text(v any) HTMLButton
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLButton
@@ -2564,7 +2564,7 @@ type HTMLButton interface {
 	AccessKey(v string) HTMLButton
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLButton
+	Aria(k string, v any) HTMLButton
 
 	// AutoFocus specifies that the element should automatically get focus when the page loads.
 	AutoFocus(v bool) HTMLButton
@@ -2576,7 +2576,7 @@ type HTMLButton interface {
 	ContentEditable(v bool) HTMLButton
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLButton
+	DataSet(k string, v any) HTMLButton
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLButton
@@ -2639,106 +2639,106 @@ type HTMLButton interface {
 	Type(v string) HTMLButton
 
 	// Value specifies the value of the element.
-	Value(v interface{}) HTMLButton
+	Value(v any) HTMLButton
 
 	// On calls the given event handler when the named event is triggered.
 	On(event string, h EventHandler, scope ...any) HTMLButton
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLButton
+	OnBlur(h EventHandler, scope ...any) HTMLButton
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLButton
+	OnChange(h EventHandler, scope ...any) HTMLButton
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLButton
+	OnClick(h EventHandler, scope ...any) HTMLButton
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLButton
+	OnContextMenu(h EventHandler, scope ...any) HTMLButton
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLButton
+	OnCopy(h EventHandler, scope ...any) HTMLButton
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLButton
+	OnCut(h EventHandler, scope ...any) HTMLButton
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLButton
+	OnDblClick(h EventHandler, scope ...any) HTMLButton
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLButton
+	OnDrag(h EventHandler, scope ...any) HTMLButton
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLButton
+	OnDragEnd(h EventHandler, scope ...any) HTMLButton
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLButton
+	OnDragEnter(h EventHandler, scope ...any) HTMLButton
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLButton
+	OnDragLeave(h EventHandler, scope ...any) HTMLButton
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLButton
+	OnDragOver(h EventHandler, scope ...any) HTMLButton
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLButton
+	OnDragStart(h EventHandler, scope ...any) HTMLButton
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLButton
+	OnDrop(h EventHandler, scope ...any) HTMLButton
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLButton
+	OnFocus(h EventHandler, scope ...any) HTMLButton
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLButton
+	OnInput(h EventHandler, scope ...any) HTMLButton
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLButton
+	OnInvalid(h EventHandler, scope ...any) HTMLButton
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLButton
+	OnKeyDown(h EventHandler, scope ...any) HTMLButton
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLButton
+	OnKeyPress(h EventHandler, scope ...any) HTMLButton
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLButton
+	OnKeyUp(h EventHandler, scope ...any) HTMLButton
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLButton
+	OnMouseDown(h EventHandler, scope ...any) HTMLButton
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLButton
+	OnMouseMove(h EventHandler, scope ...any) HTMLButton
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLButton
+	OnMouseOut(h EventHandler, scope ...any) HTMLButton
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLButton
+	OnMouseOver(h EventHandler, scope ...any) HTMLButton
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLButton
+	OnMouseUp(h EventHandler, scope ...any) HTMLButton
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLButton
+	OnPaste(h EventHandler, scope ...any) HTMLButton
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLButton
+	OnReset(h EventHandler, scope ...any) HTMLButton
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLButton
+	OnScroll(h EventHandler, scope ...any) HTMLButton
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLButton
+	OnSearch(h EventHandler, scope ...any) HTMLButton
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLButton
+	OnSelect(h EventHandler, scope ...any) HTMLButton
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLButton
+	OnSubmit(h EventHandler, scope ...any) HTMLButton
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLButton
+	OnWheel(h EventHandler, scope ...any) HTMLButton
 }
 
 // Button returns an HTML element that defines a clickable button.
@@ -2754,7 +2754,7 @@ type HTMLCanvas interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLCanvas
+	Text(v any) HTMLCanvas
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLCanvas
@@ -2766,7 +2766,7 @@ type HTMLCanvas interface {
 	AccessKey(v string) HTMLCanvas
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLCanvas
+	Aria(k string, v any) HTMLCanvas
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLCanvas
@@ -2775,7 +2775,7 @@ type HTMLCanvas interface {
 	ContentEditable(v bool) HTMLCanvas
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLCanvas
+	DataSet(k string, v any) HTMLCanvas
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLCanvas
@@ -2820,100 +2820,100 @@ type HTMLCanvas interface {
 	On(event string, h EventHandler, scope ...any) HTMLCanvas
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnBlur(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnChange(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnClick(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnContextMenu(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnCopy(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnCut(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnDblClick(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnDrag(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnDragEnd(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnDragEnter(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnDragLeave(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnDragOver(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnDragStart(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnDrop(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnFocus(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnInput(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnInvalid(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnKeyDown(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnKeyPress(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnKeyUp(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnMouseDown(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnMouseMove(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnMouseOut(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnMouseOver(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnMouseUp(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnPaste(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnReset(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnScroll(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnSearch(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnSelect(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnSubmit(h EventHandler, scope ...any) HTMLCanvas
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLCanvas
+	OnWheel(h EventHandler, scope ...any) HTMLCanvas
 }
 
 // Canvas returns an HTML element that is used to draw graphics on the fly.
@@ -2929,7 +2929,7 @@ type HTMLCaption interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLCaption
+	Text(v any) HTMLCaption
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLCaption
@@ -2941,7 +2941,7 @@ type HTMLCaption interface {
 	AccessKey(v string) HTMLCaption
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLCaption
+	Aria(k string, v any) HTMLCaption
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLCaption
@@ -2950,7 +2950,7 @@ type HTMLCaption interface {
 	ContentEditable(v bool) HTMLCaption
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLCaption
+	DataSet(k string, v any) HTMLCaption
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLCaption
@@ -2989,100 +2989,100 @@ type HTMLCaption interface {
 	On(event string, h EventHandler, scope ...any) HTMLCaption
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLCaption
+	OnBlur(h EventHandler, scope ...any) HTMLCaption
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLCaption
+	OnChange(h EventHandler, scope ...any) HTMLCaption
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLCaption
+	OnClick(h EventHandler, scope ...any) HTMLCaption
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLCaption
+	OnContextMenu(h EventHandler, scope ...any) HTMLCaption
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLCaption
+	OnCopy(h EventHandler, scope ...any) HTMLCaption
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLCaption
+	OnCut(h EventHandler, scope ...any) HTMLCaption
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLCaption
+	OnDblClick(h EventHandler, scope ...any) HTMLCaption
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLCaption
+	OnDrag(h EventHandler, scope ...any) HTMLCaption
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLCaption
+	OnDragEnd(h EventHandler, scope ...any) HTMLCaption
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLCaption
+	OnDragEnter(h EventHandler, scope ...any) HTMLCaption
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLCaption
+	OnDragLeave(h EventHandler, scope ...any) HTMLCaption
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLCaption
+	OnDragOver(h EventHandler, scope ...any) HTMLCaption
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLCaption
+	OnDragStart(h EventHandler, scope ...any) HTMLCaption
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLCaption
+	OnDrop(h EventHandler, scope ...any) HTMLCaption
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLCaption
+	OnFocus(h EventHandler, scope ...any) HTMLCaption
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLCaption
+	OnInput(h EventHandler, scope ...any) HTMLCaption
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLCaption
+	OnInvalid(h EventHandler, scope ...any) HTMLCaption
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLCaption
+	OnKeyDown(h EventHandler, scope ...any) HTMLCaption
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLCaption
+	OnKeyPress(h EventHandler, scope ...any) HTMLCaption
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLCaption
+	OnKeyUp(h EventHandler, scope ...any) HTMLCaption
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLCaption
+	OnMouseDown(h EventHandler, scope ...any) HTMLCaption
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLCaption
+	OnMouseMove(h EventHandler, scope ...any) HTMLCaption
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLCaption
+	OnMouseOut(h EventHandler, scope ...any) HTMLCaption
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLCaption
+	OnMouseOver(h EventHandler, scope ...any) HTMLCaption
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLCaption
+	OnMouseUp(h EventHandler, scope ...any) HTMLCaption
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLCaption
+	OnPaste(h EventHandler, scope ...any) HTMLCaption
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLCaption
+	OnReset(h EventHandler, scope ...any) HTMLCaption
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLCaption
+	OnScroll(h EventHandler, scope ...any) HTMLCaption
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLCaption
+	OnSearch(h EventHandler, scope ...any) HTMLCaption
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLCaption
+	OnSelect(h EventHandler, scope ...any) HTMLCaption
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLCaption
+	OnSubmit(h EventHandler, scope ...any) HTMLCaption
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLCaption
+	OnWheel(h EventHandler, scope ...any) HTMLCaption
 }
 
 // Caption returns an HTML element that defines a table caption.
@@ -3098,7 +3098,7 @@ type HTMLCite interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLCite
+	Text(v any) HTMLCite
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLCite
@@ -3110,7 +3110,7 @@ type HTMLCite interface {
 	AccessKey(v string) HTMLCite
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLCite
+	Aria(k string, v any) HTMLCite
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLCite
@@ -3119,7 +3119,7 @@ type HTMLCite interface {
 	ContentEditable(v bool) HTMLCite
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLCite
+	DataSet(k string, v any) HTMLCite
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLCite
@@ -3158,100 +3158,100 @@ type HTMLCite interface {
 	On(event string, h EventHandler, scope ...any) HTMLCite
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLCite
+	OnBlur(h EventHandler, scope ...any) HTMLCite
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLCite
+	OnChange(h EventHandler, scope ...any) HTMLCite
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLCite
+	OnClick(h EventHandler, scope ...any) HTMLCite
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLCite
+	OnContextMenu(h EventHandler, scope ...any) HTMLCite
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLCite
+	OnCopy(h EventHandler, scope ...any) HTMLCite
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLCite
+	OnCut(h EventHandler, scope ...any) HTMLCite
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLCite
+	OnDblClick(h EventHandler, scope ...any) HTMLCite
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLCite
+	OnDrag(h EventHandler, scope ...any) HTMLCite
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLCite
+	OnDragEnd(h EventHandler, scope ...any) HTMLCite
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLCite
+	OnDragEnter(h EventHandler, scope ...any) HTMLCite
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLCite
+	OnDragLeave(h EventHandler, scope ...any) HTMLCite
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLCite
+	OnDragOver(h EventHandler, scope ...any) HTMLCite
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLCite
+	OnDragStart(h EventHandler, scope ...any) HTMLCite
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLCite
+	OnDrop(h EventHandler, scope ...any) HTMLCite
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLCite
+	OnFocus(h EventHandler, scope ...any) HTMLCite
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLCite
+	OnInput(h EventHandler, scope ...any) HTMLCite
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLCite
+	OnInvalid(h EventHandler, scope ...any) HTMLCite
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLCite
+	OnKeyDown(h EventHandler, scope ...any) HTMLCite
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLCite
+	OnKeyPress(h EventHandler, scope ...any) HTMLCite
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLCite
+	OnKeyUp(h EventHandler, scope ...any) HTMLCite
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLCite
+	OnMouseDown(h EventHandler, scope ...any) HTMLCite
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLCite
+	OnMouseMove(h EventHandler, scope ...any) HTMLCite
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLCite
+	OnMouseOut(h EventHandler, scope ...any) HTMLCite
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLCite
+	OnMouseOver(h EventHandler, scope ...any) HTMLCite
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLCite
+	OnMouseUp(h EventHandler, scope ...any) HTMLCite
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLCite
+	OnPaste(h EventHandler, scope ...any) HTMLCite
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLCite
+	OnReset(h EventHandler, scope ...any) HTMLCite
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLCite
+	OnScroll(h EventHandler, scope ...any) HTMLCite
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLCite
+	OnSearch(h EventHandler, scope ...any) HTMLCite
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLCite
+	OnSelect(h EventHandler, scope ...any) HTMLCite
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLCite
+	OnSubmit(h EventHandler, scope ...any) HTMLCite
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLCite
+	OnWheel(h EventHandler, scope ...any) HTMLCite
 }
 
 // Cite returns an HTML element that defines the title of a work.
@@ -3267,7 +3267,7 @@ type HTMLCode interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLCode
+	Text(v any) HTMLCode
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLCode
@@ -3279,7 +3279,7 @@ type HTMLCode interface {
 	AccessKey(v string) HTMLCode
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLCode
+	Aria(k string, v any) HTMLCode
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLCode
@@ -3288,7 +3288,7 @@ type HTMLCode interface {
 	ContentEditable(v bool) HTMLCode
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLCode
+	DataSet(k string, v any) HTMLCode
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLCode
@@ -3327,100 +3327,100 @@ type HTMLCode interface {
 	On(event string, h EventHandler, scope ...any) HTMLCode
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLCode
+	OnBlur(h EventHandler, scope ...any) HTMLCode
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLCode
+	OnChange(h EventHandler, scope ...any) HTMLCode
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLCode
+	OnClick(h EventHandler, scope ...any) HTMLCode
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLCode
+	OnContextMenu(h EventHandler, scope ...any) HTMLCode
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLCode
+	OnCopy(h EventHandler, scope ...any) HTMLCode
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLCode
+	OnCut(h EventHandler, scope ...any) HTMLCode
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLCode
+	OnDblClick(h EventHandler, scope ...any) HTMLCode
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLCode
+	OnDrag(h EventHandler, scope ...any) HTMLCode
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLCode
+	OnDragEnd(h EventHandler, scope ...any) HTMLCode
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLCode
+	OnDragEnter(h EventHandler, scope ...any) HTMLCode
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLCode
+	OnDragLeave(h EventHandler, scope ...any) HTMLCode
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLCode
+	OnDragOver(h EventHandler, scope ...any) HTMLCode
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLCode
+	OnDragStart(h EventHandler, scope ...any) HTMLCode
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLCode
+	OnDrop(h EventHandler, scope ...any) HTMLCode
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLCode
+	OnFocus(h EventHandler, scope ...any) HTMLCode
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLCode
+	OnInput(h EventHandler, scope ...any) HTMLCode
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLCode
+	OnInvalid(h EventHandler, scope ...any) HTMLCode
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLCode
+	OnKeyDown(h EventHandler, scope ...any) HTMLCode
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLCode
+	OnKeyPress(h EventHandler, scope ...any) HTMLCode
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLCode
+	OnKeyUp(h EventHandler, scope ...any) HTMLCode
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLCode
+	OnMouseDown(h EventHandler, scope ...any) HTMLCode
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLCode
+	OnMouseMove(h EventHandler, scope ...any) HTMLCode
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLCode
+	OnMouseOut(h EventHandler, scope ...any) HTMLCode
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLCode
+	OnMouseOver(h EventHandler, scope ...any) HTMLCode
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLCode
+	OnMouseUp(h EventHandler, scope ...any) HTMLCode
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLCode
+	OnPaste(h EventHandler, scope ...any) HTMLCode
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLCode
+	OnReset(h EventHandler, scope ...any) HTMLCode
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLCode
+	OnScroll(h EventHandler, scope ...any) HTMLCode
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLCode
+	OnSearch(h EventHandler, scope ...any) HTMLCode
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLCode
+	OnSelect(h EventHandler, scope ...any) HTMLCode
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLCode
+	OnSubmit(h EventHandler, scope ...any) HTMLCode
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLCode
+	OnWheel(h EventHandler, scope ...any) HTMLCode
 }
 
 // Code returns an HTML element that defines a piece of computer code.
@@ -3442,7 +3442,7 @@ type HTMLCol interface {
 	AccessKey(v string) HTMLCol
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLCol
+	Aria(k string, v any) HTMLCol
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLCol
@@ -3451,7 +3451,7 @@ type HTMLCol interface {
 	ContentEditable(v bool) HTMLCol
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLCol
+	DataSet(k string, v any) HTMLCol
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLCol
@@ -3493,100 +3493,100 @@ type HTMLCol interface {
 	On(event string, h EventHandler, scope ...any) HTMLCol
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLCol
+	OnBlur(h EventHandler, scope ...any) HTMLCol
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLCol
+	OnChange(h EventHandler, scope ...any) HTMLCol
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLCol
+	OnClick(h EventHandler, scope ...any) HTMLCol
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLCol
+	OnContextMenu(h EventHandler, scope ...any) HTMLCol
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLCol
+	OnCopy(h EventHandler, scope ...any) HTMLCol
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLCol
+	OnCut(h EventHandler, scope ...any) HTMLCol
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLCol
+	OnDblClick(h EventHandler, scope ...any) HTMLCol
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLCol
+	OnDrag(h EventHandler, scope ...any) HTMLCol
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLCol
+	OnDragEnd(h EventHandler, scope ...any) HTMLCol
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLCol
+	OnDragEnter(h EventHandler, scope ...any) HTMLCol
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLCol
+	OnDragLeave(h EventHandler, scope ...any) HTMLCol
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLCol
+	OnDragOver(h EventHandler, scope ...any) HTMLCol
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLCol
+	OnDragStart(h EventHandler, scope ...any) HTMLCol
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLCol
+	OnDrop(h EventHandler, scope ...any) HTMLCol
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLCol
+	OnFocus(h EventHandler, scope ...any) HTMLCol
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLCol
+	OnInput(h EventHandler, scope ...any) HTMLCol
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLCol
+	OnInvalid(h EventHandler, scope ...any) HTMLCol
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLCol
+	OnKeyDown(h EventHandler, scope ...any) HTMLCol
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLCol
+	OnKeyPress(h EventHandler, scope ...any) HTMLCol
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLCol
+	OnKeyUp(h EventHandler, scope ...any) HTMLCol
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLCol
+	OnMouseDown(h EventHandler, scope ...any) HTMLCol
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLCol
+	OnMouseMove(h EventHandler, scope ...any) HTMLCol
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLCol
+	OnMouseOut(h EventHandler, scope ...any) HTMLCol
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLCol
+	OnMouseOver(h EventHandler, scope ...any) HTMLCol
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLCol
+	OnMouseUp(h EventHandler, scope ...any) HTMLCol
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLCol
+	OnPaste(h EventHandler, scope ...any) HTMLCol
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLCol
+	OnReset(h EventHandler, scope ...any) HTMLCol
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLCol
+	OnScroll(h EventHandler, scope ...any) HTMLCol
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLCol
+	OnSearch(h EventHandler, scope ...any) HTMLCol
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLCol
+	OnSelect(h EventHandler, scope ...any) HTMLCol
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLCol
+	OnSubmit(h EventHandler, scope ...any) HTMLCol
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLCol
+	OnWheel(h EventHandler, scope ...any) HTMLCol
 }
 
 // Col returns an HTML element that specifies column properties for each column within a colgroup element.
@@ -3602,7 +3602,7 @@ type HTMLColGroup interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLColGroup
+	Text(v any) HTMLColGroup
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLColGroup
@@ -3614,7 +3614,7 @@ type HTMLColGroup interface {
 	AccessKey(v string) HTMLColGroup
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLColGroup
+	Aria(k string, v any) HTMLColGroup
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLColGroup
@@ -3623,7 +3623,7 @@ type HTMLColGroup interface {
 	ContentEditable(v bool) HTMLColGroup
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLColGroup
+	DataSet(k string, v any) HTMLColGroup
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLColGroup
@@ -3665,100 +3665,100 @@ type HTMLColGroup interface {
 	On(event string, h EventHandler, scope ...any) HTMLColGroup
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnBlur(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnChange(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnClick(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnContextMenu(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnCopy(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnCut(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnDblClick(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnDrag(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnDragEnd(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnDragEnter(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnDragLeave(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnDragOver(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnDragStart(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnDrop(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnFocus(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnInput(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnInvalid(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnKeyDown(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnKeyPress(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnKeyUp(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnMouseDown(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnMouseMove(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnMouseOut(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnMouseOver(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnMouseUp(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnPaste(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnReset(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnScroll(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnSearch(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnSelect(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnSubmit(h EventHandler, scope ...any) HTMLColGroup
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLColGroup
+	OnWheel(h EventHandler, scope ...any) HTMLColGroup
 }
 
 // ColGroup returns an HTML element that specifies a group of one or more columns in a table for formatting.
@@ -3774,7 +3774,7 @@ type HTMLData interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLData
+	Text(v any) HTMLData
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLData
@@ -3786,7 +3786,7 @@ type HTMLData interface {
 	AccessKey(v string) HTMLData
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLData
+	Aria(k string, v any) HTMLData
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLData
@@ -3795,7 +3795,7 @@ type HTMLData interface {
 	ContentEditable(v bool) HTMLData
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLData
+	DataSet(k string, v any) HTMLData
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLData
@@ -3831,7 +3831,7 @@ type HTMLData interface {
 	Title(v string) HTMLData
 
 	// Value specifies the value of the element.
-	Value(v interface{}) HTMLData
+	Value(v any) HTMLData
 
 	// On calls the given event handler when the named event is triggered.
 	On(event string, h EventHandler, scope ...any) HTMLData
@@ -3850,7 +3850,7 @@ type HTMLDataList interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDataList
+	Text(v any) HTMLDataList
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDataList
@@ -3862,7 +3862,7 @@ type HTMLDataList interface {
 	AccessKey(v string) HTMLDataList
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDataList
+	Aria(k string, v any) HTMLDataList
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLDataList
@@ -3871,7 +3871,7 @@ type HTMLDataList interface {
 	ContentEditable(v bool) HTMLDataList
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDataList
+	DataSet(k string, v any) HTMLDataList
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLDataList
@@ -3910,100 +3910,100 @@ type HTMLDataList interface {
 	On(event string, h EventHandler, scope ...any) HTMLDataList
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDataList
+	OnBlur(h EventHandler, scope ...any) HTMLDataList
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDataList
+	OnChange(h EventHandler, scope ...any) HTMLDataList
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDataList
+	OnClick(h EventHandler, scope ...any) HTMLDataList
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDataList
+	OnContextMenu(h EventHandler, scope ...any) HTMLDataList
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDataList
+	OnCopy(h EventHandler, scope ...any) HTMLDataList
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDataList
+	OnCut(h EventHandler, scope ...any) HTMLDataList
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDataList
+	OnDblClick(h EventHandler, scope ...any) HTMLDataList
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDataList
+	OnDrag(h EventHandler, scope ...any) HTMLDataList
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDataList
+	OnDragEnd(h EventHandler, scope ...any) HTMLDataList
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDataList
+	OnDragEnter(h EventHandler, scope ...any) HTMLDataList
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDataList
+	OnDragLeave(h EventHandler, scope ...any) HTMLDataList
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDataList
+	OnDragOver(h EventHandler, scope ...any) HTMLDataList
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDataList
+	OnDragStart(h EventHandler, scope ...any) HTMLDataList
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDataList
+	OnDrop(h EventHandler, scope ...any) HTMLDataList
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDataList
+	OnFocus(h EventHandler, scope ...any) HTMLDataList
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDataList
+	OnInput(h EventHandler, scope ...any) HTMLDataList
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDataList
+	OnInvalid(h EventHandler, scope ...any) HTMLDataList
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDataList
+	OnKeyDown(h EventHandler, scope ...any) HTMLDataList
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDataList
+	OnKeyPress(h EventHandler, scope ...any) HTMLDataList
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDataList
+	OnKeyUp(h EventHandler, scope ...any) HTMLDataList
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDataList
+	OnMouseDown(h EventHandler, scope ...any) HTMLDataList
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDataList
+	OnMouseMove(h EventHandler, scope ...any) HTMLDataList
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDataList
+	OnMouseOut(h EventHandler, scope ...any) HTMLDataList
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDataList
+	OnMouseOver(h EventHandler, scope ...any) HTMLDataList
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDataList
+	OnMouseUp(h EventHandler, scope ...any) HTMLDataList
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDataList
+	OnPaste(h EventHandler, scope ...any) HTMLDataList
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDataList
+	OnReset(h EventHandler, scope ...any) HTMLDataList
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDataList
+	OnScroll(h EventHandler, scope ...any) HTMLDataList
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDataList
+	OnSearch(h EventHandler, scope ...any) HTMLDataList
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDataList
+	OnSelect(h EventHandler, scope ...any) HTMLDataList
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDataList
+	OnSubmit(h EventHandler, scope ...any) HTMLDataList
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDataList
+	OnWheel(h EventHandler, scope ...any) HTMLDataList
 }
 
 // DataList returns an HTML element that specifies a list of pre-defined options for input controls.
@@ -4019,7 +4019,7 @@ type HTMLDd interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDd
+	Text(v any) HTMLDd
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDd
@@ -4031,7 +4031,7 @@ type HTMLDd interface {
 	AccessKey(v string) HTMLDd
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDd
+	Aria(k string, v any) HTMLDd
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLDd
@@ -4040,7 +4040,7 @@ type HTMLDd interface {
 	ContentEditable(v bool) HTMLDd
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDd
+	DataSet(k string, v any) HTMLDd
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLDd
@@ -4079,100 +4079,100 @@ type HTMLDd interface {
 	On(event string, h EventHandler, scope ...any) HTMLDd
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDd
+	OnBlur(h EventHandler, scope ...any) HTMLDd
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDd
+	OnChange(h EventHandler, scope ...any) HTMLDd
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDd
+	OnClick(h EventHandler, scope ...any) HTMLDd
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDd
+	OnContextMenu(h EventHandler, scope ...any) HTMLDd
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDd
+	OnCopy(h EventHandler, scope ...any) HTMLDd
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDd
+	OnCut(h EventHandler, scope ...any) HTMLDd
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDd
+	OnDblClick(h EventHandler, scope ...any) HTMLDd
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDd
+	OnDrag(h EventHandler, scope ...any) HTMLDd
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDd
+	OnDragEnd(h EventHandler, scope ...any) HTMLDd
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDd
+	OnDragEnter(h EventHandler, scope ...any) HTMLDd
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDd
+	OnDragLeave(h EventHandler, scope ...any) HTMLDd
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDd
+	OnDragOver(h EventHandler, scope ...any) HTMLDd
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDd
+	OnDragStart(h EventHandler, scope ...any) HTMLDd
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDd
+	OnDrop(h EventHandler, scope ...any) HTMLDd
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDd
+	OnFocus(h EventHandler, scope ...any) HTMLDd
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDd
+	OnInput(h EventHandler, scope ...any) HTMLDd
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDd
+	OnInvalid(h EventHandler, scope ...any) HTMLDd
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDd
+	OnKeyDown(h EventHandler, scope ...any) HTMLDd
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDd
+	OnKeyPress(h EventHandler, scope ...any) HTMLDd
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDd
+	OnKeyUp(h EventHandler, scope ...any) HTMLDd
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDd
+	OnMouseDown(h EventHandler, scope ...any) HTMLDd
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDd
+	OnMouseMove(h EventHandler, scope ...any) HTMLDd
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDd
+	OnMouseOut(h EventHandler, scope ...any) HTMLDd
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDd
+	OnMouseOver(h EventHandler, scope ...any) HTMLDd
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDd
+	OnMouseUp(h EventHandler, scope ...any) HTMLDd
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDd
+	OnPaste(h EventHandler, scope ...any) HTMLDd
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDd
+	OnReset(h EventHandler, scope ...any) HTMLDd
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDd
+	OnScroll(h EventHandler, scope ...any) HTMLDd
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDd
+	OnSearch(h EventHandler, scope ...any) HTMLDd
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDd
+	OnSelect(h EventHandler, scope ...any) HTMLDd
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDd
+	OnSubmit(h EventHandler, scope ...any) HTMLDd
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDd
+	OnWheel(h EventHandler, scope ...any) HTMLDd
 }
 
 // Dd returns an HTML element that defines a description/value of a term in a description list.
@@ -4188,7 +4188,7 @@ type HTMLDel interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDel
+	Text(v any) HTMLDel
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDel
@@ -4200,7 +4200,7 @@ type HTMLDel interface {
 	AccessKey(v string) HTMLDel
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDel
+	Aria(k string, v any) HTMLDel
 
 	// Cite specifies a URL which explains the quote/deleted/inserted text.
 	Cite(v string) HTMLDel
@@ -4212,7 +4212,7 @@ type HTMLDel interface {
 	ContentEditable(v bool) HTMLDel
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDel
+	DataSet(k string, v any) HTMLDel
 
 	// DateTime specifies the date and time.
 	DateTime(v string) HTMLDel
@@ -4254,100 +4254,100 @@ type HTMLDel interface {
 	On(event string, h EventHandler, scope ...any) HTMLDel
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDel
+	OnBlur(h EventHandler, scope ...any) HTMLDel
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDel
+	OnChange(h EventHandler, scope ...any) HTMLDel
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDel
+	OnClick(h EventHandler, scope ...any) HTMLDel
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDel
+	OnContextMenu(h EventHandler, scope ...any) HTMLDel
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDel
+	OnCopy(h EventHandler, scope ...any) HTMLDel
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDel
+	OnCut(h EventHandler, scope ...any) HTMLDel
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDel
+	OnDblClick(h EventHandler, scope ...any) HTMLDel
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDel
+	OnDrag(h EventHandler, scope ...any) HTMLDel
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDel
+	OnDragEnd(h EventHandler, scope ...any) HTMLDel
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDel
+	OnDragEnter(h EventHandler, scope ...any) HTMLDel
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDel
+	OnDragLeave(h EventHandler, scope ...any) HTMLDel
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDel
+	OnDragOver(h EventHandler, scope ...any) HTMLDel
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDel
+	OnDragStart(h EventHandler, scope ...any) HTMLDel
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDel
+	OnDrop(h EventHandler, scope ...any) HTMLDel
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDel
+	OnFocus(h EventHandler, scope ...any) HTMLDel
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDel
+	OnInput(h EventHandler, scope ...any) HTMLDel
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDel
+	OnInvalid(h EventHandler, scope ...any) HTMLDel
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDel
+	OnKeyDown(h EventHandler, scope ...any) HTMLDel
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDel
+	OnKeyPress(h EventHandler, scope ...any) HTMLDel
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDel
+	OnKeyUp(h EventHandler, scope ...any) HTMLDel
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDel
+	OnMouseDown(h EventHandler, scope ...any) HTMLDel
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDel
+	OnMouseMove(h EventHandler, scope ...any) HTMLDel
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDel
+	OnMouseOut(h EventHandler, scope ...any) HTMLDel
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDel
+	OnMouseOver(h EventHandler, scope ...any) HTMLDel
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDel
+	OnMouseUp(h EventHandler, scope ...any) HTMLDel
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDel
+	OnPaste(h EventHandler, scope ...any) HTMLDel
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDel
+	OnReset(h EventHandler, scope ...any) HTMLDel
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDel
+	OnScroll(h EventHandler, scope ...any) HTMLDel
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDel
+	OnSearch(h EventHandler, scope ...any) HTMLDel
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDel
+	OnSelect(h EventHandler, scope ...any) HTMLDel
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDel
+	OnSubmit(h EventHandler, scope ...any) HTMLDel
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDel
+	OnWheel(h EventHandler, scope ...any) HTMLDel
 }
 
 // Del returns an HTML element that defines text that has been deleted from a document.
@@ -4363,7 +4363,7 @@ type HTMLDetails interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDetails
+	Text(v any) HTMLDetails
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDetails
@@ -4375,7 +4375,7 @@ type HTMLDetails interface {
 	AccessKey(v string) HTMLDetails
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDetails
+	Aria(k string, v any) HTMLDetails
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLDetails
@@ -4384,7 +4384,7 @@ type HTMLDetails interface {
 	ContentEditable(v bool) HTMLDetails
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDetails
+	DataSet(k string, v any) HTMLDetails
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLDetails
@@ -4426,103 +4426,103 @@ type HTMLDetails interface {
 	On(event string, h EventHandler, scope ...any) HTMLDetails
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDetails
+	OnBlur(h EventHandler, scope ...any) HTMLDetails
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDetails
+	OnChange(h EventHandler, scope ...any) HTMLDetails
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDetails
+	OnClick(h EventHandler, scope ...any) HTMLDetails
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDetails
+	OnContextMenu(h EventHandler, scope ...any) HTMLDetails
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDetails
+	OnCopy(h EventHandler, scope ...any) HTMLDetails
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDetails
+	OnCut(h EventHandler, scope ...any) HTMLDetails
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDetails
+	OnDblClick(h EventHandler, scope ...any) HTMLDetails
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDetails
+	OnDrag(h EventHandler, scope ...any) HTMLDetails
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDetails
+	OnDragEnd(h EventHandler, scope ...any) HTMLDetails
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDetails
+	OnDragEnter(h EventHandler, scope ...any) HTMLDetails
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDetails
+	OnDragLeave(h EventHandler, scope ...any) HTMLDetails
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDetails
+	OnDragOver(h EventHandler, scope ...any) HTMLDetails
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDetails
+	OnDragStart(h EventHandler, scope ...any) HTMLDetails
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDetails
+	OnDrop(h EventHandler, scope ...any) HTMLDetails
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDetails
+	OnFocus(h EventHandler, scope ...any) HTMLDetails
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDetails
+	OnInput(h EventHandler, scope ...any) HTMLDetails
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDetails
+	OnInvalid(h EventHandler, scope ...any) HTMLDetails
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDetails
+	OnKeyDown(h EventHandler, scope ...any) HTMLDetails
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDetails
+	OnKeyPress(h EventHandler, scope ...any) HTMLDetails
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDetails
+	OnKeyUp(h EventHandler, scope ...any) HTMLDetails
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDetails
+	OnMouseDown(h EventHandler, scope ...any) HTMLDetails
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDetails
+	OnMouseMove(h EventHandler, scope ...any) HTMLDetails
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDetails
+	OnMouseOut(h EventHandler, scope ...any) HTMLDetails
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDetails
+	OnMouseOver(h EventHandler, scope ...any) HTMLDetails
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDetails
+	OnMouseUp(h EventHandler, scope ...any) HTMLDetails
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDetails
+	OnPaste(h EventHandler, scope ...any) HTMLDetails
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDetails
+	OnReset(h EventHandler, scope ...any) HTMLDetails
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDetails
+	OnScroll(h EventHandler, scope ...any) HTMLDetails
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDetails
+	OnSearch(h EventHandler, scope ...any) HTMLDetails
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDetails
+	OnSelect(h EventHandler, scope ...any) HTMLDetails
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDetails
+	OnSubmit(h EventHandler, scope ...any) HTMLDetails
 
 	// OnToggle calls the given handler when the user opens or closes the details element.
-	OnToggle(h EventHandler, scope ...interface{}) HTMLDetails
+	OnToggle(h EventHandler, scope ...any) HTMLDetails
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDetails
+	OnWheel(h EventHandler, scope ...any) HTMLDetails
 }
 
 // Details returns an HTML element that defines additional details that the user can view or hide.
@@ -4538,7 +4538,7 @@ type HTMLDfn interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDfn
+	Text(v any) HTMLDfn
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDfn
@@ -4550,7 +4550,7 @@ type HTMLDfn interface {
 	AccessKey(v string) HTMLDfn
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDfn
+	Aria(k string, v any) HTMLDfn
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLDfn
@@ -4559,7 +4559,7 @@ type HTMLDfn interface {
 	ContentEditable(v bool) HTMLDfn
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDfn
+	DataSet(k string, v any) HTMLDfn
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLDfn
@@ -4598,100 +4598,100 @@ type HTMLDfn interface {
 	On(event string, h EventHandler, scope ...any) HTMLDfn
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDfn
+	OnBlur(h EventHandler, scope ...any) HTMLDfn
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDfn
+	OnChange(h EventHandler, scope ...any) HTMLDfn
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDfn
+	OnClick(h EventHandler, scope ...any) HTMLDfn
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDfn
+	OnContextMenu(h EventHandler, scope ...any) HTMLDfn
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDfn
+	OnCopy(h EventHandler, scope ...any) HTMLDfn
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDfn
+	OnCut(h EventHandler, scope ...any) HTMLDfn
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDfn
+	OnDblClick(h EventHandler, scope ...any) HTMLDfn
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDfn
+	OnDrag(h EventHandler, scope ...any) HTMLDfn
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDfn
+	OnDragEnd(h EventHandler, scope ...any) HTMLDfn
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDfn
+	OnDragEnter(h EventHandler, scope ...any) HTMLDfn
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDfn
+	OnDragLeave(h EventHandler, scope ...any) HTMLDfn
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDfn
+	OnDragOver(h EventHandler, scope ...any) HTMLDfn
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDfn
+	OnDragStart(h EventHandler, scope ...any) HTMLDfn
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDfn
+	OnDrop(h EventHandler, scope ...any) HTMLDfn
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDfn
+	OnFocus(h EventHandler, scope ...any) HTMLDfn
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDfn
+	OnInput(h EventHandler, scope ...any) HTMLDfn
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDfn
+	OnInvalid(h EventHandler, scope ...any) HTMLDfn
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDfn
+	OnKeyDown(h EventHandler, scope ...any) HTMLDfn
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDfn
+	OnKeyPress(h EventHandler, scope ...any) HTMLDfn
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDfn
+	OnKeyUp(h EventHandler, scope ...any) HTMLDfn
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDfn
+	OnMouseDown(h EventHandler, scope ...any) HTMLDfn
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDfn
+	OnMouseMove(h EventHandler, scope ...any) HTMLDfn
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDfn
+	OnMouseOut(h EventHandler, scope ...any) HTMLDfn
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDfn
+	OnMouseOver(h EventHandler, scope ...any) HTMLDfn
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDfn
+	OnMouseUp(h EventHandler, scope ...any) HTMLDfn
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDfn
+	OnPaste(h EventHandler, scope ...any) HTMLDfn
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDfn
+	OnReset(h EventHandler, scope ...any) HTMLDfn
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDfn
+	OnScroll(h EventHandler, scope ...any) HTMLDfn
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDfn
+	OnSearch(h EventHandler, scope ...any) HTMLDfn
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDfn
+	OnSelect(h EventHandler, scope ...any) HTMLDfn
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDfn
+	OnSubmit(h EventHandler, scope ...any) HTMLDfn
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDfn
+	OnWheel(h EventHandler, scope ...any) HTMLDfn
 }
 
 // Dfn returns an HTML element that represents the defining instance of a term.
@@ -4707,7 +4707,7 @@ type HTMLDialog interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDialog
+	Text(v any) HTMLDialog
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDialog
@@ -4719,7 +4719,7 @@ type HTMLDialog interface {
 	AccessKey(v string) HTMLDialog
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDialog
+	Aria(k string, v any) HTMLDialog
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLDialog
@@ -4728,7 +4728,7 @@ type HTMLDialog interface {
 	ContentEditable(v bool) HTMLDialog
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDialog
+	DataSet(k string, v any) HTMLDialog
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLDialog
@@ -4770,100 +4770,100 @@ type HTMLDialog interface {
 	On(event string, h EventHandler, scope ...any) HTMLDialog
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDialog
+	OnBlur(h EventHandler, scope ...any) HTMLDialog
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDialog
+	OnChange(h EventHandler, scope ...any) HTMLDialog
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDialog
+	OnClick(h EventHandler, scope ...any) HTMLDialog
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDialog
+	OnContextMenu(h EventHandler, scope ...any) HTMLDialog
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDialog
+	OnCopy(h EventHandler, scope ...any) HTMLDialog
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDialog
+	OnCut(h EventHandler, scope ...any) HTMLDialog
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDialog
+	OnDblClick(h EventHandler, scope ...any) HTMLDialog
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDialog
+	OnDrag(h EventHandler, scope ...any) HTMLDialog
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDialog
+	OnDragEnd(h EventHandler, scope ...any) HTMLDialog
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDialog
+	OnDragEnter(h EventHandler, scope ...any) HTMLDialog
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDialog
+	OnDragLeave(h EventHandler, scope ...any) HTMLDialog
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDialog
+	OnDragOver(h EventHandler, scope ...any) HTMLDialog
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDialog
+	OnDragStart(h EventHandler, scope ...any) HTMLDialog
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDialog
+	OnDrop(h EventHandler, scope ...any) HTMLDialog
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDialog
+	OnFocus(h EventHandler, scope ...any) HTMLDialog
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDialog
+	OnInput(h EventHandler, scope ...any) HTMLDialog
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDialog
+	OnInvalid(h EventHandler, scope ...any) HTMLDialog
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDialog
+	OnKeyDown(h EventHandler, scope ...any) HTMLDialog
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDialog
+	OnKeyPress(h EventHandler, scope ...any) HTMLDialog
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDialog
+	OnKeyUp(h EventHandler, scope ...any) HTMLDialog
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDialog
+	OnMouseDown(h EventHandler, scope ...any) HTMLDialog
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDialog
+	OnMouseMove(h EventHandler, scope ...any) HTMLDialog
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDialog
+	OnMouseOut(h EventHandler, scope ...any) HTMLDialog
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDialog
+	OnMouseOver(h EventHandler, scope ...any) HTMLDialog
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDialog
+	OnMouseUp(h EventHandler, scope ...any) HTMLDialog
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDialog
+	OnPaste(h EventHandler, scope ...any) HTMLDialog
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDialog
+	OnReset(h EventHandler, scope ...any) HTMLDialog
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDialog
+	OnScroll(h EventHandler, scope ...any) HTMLDialog
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDialog
+	OnSearch(h EventHandler, scope ...any) HTMLDialog
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDialog
+	OnSelect(h EventHandler, scope ...any) HTMLDialog
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDialog
+	OnSubmit(h EventHandler, scope ...any) HTMLDialog
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDialog
+	OnWheel(h EventHandler, scope ...any) HTMLDialog
 }
 
 // Dialog returns an HTML element that defines a dialog box or window.
@@ -4879,7 +4879,7 @@ type HTMLDiv interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDiv
+	Text(v any) HTMLDiv
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDiv
@@ -4891,7 +4891,7 @@ type HTMLDiv interface {
 	AccessKey(v string) HTMLDiv
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDiv
+	Aria(k string, v any) HTMLDiv
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLDiv
@@ -4900,7 +4900,7 @@ type HTMLDiv interface {
 	ContentEditable(v bool) HTMLDiv
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDiv
+	DataSet(k string, v any) HTMLDiv
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLDiv
@@ -4939,100 +4939,100 @@ type HTMLDiv interface {
 	On(event string, h EventHandler, scope ...any) HTMLDiv
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDiv
+	OnBlur(h EventHandler, scope ...any) HTMLDiv
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDiv
+	OnChange(h EventHandler, scope ...any) HTMLDiv
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDiv
+	OnClick(h EventHandler, scope ...any) HTMLDiv
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDiv
+	OnContextMenu(h EventHandler, scope ...any) HTMLDiv
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDiv
+	OnCopy(h EventHandler, scope ...any) HTMLDiv
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDiv
+	OnCut(h EventHandler, scope ...any) HTMLDiv
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDiv
+	OnDblClick(h EventHandler, scope ...any) HTMLDiv
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDiv
+	OnDrag(h EventHandler, scope ...any) HTMLDiv
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDiv
+	OnDragEnd(h EventHandler, scope ...any) HTMLDiv
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDiv
+	OnDragEnter(h EventHandler, scope ...any) HTMLDiv
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDiv
+	OnDragLeave(h EventHandler, scope ...any) HTMLDiv
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDiv
+	OnDragOver(h EventHandler, scope ...any) HTMLDiv
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDiv
+	OnDragStart(h EventHandler, scope ...any) HTMLDiv
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDiv
+	OnDrop(h EventHandler, scope ...any) HTMLDiv
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDiv
+	OnFocus(h EventHandler, scope ...any) HTMLDiv
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDiv
+	OnInput(h EventHandler, scope ...any) HTMLDiv
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDiv
+	OnInvalid(h EventHandler, scope ...any) HTMLDiv
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDiv
+	OnKeyDown(h EventHandler, scope ...any) HTMLDiv
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDiv
+	OnKeyPress(h EventHandler, scope ...any) HTMLDiv
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDiv
+	OnKeyUp(h EventHandler, scope ...any) HTMLDiv
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDiv
+	OnMouseDown(h EventHandler, scope ...any) HTMLDiv
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDiv
+	OnMouseMove(h EventHandler, scope ...any) HTMLDiv
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDiv
+	OnMouseOut(h EventHandler, scope ...any) HTMLDiv
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDiv
+	OnMouseOver(h EventHandler, scope ...any) HTMLDiv
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDiv
+	OnMouseUp(h EventHandler, scope ...any) HTMLDiv
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDiv
+	OnPaste(h EventHandler, scope ...any) HTMLDiv
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDiv
+	OnReset(h EventHandler, scope ...any) HTMLDiv
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDiv
+	OnScroll(h EventHandler, scope ...any) HTMLDiv
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDiv
+	OnSearch(h EventHandler, scope ...any) HTMLDiv
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDiv
+	OnSelect(h EventHandler, scope ...any) HTMLDiv
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDiv
+	OnSubmit(h EventHandler, scope ...any) HTMLDiv
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDiv
+	OnWheel(h EventHandler, scope ...any) HTMLDiv
 }
 
 // Div returns an HTML element that defines a section in a document.
@@ -5048,7 +5048,7 @@ type HTMLDl interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDl
+	Text(v any) HTMLDl
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDl
@@ -5060,7 +5060,7 @@ type HTMLDl interface {
 	AccessKey(v string) HTMLDl
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDl
+	Aria(k string, v any) HTMLDl
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLDl
@@ -5069,7 +5069,7 @@ type HTMLDl interface {
 	ContentEditable(v bool) HTMLDl
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDl
+	DataSet(k string, v any) HTMLDl
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLDl
@@ -5108,100 +5108,100 @@ type HTMLDl interface {
 	On(event string, h EventHandler, scope ...any) HTMLDl
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDl
+	OnBlur(h EventHandler, scope ...any) HTMLDl
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDl
+	OnChange(h EventHandler, scope ...any) HTMLDl
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDl
+	OnClick(h EventHandler, scope ...any) HTMLDl
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDl
+	OnContextMenu(h EventHandler, scope ...any) HTMLDl
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDl
+	OnCopy(h EventHandler, scope ...any) HTMLDl
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDl
+	OnCut(h EventHandler, scope ...any) HTMLDl
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDl
+	OnDblClick(h EventHandler, scope ...any) HTMLDl
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDl
+	OnDrag(h EventHandler, scope ...any) HTMLDl
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDl
+	OnDragEnd(h EventHandler, scope ...any) HTMLDl
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDl
+	OnDragEnter(h EventHandler, scope ...any) HTMLDl
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDl
+	OnDragLeave(h EventHandler, scope ...any) HTMLDl
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDl
+	OnDragOver(h EventHandler, scope ...any) HTMLDl
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDl
+	OnDragStart(h EventHandler, scope ...any) HTMLDl
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDl
+	OnDrop(h EventHandler, scope ...any) HTMLDl
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDl
+	OnFocus(h EventHandler, scope ...any) HTMLDl
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDl
+	OnInput(h EventHandler, scope ...any) HTMLDl
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDl
+	OnInvalid(h EventHandler, scope ...any) HTMLDl
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDl
+	OnKeyDown(h EventHandler, scope ...any) HTMLDl
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDl
+	OnKeyPress(h EventHandler, scope ...any) HTMLDl
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDl
+	OnKeyUp(h EventHandler, scope ...any) HTMLDl
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDl
+	OnMouseDown(h EventHandler, scope ...any) HTMLDl
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDl
+	OnMouseMove(h EventHandler, scope ...any) HTMLDl
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDl
+	OnMouseOut(h EventHandler, scope ...any) HTMLDl
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDl
+	OnMouseOver(h EventHandler, scope ...any) HTMLDl
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDl
+	OnMouseUp(h EventHandler, scope ...any) HTMLDl
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDl
+	OnPaste(h EventHandler, scope ...any) HTMLDl
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDl
+	OnReset(h EventHandler, scope ...any) HTMLDl
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDl
+	OnScroll(h EventHandler, scope ...any) HTMLDl
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDl
+	OnSearch(h EventHandler, scope ...any) HTMLDl
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDl
+	OnSelect(h EventHandler, scope ...any) HTMLDl
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDl
+	OnSubmit(h EventHandler, scope ...any) HTMLDl
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDl
+	OnWheel(h EventHandler, scope ...any) HTMLDl
 }
 
 // Dl returns an HTML element that defines a description list.
@@ -5217,7 +5217,7 @@ type HTMLDt interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLDt
+	Text(v any) HTMLDt
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLDt
@@ -5229,7 +5229,7 @@ type HTMLDt interface {
 	AccessKey(v string) HTMLDt
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLDt
+	Aria(k string, v any) HTMLDt
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLDt
@@ -5238,7 +5238,7 @@ type HTMLDt interface {
 	ContentEditable(v bool) HTMLDt
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLDt
+	DataSet(k string, v any) HTMLDt
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLDt
@@ -5277,100 +5277,100 @@ type HTMLDt interface {
 	On(event string, h EventHandler, scope ...any) HTMLDt
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLDt
+	OnBlur(h EventHandler, scope ...any) HTMLDt
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLDt
+	OnChange(h EventHandler, scope ...any) HTMLDt
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLDt
+	OnClick(h EventHandler, scope ...any) HTMLDt
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLDt
+	OnContextMenu(h EventHandler, scope ...any) HTMLDt
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLDt
+	OnCopy(h EventHandler, scope ...any) HTMLDt
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLDt
+	OnCut(h EventHandler, scope ...any) HTMLDt
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLDt
+	OnDblClick(h EventHandler, scope ...any) HTMLDt
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLDt
+	OnDrag(h EventHandler, scope ...any) HTMLDt
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLDt
+	OnDragEnd(h EventHandler, scope ...any) HTMLDt
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLDt
+	OnDragEnter(h EventHandler, scope ...any) HTMLDt
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLDt
+	OnDragLeave(h EventHandler, scope ...any) HTMLDt
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLDt
+	OnDragOver(h EventHandler, scope ...any) HTMLDt
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLDt
+	OnDragStart(h EventHandler, scope ...any) HTMLDt
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLDt
+	OnDrop(h EventHandler, scope ...any) HTMLDt
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLDt
+	OnFocus(h EventHandler, scope ...any) HTMLDt
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLDt
+	OnInput(h EventHandler, scope ...any) HTMLDt
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLDt
+	OnInvalid(h EventHandler, scope ...any) HTMLDt
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLDt
+	OnKeyDown(h EventHandler, scope ...any) HTMLDt
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLDt
+	OnKeyPress(h EventHandler, scope ...any) HTMLDt
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLDt
+	OnKeyUp(h EventHandler, scope ...any) HTMLDt
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLDt
+	OnMouseDown(h EventHandler, scope ...any) HTMLDt
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLDt
+	OnMouseMove(h EventHandler, scope ...any) HTMLDt
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLDt
+	OnMouseOut(h EventHandler, scope ...any) HTMLDt
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLDt
+	OnMouseOver(h EventHandler, scope ...any) HTMLDt
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLDt
+	OnMouseUp(h EventHandler, scope ...any) HTMLDt
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLDt
+	OnPaste(h EventHandler, scope ...any) HTMLDt
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLDt
+	OnReset(h EventHandler, scope ...any) HTMLDt
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLDt
+	OnScroll(h EventHandler, scope ...any) HTMLDt
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLDt
+	OnSearch(h EventHandler, scope ...any) HTMLDt
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLDt
+	OnSelect(h EventHandler, scope ...any) HTMLDt
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLDt
+	OnSubmit(h EventHandler, scope ...any) HTMLDt
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLDt
+	OnWheel(h EventHandler, scope ...any) HTMLDt
 }
 
 // Dt returns an HTML element that defines a term/name in a description list.
@@ -5386,7 +5386,7 @@ type HTMLEm interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLEm
+	Text(v any) HTMLEm
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLEm
@@ -5398,7 +5398,7 @@ type HTMLEm interface {
 	AccessKey(v string) HTMLEm
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLEm
+	Aria(k string, v any) HTMLEm
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLEm
@@ -5407,7 +5407,7 @@ type HTMLEm interface {
 	ContentEditable(v bool) HTMLEm
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLEm
+	DataSet(k string, v any) HTMLEm
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLEm
@@ -5446,100 +5446,100 @@ type HTMLEm interface {
 	On(event string, h EventHandler, scope ...any) HTMLEm
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLEm
+	OnBlur(h EventHandler, scope ...any) HTMLEm
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLEm
+	OnChange(h EventHandler, scope ...any) HTMLEm
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLEm
+	OnClick(h EventHandler, scope ...any) HTMLEm
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLEm
+	OnContextMenu(h EventHandler, scope ...any) HTMLEm
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLEm
+	OnCopy(h EventHandler, scope ...any) HTMLEm
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLEm
+	OnCut(h EventHandler, scope ...any) HTMLEm
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLEm
+	OnDblClick(h EventHandler, scope ...any) HTMLEm
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLEm
+	OnDrag(h EventHandler, scope ...any) HTMLEm
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLEm
+	OnDragEnd(h EventHandler, scope ...any) HTMLEm
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLEm
+	OnDragEnter(h EventHandler, scope ...any) HTMLEm
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLEm
+	OnDragLeave(h EventHandler, scope ...any) HTMLEm
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLEm
+	OnDragOver(h EventHandler, scope ...any) HTMLEm
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLEm
+	OnDragStart(h EventHandler, scope ...any) HTMLEm
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLEm
+	OnDrop(h EventHandler, scope ...any) HTMLEm
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLEm
+	OnFocus(h EventHandler, scope ...any) HTMLEm
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLEm
+	OnInput(h EventHandler, scope ...any) HTMLEm
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLEm
+	OnInvalid(h EventHandler, scope ...any) HTMLEm
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLEm
+	OnKeyDown(h EventHandler, scope ...any) HTMLEm
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLEm
+	OnKeyPress(h EventHandler, scope ...any) HTMLEm
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLEm
+	OnKeyUp(h EventHandler, scope ...any) HTMLEm
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLEm
+	OnMouseDown(h EventHandler, scope ...any) HTMLEm
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLEm
+	OnMouseMove(h EventHandler, scope ...any) HTMLEm
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLEm
+	OnMouseOut(h EventHandler, scope ...any) HTMLEm
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLEm
+	OnMouseOver(h EventHandler, scope ...any) HTMLEm
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLEm
+	OnMouseUp(h EventHandler, scope ...any) HTMLEm
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLEm
+	OnPaste(h EventHandler, scope ...any) HTMLEm
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLEm
+	OnReset(h EventHandler, scope ...any) HTMLEm
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLEm
+	OnScroll(h EventHandler, scope ...any) HTMLEm
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLEm
+	OnSearch(h EventHandler, scope ...any) HTMLEm
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLEm
+	OnSelect(h EventHandler, scope ...any) HTMLEm
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLEm
+	OnSubmit(h EventHandler, scope ...any) HTMLEm
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLEm
+	OnWheel(h EventHandler, scope ...any) HTMLEm
 }
 
 // Em returns an HTML element that defines emphasized text.
@@ -5561,7 +5561,7 @@ type HTMLEmbed interface {
 	AccessKey(v string) HTMLEmbed
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLEmbed
+	Aria(k string, v any) HTMLEmbed
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLEmbed
@@ -5570,7 +5570,7 @@ type HTMLEmbed interface {
 	ContentEditable(v bool) HTMLEmbed
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLEmbed
+	DataSet(k string, v any) HTMLEmbed
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLEmbed
@@ -5621,169 +5621,169 @@ type HTMLEmbed interface {
 	On(event string, h EventHandler, scope ...any) HTMLEmbed
 
 	// OnAbort calls the given handler on abort.
-	OnAbort(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnAbort(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnBlur(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnCanPlay calls the given handler when a file is ready to start playing (when it has buffered enough to begin).
-	OnCanPlay(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnCanPlay(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnCanPlayThrough calls the given handler when a file can be played all the way to the end without pausing for buffering.
-	OnCanPlayThrough(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnCanPlayThrough(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnChange(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnClick(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnContextMenu(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnCopy(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnCueChange calls the given handler when the cue changes in a track element.
-	OnCueChange(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnCueChange(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnCut(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDblClick(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDrag(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDragEnd(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDragEnter(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDragLeave(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDragOver(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDragStart(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDrop(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnDurationChange calls the given handler when the length of the media changes.
-	OnDurationChange(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnDurationChange(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnEmptied calls the given handler when something bad happens and the file is suddenly unavailable (like unexpectedly disconnects).
-	OnEmptied(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnEmptied(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnEnded calls the given handler when the media has reach the end.
-	OnEnded(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnEnded(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnError calls the given handler when an error occurs.
-	OnError(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnError(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnFocus(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnInput(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnInvalid(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnKeyDown(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnKeyPress(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnKeyUp(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnLoadStart calls the given handler just as the file begins to load before anything is actually loaded.
-	OnLoadStart(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnLoadStart(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnLoadedData calls the given handler when media data is loaded.
-	OnLoadedData(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnLoadedData(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnLoadedMetaData(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnMouseDown(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnMouseMove(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnMouseOut(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnMouseOver(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnMouseUp(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnPaste(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnPause calls the given handler when the media is paused either by the user or programmatically.
-	OnPause(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnPause(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnPlay calls the given handler when the media is ready to start playing.
-	OnPlay(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnPlay(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnPlaying calls the given handler when the media actually has started playing.
-	OnPlaying(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnPlaying(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnProgress calls the given handler when the browser is in the process of getting the media data.
-	OnProgress(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnProgress(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnRateChange calls the given handler each time the playback rate changes (like when a user switches to a slow motion or fast forward mode).
-	OnRateChange(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnRateChange(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnReset(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnScroll(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnSearch(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnSeeked calls the given handler when the seeking attribute is set to false indicating that seeking has ended.
-	OnSeeked(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnSeeked(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnSeeking calls the given handler when the seeking attribute is set to true indicating that seeking is active.
-	OnSeeking(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnSeeking(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnSelect(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnStalled calls the given handler when the browser is unable to fetch the media data for whatever reason.
-	OnStalled(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnStalled(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnSubmit(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnSuspend calls the given handler when fetching the media data is stopped before it is completely loaded for whatever reason.
-	OnSuspend(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnSuspend(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnTimeUpdate calls the given handler when the playing position has changed (like when the user fast forwards to a different point in the media).
-	OnTimeUpdate(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnTimeUpdate(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnVolumeChange calls the given handler each time the volume is changed which (includes setting the volume to "mute").
-	OnVolumeChange(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnVolumeChange(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnWaiting calls the given handler when the media has paused but is expected to resume (like when the media pauses to buffer more data).
-	OnWaiting(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnWaiting(h EventHandler, scope ...any) HTMLEmbed
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLEmbed
+	OnWheel(h EventHandler, scope ...any) HTMLEmbed
 }
 
 // Embed returns an HTML element that defines a container for an external (non-HTML) application.
@@ -5799,7 +5799,7 @@ type HTMLFieldSet interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLFieldSet
+	Text(v any) HTMLFieldSet
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLFieldSet
@@ -5811,7 +5811,7 @@ type HTMLFieldSet interface {
 	AccessKey(v string) HTMLFieldSet
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLFieldSet
+	Aria(k string, v any) HTMLFieldSet
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLFieldSet
@@ -5820,7 +5820,7 @@ type HTMLFieldSet interface {
 	ContentEditable(v bool) HTMLFieldSet
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLFieldSet
+	DataSet(k string, v any) HTMLFieldSet
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLFieldSet
@@ -5868,100 +5868,100 @@ type HTMLFieldSet interface {
 	On(event string, h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnBlur(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnChange(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnClick(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnContextMenu(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnCopy(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnCut(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnDblClick(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnDrag(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnDragEnd(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnDragEnter(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnDragLeave(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnDragOver(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnDragStart(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnDrop(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnFocus(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnInput(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnInvalid(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnKeyDown(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnKeyPress(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnKeyUp(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnMouseDown(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnMouseMove(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnMouseOut(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnMouseOver(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnMouseUp(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnPaste(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnReset(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnScroll(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnSearch(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnSelect(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnSubmit(h EventHandler, scope ...any) HTMLFieldSet
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLFieldSet
+	OnWheel(h EventHandler, scope ...any) HTMLFieldSet
 }
 
 // FieldSet returns an HTML element that groups related elements in a form.
@@ -5977,7 +5977,7 @@ type HTMLFigCaption interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLFigCaption
+	Text(v any) HTMLFigCaption
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLFigCaption
@@ -5989,7 +5989,7 @@ type HTMLFigCaption interface {
 	AccessKey(v string) HTMLFigCaption
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLFigCaption
+	Aria(k string, v any) HTMLFigCaption
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLFigCaption
@@ -5998,7 +5998,7 @@ type HTMLFigCaption interface {
 	ContentEditable(v bool) HTMLFigCaption
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLFigCaption
+	DataSet(k string, v any) HTMLFigCaption
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLFigCaption
@@ -6037,100 +6037,100 @@ type HTMLFigCaption interface {
 	On(event string, h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnBlur(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnChange(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnClick(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnContextMenu(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnCopy(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnCut(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnDblClick(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnDrag(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnDragEnd(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnDragEnter(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnDragLeave(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnDragOver(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnDragStart(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnDrop(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnFocus(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnInput(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnInvalid(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnKeyDown(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnKeyPress(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnKeyUp(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnMouseDown(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnMouseMove(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnMouseOut(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnMouseOver(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnMouseUp(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnPaste(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnReset(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnScroll(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnSearch(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnSelect(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnSubmit(h EventHandler, scope ...any) HTMLFigCaption
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLFigCaption
+	OnWheel(h EventHandler, scope ...any) HTMLFigCaption
 }
 
 // FigCaption returns an HTML element that defines a caption for a figure element.
@@ -6146,7 +6146,7 @@ type HTMLFigure interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLFigure
+	Text(v any) HTMLFigure
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLFigure
@@ -6158,7 +6158,7 @@ type HTMLFigure interface {
 	AccessKey(v string) HTMLFigure
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLFigure
+	Aria(k string, v any) HTMLFigure
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLFigure
@@ -6167,7 +6167,7 @@ type HTMLFigure interface {
 	ContentEditable(v bool) HTMLFigure
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLFigure
+	DataSet(k string, v any) HTMLFigure
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLFigure
@@ -6206,100 +6206,100 @@ type HTMLFigure interface {
 	On(event string, h EventHandler, scope ...any) HTMLFigure
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLFigure
+	OnBlur(h EventHandler, scope ...any) HTMLFigure
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLFigure
+	OnChange(h EventHandler, scope ...any) HTMLFigure
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLFigure
+	OnClick(h EventHandler, scope ...any) HTMLFigure
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLFigure
+	OnContextMenu(h EventHandler, scope ...any) HTMLFigure
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLFigure
+	OnCopy(h EventHandler, scope ...any) HTMLFigure
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLFigure
+	OnCut(h EventHandler, scope ...any) HTMLFigure
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLFigure
+	OnDblClick(h EventHandler, scope ...any) HTMLFigure
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLFigure
+	OnDrag(h EventHandler, scope ...any) HTMLFigure
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLFigure
+	OnDragEnd(h EventHandler, scope ...any) HTMLFigure
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLFigure
+	OnDragEnter(h EventHandler, scope ...any) HTMLFigure
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLFigure
+	OnDragLeave(h EventHandler, scope ...any) HTMLFigure
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLFigure
+	OnDragOver(h EventHandler, scope ...any) HTMLFigure
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLFigure
+	OnDragStart(h EventHandler, scope ...any) HTMLFigure
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLFigure
+	OnDrop(h EventHandler, scope ...any) HTMLFigure
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLFigure
+	OnFocus(h EventHandler, scope ...any) HTMLFigure
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLFigure
+	OnInput(h EventHandler, scope ...any) HTMLFigure
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLFigure
+	OnInvalid(h EventHandler, scope ...any) HTMLFigure
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLFigure
+	OnKeyDown(h EventHandler, scope ...any) HTMLFigure
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLFigure
+	OnKeyPress(h EventHandler, scope ...any) HTMLFigure
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLFigure
+	OnKeyUp(h EventHandler, scope ...any) HTMLFigure
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLFigure
+	OnMouseDown(h EventHandler, scope ...any) HTMLFigure
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLFigure
+	OnMouseMove(h EventHandler, scope ...any) HTMLFigure
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLFigure
+	OnMouseOut(h EventHandler, scope ...any) HTMLFigure
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLFigure
+	OnMouseOver(h EventHandler, scope ...any) HTMLFigure
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLFigure
+	OnMouseUp(h EventHandler, scope ...any) HTMLFigure
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLFigure
+	OnPaste(h EventHandler, scope ...any) HTMLFigure
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLFigure
+	OnReset(h EventHandler, scope ...any) HTMLFigure
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLFigure
+	OnScroll(h EventHandler, scope ...any) HTMLFigure
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLFigure
+	OnSearch(h EventHandler, scope ...any) HTMLFigure
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLFigure
+	OnSelect(h EventHandler, scope ...any) HTMLFigure
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLFigure
+	OnSubmit(h EventHandler, scope ...any) HTMLFigure
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLFigure
+	OnWheel(h EventHandler, scope ...any) HTMLFigure
 }
 
 // Figure returns an HTML element that specifies self-contained content.
@@ -6315,7 +6315,7 @@ type HTMLFooter interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLFooter
+	Text(v any) HTMLFooter
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLFooter
@@ -6327,7 +6327,7 @@ type HTMLFooter interface {
 	AccessKey(v string) HTMLFooter
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLFooter
+	Aria(k string, v any) HTMLFooter
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLFooter
@@ -6336,7 +6336,7 @@ type HTMLFooter interface {
 	ContentEditable(v bool) HTMLFooter
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLFooter
+	DataSet(k string, v any) HTMLFooter
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLFooter
@@ -6375,100 +6375,100 @@ type HTMLFooter interface {
 	On(event string, h EventHandler, scope ...any) HTMLFooter
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLFooter
+	OnBlur(h EventHandler, scope ...any) HTMLFooter
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLFooter
+	OnChange(h EventHandler, scope ...any) HTMLFooter
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLFooter
+	OnClick(h EventHandler, scope ...any) HTMLFooter
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLFooter
+	OnContextMenu(h EventHandler, scope ...any) HTMLFooter
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLFooter
+	OnCopy(h EventHandler, scope ...any) HTMLFooter
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLFooter
+	OnCut(h EventHandler, scope ...any) HTMLFooter
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLFooter
+	OnDblClick(h EventHandler, scope ...any) HTMLFooter
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLFooter
+	OnDrag(h EventHandler, scope ...any) HTMLFooter
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLFooter
+	OnDragEnd(h EventHandler, scope ...any) HTMLFooter
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLFooter
+	OnDragEnter(h EventHandler, scope ...any) HTMLFooter
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLFooter
+	OnDragLeave(h EventHandler, scope ...any) HTMLFooter
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLFooter
+	OnDragOver(h EventHandler, scope ...any) HTMLFooter
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLFooter
+	OnDragStart(h EventHandler, scope ...any) HTMLFooter
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLFooter
+	OnDrop(h EventHandler, scope ...any) HTMLFooter
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLFooter
+	OnFocus(h EventHandler, scope ...any) HTMLFooter
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLFooter
+	OnInput(h EventHandler, scope ...any) HTMLFooter
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLFooter
+	OnInvalid(h EventHandler, scope ...any) HTMLFooter
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLFooter
+	OnKeyDown(h EventHandler, scope ...any) HTMLFooter
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLFooter
+	OnKeyPress(h EventHandler, scope ...any) HTMLFooter
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLFooter
+	OnKeyUp(h EventHandler, scope ...any) HTMLFooter
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLFooter
+	OnMouseDown(h EventHandler, scope ...any) HTMLFooter
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLFooter
+	OnMouseMove(h EventHandler, scope ...any) HTMLFooter
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLFooter
+	OnMouseOut(h EventHandler, scope ...any) HTMLFooter
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLFooter
+	OnMouseOver(h EventHandler, scope ...any) HTMLFooter
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLFooter
+	OnMouseUp(h EventHandler, scope ...any) HTMLFooter
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLFooter
+	OnPaste(h EventHandler, scope ...any) HTMLFooter
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLFooter
+	OnReset(h EventHandler, scope ...any) HTMLFooter
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLFooter
+	OnScroll(h EventHandler, scope ...any) HTMLFooter
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLFooter
+	OnSearch(h EventHandler, scope ...any) HTMLFooter
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLFooter
+	OnSelect(h EventHandler, scope ...any) HTMLFooter
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLFooter
+	OnSubmit(h EventHandler, scope ...any) HTMLFooter
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLFooter
+	OnWheel(h EventHandler, scope ...any) HTMLFooter
 }
 
 // Footer returns an HTML element that defines a footer for a document or section.
@@ -6484,7 +6484,7 @@ type HTMLForm interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLForm
+	Text(v any) HTMLForm
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLForm
@@ -6502,7 +6502,7 @@ type HTMLForm interface {
 	Action(v string) HTMLForm
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLForm
+	Aria(k string, v any) HTMLForm
 
 	// AutoComplete specifies whether the element should have autocomplete enabled.
 	AutoComplete(v bool) HTMLForm
@@ -6514,7 +6514,7 @@ type HTMLForm interface {
 	ContentEditable(v bool) HTMLForm
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLForm
+	DataSet(k string, v any) HTMLForm
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLForm
@@ -6568,100 +6568,100 @@ type HTMLForm interface {
 	On(event string, h EventHandler, scope ...any) HTMLForm
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLForm
+	OnBlur(h EventHandler, scope ...any) HTMLForm
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLForm
+	OnChange(h EventHandler, scope ...any) HTMLForm
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLForm
+	OnClick(h EventHandler, scope ...any) HTMLForm
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLForm
+	OnContextMenu(h EventHandler, scope ...any) HTMLForm
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLForm
+	OnCopy(h EventHandler, scope ...any) HTMLForm
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLForm
+	OnCut(h EventHandler, scope ...any) HTMLForm
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLForm
+	OnDblClick(h EventHandler, scope ...any) HTMLForm
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLForm
+	OnDrag(h EventHandler, scope ...any) HTMLForm
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLForm
+	OnDragEnd(h EventHandler, scope ...any) HTMLForm
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLForm
+	OnDragEnter(h EventHandler, scope ...any) HTMLForm
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLForm
+	OnDragLeave(h EventHandler, scope ...any) HTMLForm
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLForm
+	OnDragOver(h EventHandler, scope ...any) HTMLForm
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLForm
+	OnDragStart(h EventHandler, scope ...any) HTMLForm
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLForm
+	OnDrop(h EventHandler, scope ...any) HTMLForm
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLForm
+	OnFocus(h EventHandler, scope ...any) HTMLForm
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLForm
+	OnInput(h EventHandler, scope ...any) HTMLForm
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLForm
+	OnInvalid(h EventHandler, scope ...any) HTMLForm
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLForm
+	OnKeyDown(h EventHandler, scope ...any) HTMLForm
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLForm
+	OnKeyPress(h EventHandler, scope ...any) HTMLForm
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLForm
+	OnKeyUp(h EventHandler, scope ...any) HTMLForm
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLForm
+	OnMouseDown(h EventHandler, scope ...any) HTMLForm
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLForm
+	OnMouseMove(h EventHandler, scope ...any) HTMLForm
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLForm
+	OnMouseOut(h EventHandler, scope ...any) HTMLForm
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLForm
+	OnMouseOver(h EventHandler, scope ...any) HTMLForm
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLForm
+	OnMouseUp(h EventHandler, scope ...any) HTMLForm
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLForm
+	OnPaste(h EventHandler, scope ...any) HTMLForm
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLForm
+	OnReset(h EventHandler, scope ...any) HTMLForm
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLForm
+	OnScroll(h EventHandler, scope ...any) HTMLForm
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLForm
+	OnSearch(h EventHandler, scope ...any) HTMLForm
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLForm
+	OnSelect(h EventHandler, scope ...any) HTMLForm
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLForm
+	OnSubmit(h EventHandler, scope ...any) HTMLForm
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLForm
+	OnWheel(h EventHandler, scope ...any) HTMLForm
 }
 
 // Form returns an HTML element that defines an HTML form for user input.
@@ -6677,7 +6677,7 @@ type HTMLH1 interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLH1
+	Text(v any) HTMLH1
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLH1
@@ -6689,7 +6689,7 @@ type HTMLH1 interface {
 	AccessKey(v string) HTMLH1
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLH1
+	Aria(k string, v any) HTMLH1
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLH1
@@ -6698,7 +6698,7 @@ type HTMLH1 interface {
 	ContentEditable(v bool) HTMLH1
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLH1
+	DataSet(k string, v any) HTMLH1
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLH1
@@ -6737,100 +6737,100 @@ type HTMLH1 interface {
 	On(event string, h EventHandler, scope ...any) HTMLH1
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLH1
+	OnBlur(h EventHandler, scope ...any) HTMLH1
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLH1
+	OnChange(h EventHandler, scope ...any) HTMLH1
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLH1
+	OnClick(h EventHandler, scope ...any) HTMLH1
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLH1
+	OnContextMenu(h EventHandler, scope ...any) HTMLH1
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLH1
+	OnCopy(h EventHandler, scope ...any) HTMLH1
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLH1
+	OnCut(h EventHandler, scope ...any) HTMLH1
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLH1
+	OnDblClick(h EventHandler, scope ...any) HTMLH1
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLH1
+	OnDrag(h EventHandler, scope ...any) HTMLH1
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLH1
+	OnDragEnd(h EventHandler, scope ...any) HTMLH1
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLH1
+	OnDragEnter(h EventHandler, scope ...any) HTMLH1
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLH1
+	OnDragLeave(h EventHandler, scope ...any) HTMLH1
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLH1
+	OnDragOver(h EventHandler, scope ...any) HTMLH1
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLH1
+	OnDragStart(h EventHandler, scope ...any) HTMLH1
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLH1
+	OnDrop(h EventHandler, scope ...any) HTMLH1
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLH1
+	OnFocus(h EventHandler, scope ...any) HTMLH1
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLH1
+	OnInput(h EventHandler, scope ...any) HTMLH1
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLH1
+	OnInvalid(h EventHandler, scope ...any) HTMLH1
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLH1
+	OnKeyDown(h EventHandler, scope ...any) HTMLH1
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLH1
+	OnKeyPress(h EventHandler, scope ...any) HTMLH1
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLH1
+	OnKeyUp(h EventHandler, scope ...any) HTMLH1
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLH1
+	OnMouseDown(h EventHandler, scope ...any) HTMLH1
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLH1
+	OnMouseMove(h EventHandler, scope ...any) HTMLH1
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLH1
+	OnMouseOut(h EventHandler, scope ...any) HTMLH1
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLH1
+	OnMouseOver(h EventHandler, scope ...any) HTMLH1
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLH1
+	OnMouseUp(h EventHandler, scope ...any) HTMLH1
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLH1
+	OnPaste(h EventHandler, scope ...any) HTMLH1
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLH1
+	OnReset(h EventHandler, scope ...any) HTMLH1
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLH1
+	OnScroll(h EventHandler, scope ...any) HTMLH1
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLH1
+	OnSearch(h EventHandler, scope ...any) HTMLH1
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLH1
+	OnSelect(h EventHandler, scope ...any) HTMLH1
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLH1
+	OnSubmit(h EventHandler, scope ...any) HTMLH1
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLH1
+	OnWheel(h EventHandler, scope ...any) HTMLH1
 }
 
 // H1 returns an HTML element that defines HTML heading.
@@ -6846,7 +6846,7 @@ type HTMLH2 interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLH2
+	Text(v any) HTMLH2
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLH2
@@ -6858,7 +6858,7 @@ type HTMLH2 interface {
 	AccessKey(v string) HTMLH2
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLH2
+	Aria(k string, v any) HTMLH2
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLH2
@@ -6867,7 +6867,7 @@ type HTMLH2 interface {
 	ContentEditable(v bool) HTMLH2
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLH2
+	DataSet(k string, v any) HTMLH2
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLH2
@@ -6906,100 +6906,100 @@ type HTMLH2 interface {
 	On(event string, h EventHandler, scope ...any) HTMLH2
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLH2
+	OnBlur(h EventHandler, scope ...any) HTMLH2
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLH2
+	OnChange(h EventHandler, scope ...any) HTMLH2
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLH2
+	OnClick(h EventHandler, scope ...any) HTMLH2
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLH2
+	OnContextMenu(h EventHandler, scope ...any) HTMLH2
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLH2
+	OnCopy(h EventHandler, scope ...any) HTMLH2
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLH2
+	OnCut(h EventHandler, scope ...any) HTMLH2
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLH2
+	OnDblClick(h EventHandler, scope ...any) HTMLH2
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLH2
+	OnDrag(h EventHandler, scope ...any) HTMLH2
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLH2
+	OnDragEnd(h EventHandler, scope ...any) HTMLH2
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLH2
+	OnDragEnter(h EventHandler, scope ...any) HTMLH2
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLH2
+	OnDragLeave(h EventHandler, scope ...any) HTMLH2
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLH2
+	OnDragOver(h EventHandler, scope ...any) HTMLH2
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLH2
+	OnDragStart(h EventHandler, scope ...any) HTMLH2
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLH2
+	OnDrop(h EventHandler, scope ...any) HTMLH2
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLH2
+	OnFocus(h EventHandler, scope ...any) HTMLH2
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLH2
+	OnInput(h EventHandler, scope ...any) HTMLH2
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLH2
+	OnInvalid(h EventHandler, scope ...any) HTMLH2
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLH2
+	OnKeyDown(h EventHandler, scope ...any) HTMLH2
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLH2
+	OnKeyPress(h EventHandler, scope ...any) HTMLH2
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLH2
+	OnKeyUp(h EventHandler, scope ...any) HTMLH2
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLH2
+	OnMouseDown(h EventHandler, scope ...any) HTMLH2
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLH2
+	OnMouseMove(h EventHandler, scope ...any) HTMLH2
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLH2
+	OnMouseOut(h EventHandler, scope ...any) HTMLH2
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLH2
+	OnMouseOver(h EventHandler, scope ...any) HTMLH2
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLH2
+	OnMouseUp(h EventHandler, scope ...any) HTMLH2
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLH2
+	OnPaste(h EventHandler, scope ...any) HTMLH2
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLH2
+	OnReset(h EventHandler, scope ...any) HTMLH2
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLH2
+	OnScroll(h EventHandler, scope ...any) HTMLH2
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLH2
+	OnSearch(h EventHandler, scope ...any) HTMLH2
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLH2
+	OnSelect(h EventHandler, scope ...any) HTMLH2
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLH2
+	OnSubmit(h EventHandler, scope ...any) HTMLH2
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLH2
+	OnWheel(h EventHandler, scope ...any) HTMLH2
 }
 
 // H2 returns an HTML element that defines HTML heading.
@@ -7015,7 +7015,7 @@ type HTMLH3 interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLH3
+	Text(v any) HTMLH3
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLH3
@@ -7027,7 +7027,7 @@ type HTMLH3 interface {
 	AccessKey(v string) HTMLH3
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLH3
+	Aria(k string, v any) HTMLH3
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLH3
@@ -7036,7 +7036,7 @@ type HTMLH3 interface {
 	ContentEditable(v bool) HTMLH3
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLH3
+	DataSet(k string, v any) HTMLH3
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLH3
@@ -7075,100 +7075,100 @@ type HTMLH3 interface {
 	On(event string, h EventHandler, scope ...any) HTMLH3
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLH3
+	OnBlur(h EventHandler, scope ...any) HTMLH3
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLH3
+	OnChange(h EventHandler, scope ...any) HTMLH3
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLH3
+	OnClick(h EventHandler, scope ...any) HTMLH3
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLH3
+	OnContextMenu(h EventHandler, scope ...any) HTMLH3
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLH3
+	OnCopy(h EventHandler, scope ...any) HTMLH3
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLH3
+	OnCut(h EventHandler, scope ...any) HTMLH3
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLH3
+	OnDblClick(h EventHandler, scope ...any) HTMLH3
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLH3
+	OnDrag(h EventHandler, scope ...any) HTMLH3
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLH3
+	OnDragEnd(h EventHandler, scope ...any) HTMLH3
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLH3
+	OnDragEnter(h EventHandler, scope ...any) HTMLH3
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLH3
+	OnDragLeave(h EventHandler, scope ...any) HTMLH3
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLH3
+	OnDragOver(h EventHandler, scope ...any) HTMLH3
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLH3
+	OnDragStart(h EventHandler, scope ...any) HTMLH3
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLH3
+	OnDrop(h EventHandler, scope ...any) HTMLH3
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLH3
+	OnFocus(h EventHandler, scope ...any) HTMLH3
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLH3
+	OnInput(h EventHandler, scope ...any) HTMLH3
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLH3
+	OnInvalid(h EventHandler, scope ...any) HTMLH3
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLH3
+	OnKeyDown(h EventHandler, scope ...any) HTMLH3
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLH3
+	OnKeyPress(h EventHandler, scope ...any) HTMLH3
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLH3
+	OnKeyUp(h EventHandler, scope ...any) HTMLH3
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLH3
+	OnMouseDown(h EventHandler, scope ...any) HTMLH3
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLH3
+	OnMouseMove(h EventHandler, scope ...any) HTMLH3
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLH3
+	OnMouseOut(h EventHandler, scope ...any) HTMLH3
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLH3
+	OnMouseOver(h EventHandler, scope ...any) HTMLH3
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLH3
+	OnMouseUp(h EventHandler, scope ...any) HTMLH3
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLH3
+	OnPaste(h EventHandler, scope ...any) HTMLH3
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLH3
+	OnReset(h EventHandler, scope ...any) HTMLH3
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLH3
+	OnScroll(h EventHandler, scope ...any) HTMLH3
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLH3
+	OnSearch(h EventHandler, scope ...any) HTMLH3
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLH3
+	OnSelect(h EventHandler, scope ...any) HTMLH3
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLH3
+	OnSubmit(h EventHandler, scope ...any) HTMLH3
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLH3
+	OnWheel(h EventHandler, scope ...any) HTMLH3
 }
 
 // H3 returns an HTML element that defines HTML heading.
@@ -7184,7 +7184,7 @@ type HTMLH4 interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLH4
+	Text(v any) HTMLH4
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLH4
@@ -7196,7 +7196,7 @@ type HTMLH4 interface {
 	AccessKey(v string) HTMLH4
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLH4
+	Aria(k string, v any) HTMLH4
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLH4
@@ -7205,7 +7205,7 @@ type HTMLH4 interface {
 	ContentEditable(v bool) HTMLH4
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLH4
+	DataSet(k string, v any) HTMLH4
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLH4
@@ -7244,100 +7244,100 @@ type HTMLH4 interface {
 	On(event string, h EventHandler, scope ...any) HTMLH4
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLH4
+	OnBlur(h EventHandler, scope ...any) HTMLH4
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLH4
+	OnChange(h EventHandler, scope ...any) HTMLH4
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLH4
+	OnClick(h EventHandler, scope ...any) HTMLH4
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLH4
+	OnContextMenu(h EventHandler, scope ...any) HTMLH4
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLH4
+	OnCopy(h EventHandler, scope ...any) HTMLH4
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLH4
+	OnCut(h EventHandler, scope ...any) HTMLH4
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLH4
+	OnDblClick(h EventHandler, scope ...any) HTMLH4
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLH4
+	OnDrag(h EventHandler, scope ...any) HTMLH4
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLH4
+	OnDragEnd(h EventHandler, scope ...any) HTMLH4
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLH4
+	OnDragEnter(h EventHandler, scope ...any) HTMLH4
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLH4
+	OnDragLeave(h EventHandler, scope ...any) HTMLH4
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLH4
+	OnDragOver(h EventHandler, scope ...any) HTMLH4
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLH4
+	OnDragStart(h EventHandler, scope ...any) HTMLH4
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLH4
+	OnDrop(h EventHandler, scope ...any) HTMLH4
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLH4
+	OnFocus(h EventHandler, scope ...any) HTMLH4
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLH4
+	OnInput(h EventHandler, scope ...any) HTMLH4
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLH4
+	OnInvalid(h EventHandler, scope ...any) HTMLH4
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLH4
+	OnKeyDown(h EventHandler, scope ...any) HTMLH4
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLH4
+	OnKeyPress(h EventHandler, scope ...any) HTMLH4
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLH4
+	OnKeyUp(h EventHandler, scope ...any) HTMLH4
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLH4
+	OnMouseDown(h EventHandler, scope ...any) HTMLH4
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLH4
+	OnMouseMove(h EventHandler, scope ...any) HTMLH4
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLH4
+	OnMouseOut(h EventHandler, scope ...any) HTMLH4
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLH4
+	OnMouseOver(h EventHandler, scope ...any) HTMLH4
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLH4
+	OnMouseUp(h EventHandler, scope ...any) HTMLH4
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLH4
+	OnPaste(h EventHandler, scope ...any) HTMLH4
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLH4
+	OnReset(h EventHandler, scope ...any) HTMLH4
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLH4
+	OnScroll(h EventHandler, scope ...any) HTMLH4
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLH4
+	OnSearch(h EventHandler, scope ...any) HTMLH4
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLH4
+	OnSelect(h EventHandler, scope ...any) HTMLH4
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLH4
+	OnSubmit(h EventHandler, scope ...any) HTMLH4
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLH4
+	OnWheel(h EventHandler, scope ...any) HTMLH4
 }
 
 // H4 returns an HTML element that defines HTML heading.
@@ -7353,7 +7353,7 @@ type HTMLH5 interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLH5
+	Text(v any) HTMLH5
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLH5
@@ -7365,7 +7365,7 @@ type HTMLH5 interface {
 	AccessKey(v string) HTMLH5
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLH5
+	Aria(k string, v any) HTMLH5
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLH5
@@ -7374,7 +7374,7 @@ type HTMLH5 interface {
 	ContentEditable(v bool) HTMLH5
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLH5
+	DataSet(k string, v any) HTMLH5
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLH5
@@ -7413,100 +7413,100 @@ type HTMLH5 interface {
 	On(event string, h EventHandler, scope ...any) HTMLH5
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLH5
+	OnBlur(h EventHandler, scope ...any) HTMLH5
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLH5
+	OnChange(h EventHandler, scope ...any) HTMLH5
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLH5
+	OnClick(h EventHandler, scope ...any) HTMLH5
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLH5
+	OnContextMenu(h EventHandler, scope ...any) HTMLH5
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLH5
+	OnCopy(h EventHandler, scope ...any) HTMLH5
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLH5
+	OnCut(h EventHandler, scope ...any) HTMLH5
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLH5
+	OnDblClick(h EventHandler, scope ...any) HTMLH5
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLH5
+	OnDrag(h EventHandler, scope ...any) HTMLH5
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLH5
+	OnDragEnd(h EventHandler, scope ...any) HTMLH5
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLH5
+	OnDragEnter(h EventHandler, scope ...any) HTMLH5
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLH5
+	OnDragLeave(h EventHandler, scope ...any) HTMLH5
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLH5
+	OnDragOver(h EventHandler, scope ...any) HTMLH5
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLH5
+	OnDragStart(h EventHandler, scope ...any) HTMLH5
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLH5
+	OnDrop(h EventHandler, scope ...any) HTMLH5
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLH5
+	OnFocus(h EventHandler, scope ...any) HTMLH5
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLH5
+	OnInput(h EventHandler, scope ...any) HTMLH5
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLH5
+	OnInvalid(h EventHandler, scope ...any) HTMLH5
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLH5
+	OnKeyDown(h EventHandler, scope ...any) HTMLH5
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLH5
+	OnKeyPress(h EventHandler, scope ...any) HTMLH5
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLH5
+	OnKeyUp(h EventHandler, scope ...any) HTMLH5
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLH5
+	OnMouseDown(h EventHandler, scope ...any) HTMLH5
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLH5
+	OnMouseMove(h EventHandler, scope ...any) HTMLH5
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLH5
+	OnMouseOut(h EventHandler, scope ...any) HTMLH5
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLH5
+	OnMouseOver(h EventHandler, scope ...any) HTMLH5
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLH5
+	OnMouseUp(h EventHandler, scope ...any) HTMLH5
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLH5
+	OnPaste(h EventHandler, scope ...any) HTMLH5
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLH5
+	OnReset(h EventHandler, scope ...any) HTMLH5
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLH5
+	OnScroll(h EventHandler, scope ...any) HTMLH5
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLH5
+	OnSearch(h EventHandler, scope ...any) HTMLH5
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLH5
+	OnSelect(h EventHandler, scope ...any) HTMLH5
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLH5
+	OnSubmit(h EventHandler, scope ...any) HTMLH5
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLH5
+	OnWheel(h EventHandler, scope ...any) HTMLH5
 }
 
 // H5 returns an HTML element that defines HTML heading.
@@ -7522,7 +7522,7 @@ type HTMLH6 interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLH6
+	Text(v any) HTMLH6
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLH6
@@ -7534,7 +7534,7 @@ type HTMLH6 interface {
 	AccessKey(v string) HTMLH6
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLH6
+	Aria(k string, v any) HTMLH6
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLH6
@@ -7543,7 +7543,7 @@ type HTMLH6 interface {
 	ContentEditable(v bool) HTMLH6
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLH6
+	DataSet(k string, v any) HTMLH6
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLH6
@@ -7582,100 +7582,100 @@ type HTMLH6 interface {
 	On(event string, h EventHandler, scope ...any) HTMLH6
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLH6
+	OnBlur(h EventHandler, scope ...any) HTMLH6
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLH6
+	OnChange(h EventHandler, scope ...any) HTMLH6
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLH6
+	OnClick(h EventHandler, scope ...any) HTMLH6
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLH6
+	OnContextMenu(h EventHandler, scope ...any) HTMLH6
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLH6
+	OnCopy(h EventHandler, scope ...any) HTMLH6
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLH6
+	OnCut(h EventHandler, scope ...any) HTMLH6
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLH6
+	OnDblClick(h EventHandler, scope ...any) HTMLH6
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLH6
+	OnDrag(h EventHandler, scope ...any) HTMLH6
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLH6
+	OnDragEnd(h EventHandler, scope ...any) HTMLH6
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLH6
+	OnDragEnter(h EventHandler, scope ...any) HTMLH6
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLH6
+	OnDragLeave(h EventHandler, scope ...any) HTMLH6
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLH6
+	OnDragOver(h EventHandler, scope ...any) HTMLH6
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLH6
+	OnDragStart(h EventHandler, scope ...any) HTMLH6
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLH6
+	OnDrop(h EventHandler, scope ...any) HTMLH6
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLH6
+	OnFocus(h EventHandler, scope ...any) HTMLH6
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLH6
+	OnInput(h EventHandler, scope ...any) HTMLH6
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLH6
+	OnInvalid(h EventHandler, scope ...any) HTMLH6
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLH6
+	OnKeyDown(h EventHandler, scope ...any) HTMLH6
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLH6
+	OnKeyPress(h EventHandler, scope ...any) HTMLH6
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLH6
+	OnKeyUp(h EventHandler, scope ...any) HTMLH6
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLH6
+	OnMouseDown(h EventHandler, scope ...any) HTMLH6
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLH6
+	OnMouseMove(h EventHandler, scope ...any) HTMLH6
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLH6
+	OnMouseOut(h EventHandler, scope ...any) HTMLH6
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLH6
+	OnMouseOver(h EventHandler, scope ...any) HTMLH6
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLH6
+	OnMouseUp(h EventHandler, scope ...any) HTMLH6
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLH6
+	OnPaste(h EventHandler, scope ...any) HTMLH6
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLH6
+	OnReset(h EventHandler, scope ...any) HTMLH6
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLH6
+	OnScroll(h EventHandler, scope ...any) HTMLH6
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLH6
+	OnSearch(h EventHandler, scope ...any) HTMLH6
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLH6
+	OnSelect(h EventHandler, scope ...any) HTMLH6
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLH6
+	OnSubmit(h EventHandler, scope ...any) HTMLH6
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLH6
+	OnWheel(h EventHandler, scope ...any) HTMLH6
 }
 
 // H6 returns an HTML element that defines HTML heading.
@@ -7691,7 +7691,7 @@ type HTMLHead interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLHead
+	Text(v any) HTMLHead
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLHead
@@ -7703,7 +7703,7 @@ type HTMLHead interface {
 	AccessKey(v string) HTMLHead
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLHead
+	Aria(k string, v any) HTMLHead
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLHead
@@ -7712,7 +7712,7 @@ type HTMLHead interface {
 	ContentEditable(v bool) HTMLHead
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLHead
+	DataSet(k string, v any) HTMLHead
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLHead
@@ -7764,7 +7764,7 @@ type HTMLHeader interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLHeader
+	Text(v any) HTMLHeader
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLHeader
@@ -7776,7 +7776,7 @@ type HTMLHeader interface {
 	AccessKey(v string) HTMLHeader
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLHeader
+	Aria(k string, v any) HTMLHeader
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLHeader
@@ -7785,7 +7785,7 @@ type HTMLHeader interface {
 	ContentEditable(v bool) HTMLHeader
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLHeader
+	DataSet(k string, v any) HTMLHeader
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLHeader
@@ -7824,100 +7824,100 @@ type HTMLHeader interface {
 	On(event string, h EventHandler, scope ...any) HTMLHeader
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLHeader
+	OnBlur(h EventHandler, scope ...any) HTMLHeader
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLHeader
+	OnChange(h EventHandler, scope ...any) HTMLHeader
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLHeader
+	OnClick(h EventHandler, scope ...any) HTMLHeader
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLHeader
+	OnContextMenu(h EventHandler, scope ...any) HTMLHeader
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLHeader
+	OnCopy(h EventHandler, scope ...any) HTMLHeader
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLHeader
+	OnCut(h EventHandler, scope ...any) HTMLHeader
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLHeader
+	OnDblClick(h EventHandler, scope ...any) HTMLHeader
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLHeader
+	OnDrag(h EventHandler, scope ...any) HTMLHeader
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLHeader
+	OnDragEnd(h EventHandler, scope ...any) HTMLHeader
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLHeader
+	OnDragEnter(h EventHandler, scope ...any) HTMLHeader
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLHeader
+	OnDragLeave(h EventHandler, scope ...any) HTMLHeader
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLHeader
+	OnDragOver(h EventHandler, scope ...any) HTMLHeader
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLHeader
+	OnDragStart(h EventHandler, scope ...any) HTMLHeader
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLHeader
+	OnDrop(h EventHandler, scope ...any) HTMLHeader
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLHeader
+	OnFocus(h EventHandler, scope ...any) HTMLHeader
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLHeader
+	OnInput(h EventHandler, scope ...any) HTMLHeader
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLHeader
+	OnInvalid(h EventHandler, scope ...any) HTMLHeader
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLHeader
+	OnKeyDown(h EventHandler, scope ...any) HTMLHeader
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLHeader
+	OnKeyPress(h EventHandler, scope ...any) HTMLHeader
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLHeader
+	OnKeyUp(h EventHandler, scope ...any) HTMLHeader
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLHeader
+	OnMouseDown(h EventHandler, scope ...any) HTMLHeader
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLHeader
+	OnMouseMove(h EventHandler, scope ...any) HTMLHeader
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLHeader
+	OnMouseOut(h EventHandler, scope ...any) HTMLHeader
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLHeader
+	OnMouseOver(h EventHandler, scope ...any) HTMLHeader
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLHeader
+	OnMouseUp(h EventHandler, scope ...any) HTMLHeader
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLHeader
+	OnPaste(h EventHandler, scope ...any) HTMLHeader
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLHeader
+	OnReset(h EventHandler, scope ...any) HTMLHeader
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLHeader
+	OnScroll(h EventHandler, scope ...any) HTMLHeader
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLHeader
+	OnSearch(h EventHandler, scope ...any) HTMLHeader
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLHeader
+	OnSelect(h EventHandler, scope ...any) HTMLHeader
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLHeader
+	OnSubmit(h EventHandler, scope ...any) HTMLHeader
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLHeader
+	OnWheel(h EventHandler, scope ...any) HTMLHeader
 }
 
 // Header returns an HTML element that defines a header for a document or section.
@@ -7939,7 +7939,7 @@ type HTMLHr interface {
 	AccessKey(v string) HTMLHr
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLHr
+	Aria(k string, v any) HTMLHr
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLHr
@@ -7948,7 +7948,7 @@ type HTMLHr interface {
 	ContentEditable(v bool) HTMLHr
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLHr
+	DataSet(k string, v any) HTMLHr
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLHr
@@ -7987,100 +7987,100 @@ type HTMLHr interface {
 	On(event string, h EventHandler, scope ...any) HTMLHr
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLHr
+	OnBlur(h EventHandler, scope ...any) HTMLHr
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLHr
+	OnChange(h EventHandler, scope ...any) HTMLHr
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLHr
+	OnClick(h EventHandler, scope ...any) HTMLHr
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLHr
+	OnContextMenu(h EventHandler, scope ...any) HTMLHr
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLHr
+	OnCopy(h EventHandler, scope ...any) HTMLHr
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLHr
+	OnCut(h EventHandler, scope ...any) HTMLHr
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLHr
+	OnDblClick(h EventHandler, scope ...any) HTMLHr
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLHr
+	OnDrag(h EventHandler, scope ...any) HTMLHr
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLHr
+	OnDragEnd(h EventHandler, scope ...any) HTMLHr
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLHr
+	OnDragEnter(h EventHandler, scope ...any) HTMLHr
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLHr
+	OnDragLeave(h EventHandler, scope ...any) HTMLHr
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLHr
+	OnDragOver(h EventHandler, scope ...any) HTMLHr
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLHr
+	OnDragStart(h EventHandler, scope ...any) HTMLHr
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLHr
+	OnDrop(h EventHandler, scope ...any) HTMLHr
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLHr
+	OnFocus(h EventHandler, scope ...any) HTMLHr
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLHr
+	OnInput(h EventHandler, scope ...any) HTMLHr
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLHr
+	OnInvalid(h EventHandler, scope ...any) HTMLHr
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLHr
+	OnKeyDown(h EventHandler, scope ...any) HTMLHr
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLHr
+	OnKeyPress(h EventHandler, scope ...any) HTMLHr
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLHr
+	OnKeyUp(h EventHandler, scope ...any) HTMLHr
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLHr
+	OnMouseDown(h EventHandler, scope ...any) HTMLHr
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLHr
+	OnMouseMove(h EventHandler, scope ...any) HTMLHr
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLHr
+	OnMouseOut(h EventHandler, scope ...any) HTMLHr
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLHr
+	OnMouseOver(h EventHandler, scope ...any) HTMLHr
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLHr
+	OnMouseUp(h EventHandler, scope ...any) HTMLHr
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLHr
+	OnPaste(h EventHandler, scope ...any) HTMLHr
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLHr
+	OnReset(h EventHandler, scope ...any) HTMLHr
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLHr
+	OnScroll(h EventHandler, scope ...any) HTMLHr
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLHr
+	OnSearch(h EventHandler, scope ...any) HTMLHr
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLHr
+	OnSelect(h EventHandler, scope ...any) HTMLHr
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLHr
+	OnSubmit(h EventHandler, scope ...any) HTMLHr
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLHr
+	OnWheel(h EventHandler, scope ...any) HTMLHr
 }
 
 // Hr returns an HTML element that defines a thematic change in the content.
@@ -8102,7 +8102,7 @@ type HTMLHtml interface {
 	AccessKey(v string) HTMLHtml
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLHtml
+	Aria(k string, v any) HTMLHtml
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLHtml
@@ -8111,7 +8111,7 @@ type HTMLHtml interface {
 	ContentEditable(v bool) HTMLHtml
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLHtml
+	DataSet(k string, v any) HTMLHtml
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLHtml
@@ -8163,7 +8163,7 @@ type HTMLI interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLI
+	Text(v any) HTMLI
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLI
@@ -8175,7 +8175,7 @@ type HTMLI interface {
 	AccessKey(v string) HTMLI
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLI
+	Aria(k string, v any) HTMLI
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLI
@@ -8184,7 +8184,7 @@ type HTMLI interface {
 	ContentEditable(v bool) HTMLI
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLI
+	DataSet(k string, v any) HTMLI
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLI
@@ -8223,100 +8223,100 @@ type HTMLI interface {
 	On(event string, h EventHandler, scope ...any) HTMLI
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLI
+	OnBlur(h EventHandler, scope ...any) HTMLI
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLI
+	OnChange(h EventHandler, scope ...any) HTMLI
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLI
+	OnClick(h EventHandler, scope ...any) HTMLI
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLI
+	OnContextMenu(h EventHandler, scope ...any) HTMLI
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLI
+	OnCopy(h EventHandler, scope ...any) HTMLI
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLI
+	OnCut(h EventHandler, scope ...any) HTMLI
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLI
+	OnDblClick(h EventHandler, scope ...any) HTMLI
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLI
+	OnDrag(h EventHandler, scope ...any) HTMLI
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLI
+	OnDragEnd(h EventHandler, scope ...any) HTMLI
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLI
+	OnDragEnter(h EventHandler, scope ...any) HTMLI
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLI
+	OnDragLeave(h EventHandler, scope ...any) HTMLI
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLI
+	OnDragOver(h EventHandler, scope ...any) HTMLI
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLI
+	OnDragStart(h EventHandler, scope ...any) HTMLI
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLI
+	OnDrop(h EventHandler, scope ...any) HTMLI
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLI
+	OnFocus(h EventHandler, scope ...any) HTMLI
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLI
+	OnInput(h EventHandler, scope ...any) HTMLI
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLI
+	OnInvalid(h EventHandler, scope ...any) HTMLI
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLI
+	OnKeyDown(h EventHandler, scope ...any) HTMLI
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLI
+	OnKeyPress(h EventHandler, scope ...any) HTMLI
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLI
+	OnKeyUp(h EventHandler, scope ...any) HTMLI
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLI
+	OnMouseDown(h EventHandler, scope ...any) HTMLI
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLI
+	OnMouseMove(h EventHandler, scope ...any) HTMLI
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLI
+	OnMouseOut(h EventHandler, scope ...any) HTMLI
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLI
+	OnMouseOver(h EventHandler, scope ...any) HTMLI
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLI
+	OnMouseUp(h EventHandler, scope ...any) HTMLI
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLI
+	OnPaste(h EventHandler, scope ...any) HTMLI
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLI
+	OnReset(h EventHandler, scope ...any) HTMLI
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLI
+	OnScroll(h EventHandler, scope ...any) HTMLI
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLI
+	OnSearch(h EventHandler, scope ...any) HTMLI
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLI
+	OnSelect(h EventHandler, scope ...any) HTMLI
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLI
+	OnSubmit(h EventHandler, scope ...any) HTMLI
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLI
+	OnWheel(h EventHandler, scope ...any) HTMLI
 }
 
 // I returns an HTML element that defines a part of text in an alternate voice or mood.
@@ -8332,7 +8332,7 @@ type HTMLIFrame interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLIFrame
+	Text(v any) HTMLIFrame
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLIFrame
@@ -8353,7 +8353,7 @@ type HTMLIFrame interface {
 	AllowPaymentRequest(v bool) HTMLIFrame
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLIFrame
+	Aria(k string, v any) HTMLIFrame
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLIFrame
@@ -8362,7 +8362,7 @@ type HTMLIFrame interface {
 	ContentEditable(v bool) HTMLIFrame
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLIFrame
+	DataSet(k string, v any) HTMLIFrame
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLIFrame
@@ -8395,7 +8395,7 @@ type HTMLIFrame interface {
 	Role(v string) HTMLIFrame
 
 	// Sandbox enables an extra set of restrictions for the content in an iframe.
-	Sandbox(v interface{}) HTMLIFrame
+	Sandbox(v any) HTMLIFrame
 
 	// Spellcheck specifies whether the element is to have its spelling and grammar checked or not.
 	Spellcheck(v bool) HTMLIFrame
@@ -8425,103 +8425,103 @@ type HTMLIFrame interface {
 	On(event string, h EventHandler, scope ...any) HTMLIFrame
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnBlur(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnChange(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnClick(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnContextMenu(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnCopy(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnCut(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnDblClick(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnDrag(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnDragEnd(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnDragEnter(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnDragLeave(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnDragOver(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnDragStart(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnDrop(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnFocus(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnInput(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnInvalid(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnKeyDown(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnKeyPress(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnKeyUp(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnLoad calls the given handler after the element is finished loading.
-	OnLoad(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnLoad(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnMouseDown(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnMouseMove(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnMouseOut(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnMouseOver(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnMouseUp(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnPaste(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnReset(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnScroll(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnSearch(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnSelect(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnSubmit(h EventHandler, scope ...any) HTMLIFrame
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLIFrame
+	OnWheel(h EventHandler, scope ...any) HTMLIFrame
 }
 
 // IFrame returns an HTML element that defines an inline frame.
@@ -8546,7 +8546,7 @@ type HTMLImg interface {
 	Alt(v string) HTMLImg
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLImg
+	Aria(k string, v any) HTMLImg
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLImg
@@ -8558,7 +8558,7 @@ type HTMLImg interface {
 	CrossOrigin(v string) HTMLImg
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLImg
+	DataSet(k string, v any) HTMLImg
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLImg
@@ -8618,172 +8618,172 @@ type HTMLImg interface {
 	On(event string, h EventHandler, scope ...any) HTMLImg
 
 	// OnAbort calls the given handler on abort.
-	OnAbort(h EventHandler, scope ...interface{}) HTMLImg
+	OnAbort(h EventHandler, scope ...any) HTMLImg
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLImg
+	OnBlur(h EventHandler, scope ...any) HTMLImg
 
 	// OnCanPlay calls the given handler when a file is ready to start playing (when it has buffered enough to begin).
-	OnCanPlay(h EventHandler, scope ...interface{}) HTMLImg
+	OnCanPlay(h EventHandler, scope ...any) HTMLImg
 
 	// OnCanPlayThrough calls the given handler when a file can be played all the way to the end without pausing for buffering.
-	OnCanPlayThrough(h EventHandler, scope ...interface{}) HTMLImg
+	OnCanPlayThrough(h EventHandler, scope ...any) HTMLImg
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLImg
+	OnChange(h EventHandler, scope ...any) HTMLImg
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLImg
+	OnClick(h EventHandler, scope ...any) HTMLImg
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLImg
+	OnContextMenu(h EventHandler, scope ...any) HTMLImg
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLImg
+	OnCopy(h EventHandler, scope ...any) HTMLImg
 
 	// OnCueChange calls the given handler when the cue changes in a track element.
-	OnCueChange(h EventHandler, scope ...interface{}) HTMLImg
+	OnCueChange(h EventHandler, scope ...any) HTMLImg
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLImg
+	OnCut(h EventHandler, scope ...any) HTMLImg
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLImg
+	OnDblClick(h EventHandler, scope ...any) HTMLImg
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLImg
+	OnDrag(h EventHandler, scope ...any) HTMLImg
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLImg
+	OnDragEnd(h EventHandler, scope ...any) HTMLImg
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLImg
+	OnDragEnter(h EventHandler, scope ...any) HTMLImg
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLImg
+	OnDragLeave(h EventHandler, scope ...any) HTMLImg
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLImg
+	OnDragOver(h EventHandler, scope ...any) HTMLImg
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLImg
+	OnDragStart(h EventHandler, scope ...any) HTMLImg
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLImg
+	OnDrop(h EventHandler, scope ...any) HTMLImg
 
 	// OnDurationChange calls the given handler when the length of the media changes.
-	OnDurationChange(h EventHandler, scope ...interface{}) HTMLImg
+	OnDurationChange(h EventHandler, scope ...any) HTMLImg
 
 	// OnEmptied calls the given handler when something bad happens and the file is suddenly unavailable (like unexpectedly disconnects).
-	OnEmptied(h EventHandler, scope ...interface{}) HTMLImg
+	OnEmptied(h EventHandler, scope ...any) HTMLImg
 
 	// OnEnded calls the given handler when the media has reach the end.
-	OnEnded(h EventHandler, scope ...interface{}) HTMLImg
+	OnEnded(h EventHandler, scope ...any) HTMLImg
 
 	// OnError calls the given handler when an error occurs.
-	OnError(h EventHandler, scope ...interface{}) HTMLImg
+	OnError(h EventHandler, scope ...any) HTMLImg
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLImg
+	OnFocus(h EventHandler, scope ...any) HTMLImg
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLImg
+	OnInput(h EventHandler, scope ...any) HTMLImg
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLImg
+	OnInvalid(h EventHandler, scope ...any) HTMLImg
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLImg
+	OnKeyDown(h EventHandler, scope ...any) HTMLImg
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLImg
+	OnKeyPress(h EventHandler, scope ...any) HTMLImg
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLImg
+	OnKeyUp(h EventHandler, scope ...any) HTMLImg
 
 	// OnLoad calls the given handler after the element is finished loading.
-	OnLoad(h EventHandler, scope ...interface{}) HTMLImg
+	OnLoad(h EventHandler, scope ...any) HTMLImg
 
 	// OnLoadStart calls the given handler just as the file begins to load before anything is actually loaded.
-	OnLoadStart(h EventHandler, scope ...interface{}) HTMLImg
+	OnLoadStart(h EventHandler, scope ...any) HTMLImg
 
 	// OnLoadedData calls the given handler when media data is loaded.
-	OnLoadedData(h EventHandler, scope ...interface{}) HTMLImg
+	OnLoadedData(h EventHandler, scope ...any) HTMLImg
 
 	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLImg
+	OnLoadedMetaData(h EventHandler, scope ...any) HTMLImg
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLImg
+	OnMouseDown(h EventHandler, scope ...any) HTMLImg
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLImg
+	OnMouseMove(h EventHandler, scope ...any) HTMLImg
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLImg
+	OnMouseOut(h EventHandler, scope ...any) HTMLImg
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLImg
+	OnMouseOver(h EventHandler, scope ...any) HTMLImg
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLImg
+	OnMouseUp(h EventHandler, scope ...any) HTMLImg
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLImg
+	OnPaste(h EventHandler, scope ...any) HTMLImg
 
 	// OnPause calls the given handler when the media is paused either by the user or programmatically.
-	OnPause(h EventHandler, scope ...interface{}) HTMLImg
+	OnPause(h EventHandler, scope ...any) HTMLImg
 
 	// OnPlay calls the given handler when the media is ready to start playing.
-	OnPlay(h EventHandler, scope ...interface{}) HTMLImg
+	OnPlay(h EventHandler, scope ...any) HTMLImg
 
 	// OnPlaying calls the given handler when the media actually has started playing.
-	OnPlaying(h EventHandler, scope ...interface{}) HTMLImg
+	OnPlaying(h EventHandler, scope ...any) HTMLImg
 
 	// OnProgress calls the given handler when the browser is in the process of getting the media data.
-	OnProgress(h EventHandler, scope ...interface{}) HTMLImg
+	OnProgress(h EventHandler, scope ...any) HTMLImg
 
 	// OnRateChange calls the given handler each time the playback rate changes (like when a user switches to a slow motion or fast forward mode).
-	OnRateChange(h EventHandler, scope ...interface{}) HTMLImg
+	OnRateChange(h EventHandler, scope ...any) HTMLImg
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLImg
+	OnReset(h EventHandler, scope ...any) HTMLImg
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLImg
+	OnScroll(h EventHandler, scope ...any) HTMLImg
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLImg
+	OnSearch(h EventHandler, scope ...any) HTMLImg
 
 	// OnSeeked calls the given handler when the seeking attribute is set to false indicating that seeking has ended.
-	OnSeeked(h EventHandler, scope ...interface{}) HTMLImg
+	OnSeeked(h EventHandler, scope ...any) HTMLImg
 
 	// OnSeeking calls the given handler when the seeking attribute is set to true indicating that seeking is active.
-	OnSeeking(h EventHandler, scope ...interface{}) HTMLImg
+	OnSeeking(h EventHandler, scope ...any) HTMLImg
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLImg
+	OnSelect(h EventHandler, scope ...any) HTMLImg
 
 	// OnStalled calls the given handler when the browser is unable to fetch the media data for whatever reason.
-	OnStalled(h EventHandler, scope ...interface{}) HTMLImg
+	OnStalled(h EventHandler, scope ...any) HTMLImg
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLImg
+	OnSubmit(h EventHandler, scope ...any) HTMLImg
 
 	// OnSuspend calls the given handler when fetching the media data is stopped before it is completely loaded for whatever reason.
-	OnSuspend(h EventHandler, scope ...interface{}) HTMLImg
+	OnSuspend(h EventHandler, scope ...any) HTMLImg
 
 	// OnTimeUpdate calls the given handler when the playing position has changed (like when the user fast forwards to a different point in the media).
-	OnTimeUpdate(h EventHandler, scope ...interface{}) HTMLImg
+	OnTimeUpdate(h EventHandler, scope ...any) HTMLImg
 
 	// OnVolumeChange calls the given handler each time the volume is changed which (includes setting the volume to "mute").
-	OnVolumeChange(h EventHandler, scope ...interface{}) HTMLImg
+	OnVolumeChange(h EventHandler, scope ...any) HTMLImg
 
 	// OnWaiting calls the given handler when the media has paused but is expected to resume (like when the media pauses to buffer more data).
-	OnWaiting(h EventHandler, scope ...interface{}) HTMLImg
+	OnWaiting(h EventHandler, scope ...any) HTMLImg
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLImg
+	OnWheel(h EventHandler, scope ...any) HTMLImg
 }
 
 // Img returns an HTML element that defines an image.
@@ -8811,7 +8811,7 @@ type HTMLInput interface {
 	Alt(v string) HTMLInput
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLInput
+	Aria(k string, v any) HTMLInput
 
 	// AutoComplete specifies whether the element should have autocomplete enabled.
 	AutoComplete(v bool) HTMLInput
@@ -8832,7 +8832,7 @@ type HTMLInput interface {
 	ContentEditable(v bool) HTMLInput
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLInput
+	DataSet(k string, v any) HTMLInput
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLInput
@@ -8880,13 +8880,13 @@ type HTMLInput interface {
 	List(v string) HTMLInput
 
 	// Max Specifies the maximum value.
-	Max(v interface{}) HTMLInput
+	Max(v any) HTMLInput
 
 	// MaxLength specifies the maximum number of characters allowed in an element.
 	MaxLength(v int) HTMLInput
 
 	// Min specifies a minimum value.
-	Min(v interface{}) HTMLInput
+	Min(v any) HTMLInput
 
 	// Multiple specifies that a user can enter more than one value.
 	Multiple(v bool) HTMLInput
@@ -8937,7 +8937,7 @@ type HTMLInput interface {
 	Type(v string) HTMLInput
 
 	// Value specifies the value of the element.
-	Value(v interface{}) HTMLInput
+	Value(v any) HTMLInput
 
 	// Width specifies the width of the element.
 	Width(v int) HTMLInput
@@ -8946,103 +8946,103 @@ type HTMLInput interface {
 	On(event string, h EventHandler, scope ...any) HTMLInput
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLInput
+	OnBlur(h EventHandler, scope ...any) HTMLInput
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLInput
+	OnChange(h EventHandler, scope ...any) HTMLInput
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLInput
+	OnClick(h EventHandler, scope ...any) HTMLInput
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLInput
+	OnContextMenu(h EventHandler, scope ...any) HTMLInput
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLInput
+	OnCopy(h EventHandler, scope ...any) HTMLInput
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLInput
+	OnCut(h EventHandler, scope ...any) HTMLInput
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLInput
+	OnDblClick(h EventHandler, scope ...any) HTMLInput
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLInput
+	OnDrag(h EventHandler, scope ...any) HTMLInput
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLInput
+	OnDragEnd(h EventHandler, scope ...any) HTMLInput
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLInput
+	OnDragEnter(h EventHandler, scope ...any) HTMLInput
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLInput
+	OnDragLeave(h EventHandler, scope ...any) HTMLInput
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLInput
+	OnDragOver(h EventHandler, scope ...any) HTMLInput
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLInput
+	OnDragStart(h EventHandler, scope ...any) HTMLInput
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLInput
+	OnDrop(h EventHandler, scope ...any) HTMLInput
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLInput
+	OnFocus(h EventHandler, scope ...any) HTMLInput
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLInput
+	OnInput(h EventHandler, scope ...any) HTMLInput
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLInput
+	OnInvalid(h EventHandler, scope ...any) HTMLInput
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLInput
+	OnKeyDown(h EventHandler, scope ...any) HTMLInput
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLInput
+	OnKeyPress(h EventHandler, scope ...any) HTMLInput
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLInput
+	OnKeyUp(h EventHandler, scope ...any) HTMLInput
 
 	// OnLoad calls the given handler after the element is finished loading.
-	OnLoad(h EventHandler, scope ...interface{}) HTMLInput
+	OnLoad(h EventHandler, scope ...any) HTMLInput
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLInput
+	OnMouseDown(h EventHandler, scope ...any) HTMLInput
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLInput
+	OnMouseMove(h EventHandler, scope ...any) HTMLInput
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLInput
+	OnMouseOut(h EventHandler, scope ...any) HTMLInput
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLInput
+	OnMouseOver(h EventHandler, scope ...any) HTMLInput
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLInput
+	OnMouseUp(h EventHandler, scope ...any) HTMLInput
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLInput
+	OnPaste(h EventHandler, scope ...any) HTMLInput
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLInput
+	OnReset(h EventHandler, scope ...any) HTMLInput
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLInput
+	OnScroll(h EventHandler, scope ...any) HTMLInput
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLInput
+	OnSearch(h EventHandler, scope ...any) HTMLInput
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLInput
+	OnSelect(h EventHandler, scope ...any) HTMLInput
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLInput
+	OnSubmit(h EventHandler, scope ...any) HTMLInput
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLInput
+	OnWheel(h EventHandler, scope ...any) HTMLInput
 }
 
 // Input returns an HTML element that defines an input control.
@@ -9058,7 +9058,7 @@ type HTMLIns interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLIns
+	Text(v any) HTMLIns
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLIns
@@ -9070,7 +9070,7 @@ type HTMLIns interface {
 	AccessKey(v string) HTMLIns
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLIns
+	Aria(k string, v any) HTMLIns
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLIns
@@ -9079,7 +9079,7 @@ type HTMLIns interface {
 	ContentEditable(v bool) HTMLIns
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLIns
+	DataSet(k string, v any) HTMLIns
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLIns
@@ -9118,100 +9118,100 @@ type HTMLIns interface {
 	On(event string, h EventHandler, scope ...any) HTMLIns
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLIns
+	OnBlur(h EventHandler, scope ...any) HTMLIns
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLIns
+	OnChange(h EventHandler, scope ...any) HTMLIns
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLIns
+	OnClick(h EventHandler, scope ...any) HTMLIns
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLIns
+	OnContextMenu(h EventHandler, scope ...any) HTMLIns
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLIns
+	OnCopy(h EventHandler, scope ...any) HTMLIns
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLIns
+	OnCut(h EventHandler, scope ...any) HTMLIns
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLIns
+	OnDblClick(h EventHandler, scope ...any) HTMLIns
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLIns
+	OnDrag(h EventHandler, scope ...any) HTMLIns
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLIns
+	OnDragEnd(h EventHandler, scope ...any) HTMLIns
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLIns
+	OnDragEnter(h EventHandler, scope ...any) HTMLIns
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLIns
+	OnDragLeave(h EventHandler, scope ...any) HTMLIns
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLIns
+	OnDragOver(h EventHandler, scope ...any) HTMLIns
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLIns
+	OnDragStart(h EventHandler, scope ...any) HTMLIns
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLIns
+	OnDrop(h EventHandler, scope ...any) HTMLIns
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLIns
+	OnFocus(h EventHandler, scope ...any) HTMLIns
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLIns
+	OnInput(h EventHandler, scope ...any) HTMLIns
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLIns
+	OnInvalid(h EventHandler, scope ...any) HTMLIns
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLIns
+	OnKeyDown(h EventHandler, scope ...any) HTMLIns
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLIns
+	OnKeyPress(h EventHandler, scope ...any) HTMLIns
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLIns
+	OnKeyUp(h EventHandler, scope ...any) HTMLIns
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLIns
+	OnMouseDown(h EventHandler, scope ...any) HTMLIns
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLIns
+	OnMouseMove(h EventHandler, scope ...any) HTMLIns
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLIns
+	OnMouseOut(h EventHandler, scope ...any) HTMLIns
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLIns
+	OnMouseOver(h EventHandler, scope ...any) HTMLIns
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLIns
+	OnMouseUp(h EventHandler, scope ...any) HTMLIns
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLIns
+	OnPaste(h EventHandler, scope ...any) HTMLIns
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLIns
+	OnReset(h EventHandler, scope ...any) HTMLIns
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLIns
+	OnScroll(h EventHandler, scope ...any) HTMLIns
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLIns
+	OnSearch(h EventHandler, scope ...any) HTMLIns
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLIns
+	OnSelect(h EventHandler, scope ...any) HTMLIns
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLIns
+	OnSubmit(h EventHandler, scope ...any) HTMLIns
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLIns
+	OnWheel(h EventHandler, scope ...any) HTMLIns
 }
 
 // Ins returns an HTML element that defines a text that has been inserted into a document.
@@ -9227,7 +9227,7 @@ type HTMLKbd interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLKbd
+	Text(v any) HTMLKbd
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLKbd
@@ -9239,7 +9239,7 @@ type HTMLKbd interface {
 	AccessKey(v string) HTMLKbd
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLKbd
+	Aria(k string, v any) HTMLKbd
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLKbd
@@ -9248,7 +9248,7 @@ type HTMLKbd interface {
 	ContentEditable(v bool) HTMLKbd
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLKbd
+	DataSet(k string, v any) HTMLKbd
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLKbd
@@ -9287,100 +9287,100 @@ type HTMLKbd interface {
 	On(event string, h EventHandler, scope ...any) HTMLKbd
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLKbd
+	OnBlur(h EventHandler, scope ...any) HTMLKbd
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLKbd
+	OnChange(h EventHandler, scope ...any) HTMLKbd
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLKbd
+	OnClick(h EventHandler, scope ...any) HTMLKbd
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLKbd
+	OnContextMenu(h EventHandler, scope ...any) HTMLKbd
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLKbd
+	OnCopy(h EventHandler, scope ...any) HTMLKbd
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLKbd
+	OnCut(h EventHandler, scope ...any) HTMLKbd
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLKbd
+	OnDblClick(h EventHandler, scope ...any) HTMLKbd
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLKbd
+	OnDrag(h EventHandler, scope ...any) HTMLKbd
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLKbd
+	OnDragEnd(h EventHandler, scope ...any) HTMLKbd
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLKbd
+	OnDragEnter(h EventHandler, scope ...any) HTMLKbd
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLKbd
+	OnDragLeave(h EventHandler, scope ...any) HTMLKbd
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLKbd
+	OnDragOver(h EventHandler, scope ...any) HTMLKbd
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLKbd
+	OnDragStart(h EventHandler, scope ...any) HTMLKbd
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLKbd
+	OnDrop(h EventHandler, scope ...any) HTMLKbd
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLKbd
+	OnFocus(h EventHandler, scope ...any) HTMLKbd
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLKbd
+	OnInput(h EventHandler, scope ...any) HTMLKbd
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLKbd
+	OnInvalid(h EventHandler, scope ...any) HTMLKbd
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLKbd
+	OnKeyDown(h EventHandler, scope ...any) HTMLKbd
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLKbd
+	OnKeyPress(h EventHandler, scope ...any) HTMLKbd
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLKbd
+	OnKeyUp(h EventHandler, scope ...any) HTMLKbd
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLKbd
+	OnMouseDown(h EventHandler, scope ...any) HTMLKbd
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLKbd
+	OnMouseMove(h EventHandler, scope ...any) HTMLKbd
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLKbd
+	OnMouseOut(h EventHandler, scope ...any) HTMLKbd
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLKbd
+	OnMouseOver(h EventHandler, scope ...any) HTMLKbd
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLKbd
+	OnMouseUp(h EventHandler, scope ...any) HTMLKbd
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLKbd
+	OnPaste(h EventHandler, scope ...any) HTMLKbd
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLKbd
+	OnReset(h EventHandler, scope ...any) HTMLKbd
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLKbd
+	OnScroll(h EventHandler, scope ...any) HTMLKbd
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLKbd
+	OnSearch(h EventHandler, scope ...any) HTMLKbd
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLKbd
+	OnSelect(h EventHandler, scope ...any) HTMLKbd
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLKbd
+	OnSubmit(h EventHandler, scope ...any) HTMLKbd
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLKbd
+	OnWheel(h EventHandler, scope ...any) HTMLKbd
 }
 
 // Kbd returns an HTML element that defines keyboard input.
@@ -9396,7 +9396,7 @@ type HTMLLabel interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLLabel
+	Text(v any) HTMLLabel
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLLabel
@@ -9408,7 +9408,7 @@ type HTMLLabel interface {
 	AccessKey(v string) HTMLLabel
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLLabel
+	Aria(k string, v any) HTMLLabel
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLLabel
@@ -9417,7 +9417,7 @@ type HTMLLabel interface {
 	ContentEditable(v bool) HTMLLabel
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLLabel
+	DataSet(k string, v any) HTMLLabel
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLLabel
@@ -9462,100 +9462,100 @@ type HTMLLabel interface {
 	On(event string, h EventHandler, scope ...any) HTMLLabel
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLLabel
+	OnBlur(h EventHandler, scope ...any) HTMLLabel
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLLabel
+	OnChange(h EventHandler, scope ...any) HTMLLabel
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLLabel
+	OnClick(h EventHandler, scope ...any) HTMLLabel
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLLabel
+	OnContextMenu(h EventHandler, scope ...any) HTMLLabel
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLLabel
+	OnCopy(h EventHandler, scope ...any) HTMLLabel
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLLabel
+	OnCut(h EventHandler, scope ...any) HTMLLabel
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLLabel
+	OnDblClick(h EventHandler, scope ...any) HTMLLabel
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLLabel
+	OnDrag(h EventHandler, scope ...any) HTMLLabel
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLLabel
+	OnDragEnd(h EventHandler, scope ...any) HTMLLabel
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLLabel
+	OnDragEnter(h EventHandler, scope ...any) HTMLLabel
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLLabel
+	OnDragLeave(h EventHandler, scope ...any) HTMLLabel
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLLabel
+	OnDragOver(h EventHandler, scope ...any) HTMLLabel
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLLabel
+	OnDragStart(h EventHandler, scope ...any) HTMLLabel
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLLabel
+	OnDrop(h EventHandler, scope ...any) HTMLLabel
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLLabel
+	OnFocus(h EventHandler, scope ...any) HTMLLabel
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLLabel
+	OnInput(h EventHandler, scope ...any) HTMLLabel
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLLabel
+	OnInvalid(h EventHandler, scope ...any) HTMLLabel
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLLabel
+	OnKeyDown(h EventHandler, scope ...any) HTMLLabel
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLLabel
+	OnKeyPress(h EventHandler, scope ...any) HTMLLabel
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLLabel
+	OnKeyUp(h EventHandler, scope ...any) HTMLLabel
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLLabel
+	OnMouseDown(h EventHandler, scope ...any) HTMLLabel
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLLabel
+	OnMouseMove(h EventHandler, scope ...any) HTMLLabel
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLLabel
+	OnMouseOut(h EventHandler, scope ...any) HTMLLabel
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLLabel
+	OnMouseOver(h EventHandler, scope ...any) HTMLLabel
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLLabel
+	OnMouseUp(h EventHandler, scope ...any) HTMLLabel
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLLabel
+	OnPaste(h EventHandler, scope ...any) HTMLLabel
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLLabel
+	OnReset(h EventHandler, scope ...any) HTMLLabel
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLLabel
+	OnScroll(h EventHandler, scope ...any) HTMLLabel
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLLabel
+	OnSearch(h EventHandler, scope ...any) HTMLLabel
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLLabel
+	OnSelect(h EventHandler, scope ...any) HTMLLabel
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLLabel
+	OnSubmit(h EventHandler, scope ...any) HTMLLabel
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLLabel
+	OnWheel(h EventHandler, scope ...any) HTMLLabel
 }
 
 // Label returns an HTML element that defines a label for an input element.
@@ -9571,7 +9571,7 @@ type HTMLLegend interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLLegend
+	Text(v any) HTMLLegend
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLLegend
@@ -9583,7 +9583,7 @@ type HTMLLegend interface {
 	AccessKey(v string) HTMLLegend
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLLegend
+	Aria(k string, v any) HTMLLegend
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLLegend
@@ -9592,7 +9592,7 @@ type HTMLLegend interface {
 	ContentEditable(v bool) HTMLLegend
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLLegend
+	DataSet(k string, v any) HTMLLegend
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLLegend
@@ -9631,100 +9631,100 @@ type HTMLLegend interface {
 	On(event string, h EventHandler, scope ...any) HTMLLegend
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLLegend
+	OnBlur(h EventHandler, scope ...any) HTMLLegend
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLLegend
+	OnChange(h EventHandler, scope ...any) HTMLLegend
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLLegend
+	OnClick(h EventHandler, scope ...any) HTMLLegend
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLLegend
+	OnContextMenu(h EventHandler, scope ...any) HTMLLegend
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLLegend
+	OnCopy(h EventHandler, scope ...any) HTMLLegend
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLLegend
+	OnCut(h EventHandler, scope ...any) HTMLLegend
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLLegend
+	OnDblClick(h EventHandler, scope ...any) HTMLLegend
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLLegend
+	OnDrag(h EventHandler, scope ...any) HTMLLegend
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLLegend
+	OnDragEnd(h EventHandler, scope ...any) HTMLLegend
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLLegend
+	OnDragEnter(h EventHandler, scope ...any) HTMLLegend
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLLegend
+	OnDragLeave(h EventHandler, scope ...any) HTMLLegend
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLLegend
+	OnDragOver(h EventHandler, scope ...any) HTMLLegend
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLLegend
+	OnDragStart(h EventHandler, scope ...any) HTMLLegend
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLLegend
+	OnDrop(h EventHandler, scope ...any) HTMLLegend
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLLegend
+	OnFocus(h EventHandler, scope ...any) HTMLLegend
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLLegend
+	OnInput(h EventHandler, scope ...any) HTMLLegend
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLLegend
+	OnInvalid(h EventHandler, scope ...any) HTMLLegend
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLLegend
+	OnKeyDown(h EventHandler, scope ...any) HTMLLegend
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLLegend
+	OnKeyPress(h EventHandler, scope ...any) HTMLLegend
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLLegend
+	OnKeyUp(h EventHandler, scope ...any) HTMLLegend
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLLegend
+	OnMouseDown(h EventHandler, scope ...any) HTMLLegend
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLLegend
+	OnMouseMove(h EventHandler, scope ...any) HTMLLegend
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLLegend
+	OnMouseOut(h EventHandler, scope ...any) HTMLLegend
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLLegend
+	OnMouseOver(h EventHandler, scope ...any) HTMLLegend
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLLegend
+	OnMouseUp(h EventHandler, scope ...any) HTMLLegend
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLLegend
+	OnPaste(h EventHandler, scope ...any) HTMLLegend
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLLegend
+	OnReset(h EventHandler, scope ...any) HTMLLegend
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLLegend
+	OnScroll(h EventHandler, scope ...any) HTMLLegend
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLLegend
+	OnSearch(h EventHandler, scope ...any) HTMLLegend
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLLegend
+	OnSelect(h EventHandler, scope ...any) HTMLLegend
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLLegend
+	OnSubmit(h EventHandler, scope ...any) HTMLLegend
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLLegend
+	OnWheel(h EventHandler, scope ...any) HTMLLegend
 }
 
 // Legend returns an HTML element that defines a caption for a fieldset element.
@@ -9740,7 +9740,7 @@ type HTMLLi interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLLi
+	Text(v any) HTMLLi
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLLi
@@ -9752,7 +9752,7 @@ type HTMLLi interface {
 	AccessKey(v string) HTMLLi
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLLi
+	Aria(k string, v any) HTMLLi
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLLi
@@ -9761,7 +9761,7 @@ type HTMLLi interface {
 	ContentEditable(v bool) HTMLLi
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLLi
+	DataSet(k string, v any) HTMLLi
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLLi
@@ -9797,106 +9797,106 @@ type HTMLLi interface {
 	Title(v string) HTMLLi
 
 	// Value specifies the value of the element.
-	Value(v interface{}) HTMLLi
+	Value(v any) HTMLLi
 
 	// On calls the given event handler when the named event is triggered.
 	On(event string, h EventHandler, scope ...any) HTMLLi
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLLi
+	OnBlur(h EventHandler, scope ...any) HTMLLi
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLLi
+	OnChange(h EventHandler, scope ...any) HTMLLi
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLLi
+	OnClick(h EventHandler, scope ...any) HTMLLi
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLLi
+	OnContextMenu(h EventHandler, scope ...any) HTMLLi
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLLi
+	OnCopy(h EventHandler, scope ...any) HTMLLi
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLLi
+	OnCut(h EventHandler, scope ...any) HTMLLi
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLLi
+	OnDblClick(h EventHandler, scope ...any) HTMLLi
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLLi
+	OnDrag(h EventHandler, scope ...any) HTMLLi
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLLi
+	OnDragEnd(h EventHandler, scope ...any) HTMLLi
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLLi
+	OnDragEnter(h EventHandler, scope ...any) HTMLLi
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLLi
+	OnDragLeave(h EventHandler, scope ...any) HTMLLi
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLLi
+	OnDragOver(h EventHandler, scope ...any) HTMLLi
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLLi
+	OnDragStart(h EventHandler, scope ...any) HTMLLi
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLLi
+	OnDrop(h EventHandler, scope ...any) HTMLLi
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLLi
+	OnFocus(h EventHandler, scope ...any) HTMLLi
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLLi
+	OnInput(h EventHandler, scope ...any) HTMLLi
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLLi
+	OnInvalid(h EventHandler, scope ...any) HTMLLi
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLLi
+	OnKeyDown(h EventHandler, scope ...any) HTMLLi
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLLi
+	OnKeyPress(h EventHandler, scope ...any) HTMLLi
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLLi
+	OnKeyUp(h EventHandler, scope ...any) HTMLLi
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLLi
+	OnMouseDown(h EventHandler, scope ...any) HTMLLi
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLLi
+	OnMouseMove(h EventHandler, scope ...any) HTMLLi
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLLi
+	OnMouseOut(h EventHandler, scope ...any) HTMLLi
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLLi
+	OnMouseOver(h EventHandler, scope ...any) HTMLLi
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLLi
+	OnMouseUp(h EventHandler, scope ...any) HTMLLi
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLLi
+	OnPaste(h EventHandler, scope ...any) HTMLLi
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLLi
+	OnReset(h EventHandler, scope ...any) HTMLLi
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLLi
+	OnScroll(h EventHandler, scope ...any) HTMLLi
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLLi
+	OnSearch(h EventHandler, scope ...any) HTMLLi
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLLi
+	OnSelect(h EventHandler, scope ...any) HTMLLi
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLLi
+	OnSubmit(h EventHandler, scope ...any) HTMLLi
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLLi
+	OnWheel(h EventHandler, scope ...any) HTMLLi
 }
 
 // Li returns an HTML element that defines a list item.
@@ -9918,7 +9918,7 @@ type HTMLLink interface {
 	AccessKey(v string) HTMLLink
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLLink
+	Aria(k string, v any) HTMLLink
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLLink
@@ -9930,7 +9930,7 @@ type HTMLLink interface {
 	CrossOrigin(v string) HTMLLink
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLLink
+	DataSet(k string, v any) HTMLLink
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLLink
@@ -9987,103 +9987,103 @@ type HTMLLink interface {
 	On(event string, h EventHandler, scope ...any) HTMLLink
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLLink
+	OnBlur(h EventHandler, scope ...any) HTMLLink
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLLink
+	OnChange(h EventHandler, scope ...any) HTMLLink
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLLink
+	OnClick(h EventHandler, scope ...any) HTMLLink
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLLink
+	OnContextMenu(h EventHandler, scope ...any) HTMLLink
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLLink
+	OnCopy(h EventHandler, scope ...any) HTMLLink
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLLink
+	OnCut(h EventHandler, scope ...any) HTMLLink
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLLink
+	OnDblClick(h EventHandler, scope ...any) HTMLLink
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLLink
+	OnDrag(h EventHandler, scope ...any) HTMLLink
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLLink
+	OnDragEnd(h EventHandler, scope ...any) HTMLLink
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLLink
+	OnDragEnter(h EventHandler, scope ...any) HTMLLink
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLLink
+	OnDragLeave(h EventHandler, scope ...any) HTMLLink
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLLink
+	OnDragOver(h EventHandler, scope ...any) HTMLLink
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLLink
+	OnDragStart(h EventHandler, scope ...any) HTMLLink
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLLink
+	OnDrop(h EventHandler, scope ...any) HTMLLink
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLLink
+	OnFocus(h EventHandler, scope ...any) HTMLLink
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLLink
+	OnInput(h EventHandler, scope ...any) HTMLLink
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLLink
+	OnInvalid(h EventHandler, scope ...any) HTMLLink
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLLink
+	OnKeyDown(h EventHandler, scope ...any) HTMLLink
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLLink
+	OnKeyPress(h EventHandler, scope ...any) HTMLLink
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLLink
+	OnKeyUp(h EventHandler, scope ...any) HTMLLink
 
 	// OnLoad calls the given handler after the element is finished loading.
-	OnLoad(h EventHandler, scope ...interface{}) HTMLLink
+	OnLoad(h EventHandler, scope ...any) HTMLLink
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLLink
+	OnMouseDown(h EventHandler, scope ...any) HTMLLink
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLLink
+	OnMouseMove(h EventHandler, scope ...any) HTMLLink
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLLink
+	OnMouseOut(h EventHandler, scope ...any) HTMLLink
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLLink
+	OnMouseOver(h EventHandler, scope ...any) HTMLLink
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLLink
+	OnMouseUp(h EventHandler, scope ...any) HTMLLink
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLLink
+	OnPaste(h EventHandler, scope ...any) HTMLLink
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLLink
+	OnReset(h EventHandler, scope ...any) HTMLLink
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLLink
+	OnScroll(h EventHandler, scope ...any) HTMLLink
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLLink
+	OnSearch(h EventHandler, scope ...any) HTMLLink
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLLink
+	OnSelect(h EventHandler, scope ...any) HTMLLink
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLLink
+	OnSubmit(h EventHandler, scope ...any) HTMLLink
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLLink
+	OnWheel(h EventHandler, scope ...any) HTMLLink
 }
 
 // Link returns an HTML element that defines the relationship between a document and an external resource (most used to link to style sheets).
@@ -10099,7 +10099,7 @@ type HTMLMain interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLMain
+	Text(v any) HTMLMain
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLMain
@@ -10111,7 +10111,7 @@ type HTMLMain interface {
 	AccessKey(v string) HTMLMain
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLMain
+	Aria(k string, v any) HTMLMain
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLMain
@@ -10120,7 +10120,7 @@ type HTMLMain interface {
 	ContentEditable(v bool) HTMLMain
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLMain
+	DataSet(k string, v any) HTMLMain
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLMain
@@ -10159,100 +10159,100 @@ type HTMLMain interface {
 	On(event string, h EventHandler, scope ...any) HTMLMain
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLMain
+	OnBlur(h EventHandler, scope ...any) HTMLMain
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLMain
+	OnChange(h EventHandler, scope ...any) HTMLMain
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLMain
+	OnClick(h EventHandler, scope ...any) HTMLMain
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLMain
+	OnContextMenu(h EventHandler, scope ...any) HTMLMain
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLMain
+	OnCopy(h EventHandler, scope ...any) HTMLMain
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLMain
+	OnCut(h EventHandler, scope ...any) HTMLMain
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLMain
+	OnDblClick(h EventHandler, scope ...any) HTMLMain
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLMain
+	OnDrag(h EventHandler, scope ...any) HTMLMain
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLMain
+	OnDragEnd(h EventHandler, scope ...any) HTMLMain
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLMain
+	OnDragEnter(h EventHandler, scope ...any) HTMLMain
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLMain
+	OnDragLeave(h EventHandler, scope ...any) HTMLMain
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLMain
+	OnDragOver(h EventHandler, scope ...any) HTMLMain
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLMain
+	OnDragStart(h EventHandler, scope ...any) HTMLMain
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLMain
+	OnDrop(h EventHandler, scope ...any) HTMLMain
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLMain
+	OnFocus(h EventHandler, scope ...any) HTMLMain
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLMain
+	OnInput(h EventHandler, scope ...any) HTMLMain
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLMain
+	OnInvalid(h EventHandler, scope ...any) HTMLMain
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLMain
+	OnKeyDown(h EventHandler, scope ...any) HTMLMain
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLMain
+	OnKeyPress(h EventHandler, scope ...any) HTMLMain
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLMain
+	OnKeyUp(h EventHandler, scope ...any) HTMLMain
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLMain
+	OnMouseDown(h EventHandler, scope ...any) HTMLMain
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLMain
+	OnMouseMove(h EventHandler, scope ...any) HTMLMain
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLMain
+	OnMouseOut(h EventHandler, scope ...any) HTMLMain
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLMain
+	OnMouseOver(h EventHandler, scope ...any) HTMLMain
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLMain
+	OnMouseUp(h EventHandler, scope ...any) HTMLMain
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLMain
+	OnPaste(h EventHandler, scope ...any) HTMLMain
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLMain
+	OnReset(h EventHandler, scope ...any) HTMLMain
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLMain
+	OnScroll(h EventHandler, scope ...any) HTMLMain
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLMain
+	OnSearch(h EventHandler, scope ...any) HTMLMain
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLMain
+	OnSelect(h EventHandler, scope ...any) HTMLMain
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLMain
+	OnSubmit(h EventHandler, scope ...any) HTMLMain
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLMain
+	OnWheel(h EventHandler, scope ...any) HTMLMain
 }
 
 // Main returns an HTML element that specifies the main content of a document.
@@ -10268,7 +10268,7 @@ type HTMLMap interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLMap
+	Text(v any) HTMLMap
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLMap
@@ -10280,7 +10280,7 @@ type HTMLMap interface {
 	AccessKey(v string) HTMLMap
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLMap
+	Aria(k string, v any) HTMLMap
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLMap
@@ -10289,7 +10289,7 @@ type HTMLMap interface {
 	ContentEditable(v bool) HTMLMap
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLMap
+	DataSet(k string, v any) HTMLMap
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLMap
@@ -10331,100 +10331,100 @@ type HTMLMap interface {
 	On(event string, h EventHandler, scope ...any) HTMLMap
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLMap
+	OnBlur(h EventHandler, scope ...any) HTMLMap
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLMap
+	OnChange(h EventHandler, scope ...any) HTMLMap
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLMap
+	OnClick(h EventHandler, scope ...any) HTMLMap
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLMap
+	OnContextMenu(h EventHandler, scope ...any) HTMLMap
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLMap
+	OnCopy(h EventHandler, scope ...any) HTMLMap
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLMap
+	OnCut(h EventHandler, scope ...any) HTMLMap
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLMap
+	OnDblClick(h EventHandler, scope ...any) HTMLMap
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLMap
+	OnDrag(h EventHandler, scope ...any) HTMLMap
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLMap
+	OnDragEnd(h EventHandler, scope ...any) HTMLMap
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLMap
+	OnDragEnter(h EventHandler, scope ...any) HTMLMap
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLMap
+	OnDragLeave(h EventHandler, scope ...any) HTMLMap
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLMap
+	OnDragOver(h EventHandler, scope ...any) HTMLMap
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLMap
+	OnDragStart(h EventHandler, scope ...any) HTMLMap
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLMap
+	OnDrop(h EventHandler, scope ...any) HTMLMap
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLMap
+	OnFocus(h EventHandler, scope ...any) HTMLMap
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLMap
+	OnInput(h EventHandler, scope ...any) HTMLMap
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLMap
+	OnInvalid(h EventHandler, scope ...any) HTMLMap
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLMap
+	OnKeyDown(h EventHandler, scope ...any) HTMLMap
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLMap
+	OnKeyPress(h EventHandler, scope ...any) HTMLMap
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLMap
+	OnKeyUp(h EventHandler, scope ...any) HTMLMap
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLMap
+	OnMouseDown(h EventHandler, scope ...any) HTMLMap
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLMap
+	OnMouseMove(h EventHandler, scope ...any) HTMLMap
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLMap
+	OnMouseOut(h EventHandler, scope ...any) HTMLMap
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLMap
+	OnMouseOver(h EventHandler, scope ...any) HTMLMap
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLMap
+	OnMouseUp(h EventHandler, scope ...any) HTMLMap
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLMap
+	OnPaste(h EventHandler, scope ...any) HTMLMap
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLMap
+	OnReset(h EventHandler, scope ...any) HTMLMap
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLMap
+	OnScroll(h EventHandler, scope ...any) HTMLMap
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLMap
+	OnSearch(h EventHandler, scope ...any) HTMLMap
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLMap
+	OnSelect(h EventHandler, scope ...any) HTMLMap
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLMap
+	OnSubmit(h EventHandler, scope ...any) HTMLMap
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLMap
+	OnWheel(h EventHandler, scope ...any) HTMLMap
 }
 
 // Map returns an HTML element that defines a client-side image-map.
@@ -10440,7 +10440,7 @@ type HTMLMark interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLMark
+	Text(v any) HTMLMark
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLMark
@@ -10452,7 +10452,7 @@ type HTMLMark interface {
 	AccessKey(v string) HTMLMark
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLMark
+	Aria(k string, v any) HTMLMark
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLMark
@@ -10461,7 +10461,7 @@ type HTMLMark interface {
 	ContentEditable(v bool) HTMLMark
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLMark
+	DataSet(k string, v any) HTMLMark
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLMark
@@ -10500,100 +10500,100 @@ type HTMLMark interface {
 	On(event string, h EventHandler, scope ...any) HTMLMark
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLMark
+	OnBlur(h EventHandler, scope ...any) HTMLMark
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLMark
+	OnChange(h EventHandler, scope ...any) HTMLMark
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLMark
+	OnClick(h EventHandler, scope ...any) HTMLMark
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLMark
+	OnContextMenu(h EventHandler, scope ...any) HTMLMark
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLMark
+	OnCopy(h EventHandler, scope ...any) HTMLMark
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLMark
+	OnCut(h EventHandler, scope ...any) HTMLMark
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLMark
+	OnDblClick(h EventHandler, scope ...any) HTMLMark
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLMark
+	OnDrag(h EventHandler, scope ...any) HTMLMark
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLMark
+	OnDragEnd(h EventHandler, scope ...any) HTMLMark
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLMark
+	OnDragEnter(h EventHandler, scope ...any) HTMLMark
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLMark
+	OnDragLeave(h EventHandler, scope ...any) HTMLMark
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLMark
+	OnDragOver(h EventHandler, scope ...any) HTMLMark
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLMark
+	OnDragStart(h EventHandler, scope ...any) HTMLMark
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLMark
+	OnDrop(h EventHandler, scope ...any) HTMLMark
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLMark
+	OnFocus(h EventHandler, scope ...any) HTMLMark
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLMark
+	OnInput(h EventHandler, scope ...any) HTMLMark
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLMark
+	OnInvalid(h EventHandler, scope ...any) HTMLMark
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLMark
+	OnKeyDown(h EventHandler, scope ...any) HTMLMark
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLMark
+	OnKeyPress(h EventHandler, scope ...any) HTMLMark
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLMark
+	OnKeyUp(h EventHandler, scope ...any) HTMLMark
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLMark
+	OnMouseDown(h EventHandler, scope ...any) HTMLMark
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLMark
+	OnMouseMove(h EventHandler, scope ...any) HTMLMark
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLMark
+	OnMouseOut(h EventHandler, scope ...any) HTMLMark
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLMark
+	OnMouseOver(h EventHandler, scope ...any) HTMLMark
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLMark
+	OnMouseUp(h EventHandler, scope ...any) HTMLMark
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLMark
+	OnPaste(h EventHandler, scope ...any) HTMLMark
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLMark
+	OnReset(h EventHandler, scope ...any) HTMLMark
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLMark
+	OnScroll(h EventHandler, scope ...any) HTMLMark
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLMark
+	OnSearch(h EventHandler, scope ...any) HTMLMark
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLMark
+	OnSelect(h EventHandler, scope ...any) HTMLMark
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLMark
+	OnSubmit(h EventHandler, scope ...any) HTMLMark
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLMark
+	OnWheel(h EventHandler, scope ...any) HTMLMark
 }
 
 // Mark returns an HTML element that defines marked/highlighted text.
@@ -10615,7 +10615,7 @@ type HTMLMeta interface {
 	AccessKey(v string) HTMLMeta
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLMeta
+	Aria(k string, v any) HTMLMeta
 
 	// Charset specifies the character encoding.
 	Charset(v string) HTMLMeta
@@ -10630,7 +10630,7 @@ type HTMLMeta interface {
 	ContentEditable(v bool) HTMLMeta
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLMeta
+	DataSet(k string, v any) HTMLMeta
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLMeta
@@ -10691,7 +10691,7 @@ type HTMLMeter interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLMeter
+	Text(v any) HTMLMeter
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLMeter
@@ -10703,7 +10703,7 @@ type HTMLMeter interface {
 	AccessKey(v string) HTMLMeter
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLMeter
+	Aria(k string, v any) HTMLMeter
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLMeter
@@ -10712,7 +10712,7 @@ type HTMLMeter interface {
 	ContentEditable(v bool) HTMLMeter
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLMeter
+	DataSet(k string, v any) HTMLMeter
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLMeter
@@ -10739,10 +10739,10 @@ type HTMLMeter interface {
 	Low(v float64) HTMLMeter
 
 	// Max Specifies the maximum value.
-	Max(v interface{}) HTMLMeter
+	Max(v any) HTMLMeter
 
 	// Min specifies a minimum value.
-	Min(v interface{}) HTMLMeter
+	Min(v any) HTMLMeter
 
 	// Optimum specifies what value is the optimal value for the gauge.
 	Optimum(v float64) HTMLMeter
@@ -10766,106 +10766,106 @@ type HTMLMeter interface {
 	Title(v string) HTMLMeter
 
 	// Value specifies the value of the element.
-	Value(v interface{}) HTMLMeter
+	Value(v any) HTMLMeter
 
 	// On calls the given event handler when the named event is triggered.
 	On(event string, h EventHandler, scope ...any) HTMLMeter
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLMeter
+	OnBlur(h EventHandler, scope ...any) HTMLMeter
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLMeter
+	OnChange(h EventHandler, scope ...any) HTMLMeter
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLMeter
+	OnClick(h EventHandler, scope ...any) HTMLMeter
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLMeter
+	OnContextMenu(h EventHandler, scope ...any) HTMLMeter
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLMeter
+	OnCopy(h EventHandler, scope ...any) HTMLMeter
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLMeter
+	OnCut(h EventHandler, scope ...any) HTMLMeter
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLMeter
+	OnDblClick(h EventHandler, scope ...any) HTMLMeter
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLMeter
+	OnDrag(h EventHandler, scope ...any) HTMLMeter
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLMeter
+	OnDragEnd(h EventHandler, scope ...any) HTMLMeter
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLMeter
+	OnDragEnter(h EventHandler, scope ...any) HTMLMeter
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLMeter
+	OnDragLeave(h EventHandler, scope ...any) HTMLMeter
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLMeter
+	OnDragOver(h EventHandler, scope ...any) HTMLMeter
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLMeter
+	OnDragStart(h EventHandler, scope ...any) HTMLMeter
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLMeter
+	OnDrop(h EventHandler, scope ...any) HTMLMeter
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLMeter
+	OnFocus(h EventHandler, scope ...any) HTMLMeter
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLMeter
+	OnInput(h EventHandler, scope ...any) HTMLMeter
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLMeter
+	OnInvalid(h EventHandler, scope ...any) HTMLMeter
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLMeter
+	OnKeyDown(h EventHandler, scope ...any) HTMLMeter
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLMeter
+	OnKeyPress(h EventHandler, scope ...any) HTMLMeter
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLMeter
+	OnKeyUp(h EventHandler, scope ...any) HTMLMeter
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLMeter
+	OnMouseDown(h EventHandler, scope ...any) HTMLMeter
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLMeter
+	OnMouseMove(h EventHandler, scope ...any) HTMLMeter
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLMeter
+	OnMouseOut(h EventHandler, scope ...any) HTMLMeter
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLMeter
+	OnMouseOver(h EventHandler, scope ...any) HTMLMeter
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLMeter
+	OnMouseUp(h EventHandler, scope ...any) HTMLMeter
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLMeter
+	OnPaste(h EventHandler, scope ...any) HTMLMeter
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLMeter
+	OnReset(h EventHandler, scope ...any) HTMLMeter
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLMeter
+	OnScroll(h EventHandler, scope ...any) HTMLMeter
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLMeter
+	OnSearch(h EventHandler, scope ...any) HTMLMeter
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLMeter
+	OnSelect(h EventHandler, scope ...any) HTMLMeter
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLMeter
+	OnSubmit(h EventHandler, scope ...any) HTMLMeter
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLMeter
+	OnWheel(h EventHandler, scope ...any) HTMLMeter
 }
 
 // Meter returns an HTML element that defines a scalar measurement within a known range (a gauge).
@@ -10881,7 +10881,7 @@ type HTMLNav interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLNav
+	Text(v any) HTMLNav
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLNav
@@ -10893,7 +10893,7 @@ type HTMLNav interface {
 	AccessKey(v string) HTMLNav
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLNav
+	Aria(k string, v any) HTMLNav
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLNav
@@ -10902,7 +10902,7 @@ type HTMLNav interface {
 	ContentEditable(v bool) HTMLNav
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLNav
+	DataSet(k string, v any) HTMLNav
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLNav
@@ -10941,100 +10941,100 @@ type HTMLNav interface {
 	On(event string, h EventHandler, scope ...any) HTMLNav
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLNav
+	OnBlur(h EventHandler, scope ...any) HTMLNav
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLNav
+	OnChange(h EventHandler, scope ...any) HTMLNav
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLNav
+	OnClick(h EventHandler, scope ...any) HTMLNav
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLNav
+	OnContextMenu(h EventHandler, scope ...any) HTMLNav
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLNav
+	OnCopy(h EventHandler, scope ...any) HTMLNav
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLNav
+	OnCut(h EventHandler, scope ...any) HTMLNav
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLNav
+	OnDblClick(h EventHandler, scope ...any) HTMLNav
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLNav
+	OnDrag(h EventHandler, scope ...any) HTMLNav
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLNav
+	OnDragEnd(h EventHandler, scope ...any) HTMLNav
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLNav
+	OnDragEnter(h EventHandler, scope ...any) HTMLNav
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLNav
+	OnDragLeave(h EventHandler, scope ...any) HTMLNav
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLNav
+	OnDragOver(h EventHandler, scope ...any) HTMLNav
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLNav
+	OnDragStart(h EventHandler, scope ...any) HTMLNav
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLNav
+	OnDrop(h EventHandler, scope ...any) HTMLNav
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLNav
+	OnFocus(h EventHandler, scope ...any) HTMLNav
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLNav
+	OnInput(h EventHandler, scope ...any) HTMLNav
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLNav
+	OnInvalid(h EventHandler, scope ...any) HTMLNav
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLNav
+	OnKeyDown(h EventHandler, scope ...any) HTMLNav
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLNav
+	OnKeyPress(h EventHandler, scope ...any) HTMLNav
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLNav
+	OnKeyUp(h EventHandler, scope ...any) HTMLNav
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLNav
+	OnMouseDown(h EventHandler, scope ...any) HTMLNav
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLNav
+	OnMouseMove(h EventHandler, scope ...any) HTMLNav
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLNav
+	OnMouseOut(h EventHandler, scope ...any) HTMLNav
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLNav
+	OnMouseOver(h EventHandler, scope ...any) HTMLNav
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLNav
+	OnMouseUp(h EventHandler, scope ...any) HTMLNav
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLNav
+	OnPaste(h EventHandler, scope ...any) HTMLNav
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLNav
+	OnReset(h EventHandler, scope ...any) HTMLNav
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLNav
+	OnScroll(h EventHandler, scope ...any) HTMLNav
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLNav
+	OnSearch(h EventHandler, scope ...any) HTMLNav
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLNav
+	OnSelect(h EventHandler, scope ...any) HTMLNav
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLNav
+	OnSubmit(h EventHandler, scope ...any) HTMLNav
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLNav
+	OnWheel(h EventHandler, scope ...any) HTMLNav
 }
 
 // Nav returns an HTML element that defines navigation links.
@@ -11050,7 +11050,7 @@ type HTMLNoScript interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLNoScript
+	Text(v any) HTMLNoScript
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLNoScript
@@ -11062,7 +11062,7 @@ type HTMLNoScript interface {
 	AccessKey(v string) HTMLNoScript
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLNoScript
+	Aria(k string, v any) HTMLNoScript
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLNoScript
@@ -11071,7 +11071,7 @@ type HTMLNoScript interface {
 	ContentEditable(v bool) HTMLNoScript
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLNoScript
+	DataSet(k string, v any) HTMLNoScript
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLNoScript
@@ -11123,7 +11123,7 @@ type HTMLObject interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLObject
+	Text(v any) HTMLObject
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLObject
@@ -11135,7 +11135,7 @@ type HTMLObject interface {
 	AccessKey(v string) HTMLObject
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLObject
+	Aria(k string, v any) HTMLObject
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLObject
@@ -11147,7 +11147,7 @@ type HTMLObject interface {
 	Data(v string) HTMLObject
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLObject
+	DataSet(k string, v any) HTMLObject
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLObject
@@ -11204,169 +11204,169 @@ type HTMLObject interface {
 	On(event string, h EventHandler, scope ...any) HTMLObject
 
 	// OnAbort calls the given handler on abort.
-	OnAbort(h EventHandler, scope ...interface{}) HTMLObject
+	OnAbort(h EventHandler, scope ...any) HTMLObject
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLObject
+	OnBlur(h EventHandler, scope ...any) HTMLObject
 
 	// OnCanPlay calls the given handler when a file is ready to start playing (when it has buffered enough to begin).
-	OnCanPlay(h EventHandler, scope ...interface{}) HTMLObject
+	OnCanPlay(h EventHandler, scope ...any) HTMLObject
 
 	// OnCanPlayThrough calls the given handler when a file can be played all the way to the end without pausing for buffering.
-	OnCanPlayThrough(h EventHandler, scope ...interface{}) HTMLObject
+	OnCanPlayThrough(h EventHandler, scope ...any) HTMLObject
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLObject
+	OnChange(h EventHandler, scope ...any) HTMLObject
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLObject
+	OnClick(h EventHandler, scope ...any) HTMLObject
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLObject
+	OnContextMenu(h EventHandler, scope ...any) HTMLObject
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLObject
+	OnCopy(h EventHandler, scope ...any) HTMLObject
 
 	// OnCueChange calls the given handler when the cue changes in a track element.
-	OnCueChange(h EventHandler, scope ...interface{}) HTMLObject
+	OnCueChange(h EventHandler, scope ...any) HTMLObject
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLObject
+	OnCut(h EventHandler, scope ...any) HTMLObject
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLObject
+	OnDblClick(h EventHandler, scope ...any) HTMLObject
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLObject
+	OnDrag(h EventHandler, scope ...any) HTMLObject
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLObject
+	OnDragEnd(h EventHandler, scope ...any) HTMLObject
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLObject
+	OnDragEnter(h EventHandler, scope ...any) HTMLObject
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLObject
+	OnDragLeave(h EventHandler, scope ...any) HTMLObject
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLObject
+	OnDragOver(h EventHandler, scope ...any) HTMLObject
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLObject
+	OnDragStart(h EventHandler, scope ...any) HTMLObject
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLObject
+	OnDrop(h EventHandler, scope ...any) HTMLObject
 
 	// OnDurationChange calls the given handler when the length of the media changes.
-	OnDurationChange(h EventHandler, scope ...interface{}) HTMLObject
+	OnDurationChange(h EventHandler, scope ...any) HTMLObject
 
 	// OnEmptied calls the given handler when something bad happens and the file is suddenly unavailable (like unexpectedly disconnects).
-	OnEmptied(h EventHandler, scope ...interface{}) HTMLObject
+	OnEmptied(h EventHandler, scope ...any) HTMLObject
 
 	// OnEnded calls the given handler when the media has reach the end.
-	OnEnded(h EventHandler, scope ...interface{}) HTMLObject
+	OnEnded(h EventHandler, scope ...any) HTMLObject
 
 	// OnError calls the given handler when an error occurs.
-	OnError(h EventHandler, scope ...interface{}) HTMLObject
+	OnError(h EventHandler, scope ...any) HTMLObject
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLObject
+	OnFocus(h EventHandler, scope ...any) HTMLObject
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLObject
+	OnInput(h EventHandler, scope ...any) HTMLObject
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLObject
+	OnInvalid(h EventHandler, scope ...any) HTMLObject
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLObject
+	OnKeyDown(h EventHandler, scope ...any) HTMLObject
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLObject
+	OnKeyPress(h EventHandler, scope ...any) HTMLObject
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLObject
+	OnKeyUp(h EventHandler, scope ...any) HTMLObject
 
 	// OnLoadStart calls the given handler just as the file begins to load before anything is actually loaded.
-	OnLoadStart(h EventHandler, scope ...interface{}) HTMLObject
+	OnLoadStart(h EventHandler, scope ...any) HTMLObject
 
 	// OnLoadedData calls the given handler when media data is loaded.
-	OnLoadedData(h EventHandler, scope ...interface{}) HTMLObject
+	OnLoadedData(h EventHandler, scope ...any) HTMLObject
 
 	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLObject
+	OnLoadedMetaData(h EventHandler, scope ...any) HTMLObject
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLObject
+	OnMouseDown(h EventHandler, scope ...any) HTMLObject
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLObject
+	OnMouseMove(h EventHandler, scope ...any) HTMLObject
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLObject
+	OnMouseOut(h EventHandler, scope ...any) HTMLObject
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLObject
+	OnMouseOver(h EventHandler, scope ...any) HTMLObject
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLObject
+	OnMouseUp(h EventHandler, scope ...any) HTMLObject
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLObject
+	OnPaste(h EventHandler, scope ...any) HTMLObject
 
 	// OnPause calls the given handler when the media is paused either by the user or programmatically.
-	OnPause(h EventHandler, scope ...interface{}) HTMLObject
+	OnPause(h EventHandler, scope ...any) HTMLObject
 
 	// OnPlay calls the given handler when the media is ready to start playing.
-	OnPlay(h EventHandler, scope ...interface{}) HTMLObject
+	OnPlay(h EventHandler, scope ...any) HTMLObject
 
 	// OnPlaying calls the given handler when the media actually has started playing.
-	OnPlaying(h EventHandler, scope ...interface{}) HTMLObject
+	OnPlaying(h EventHandler, scope ...any) HTMLObject
 
 	// OnProgress calls the given handler when the browser is in the process of getting the media data.
-	OnProgress(h EventHandler, scope ...interface{}) HTMLObject
+	OnProgress(h EventHandler, scope ...any) HTMLObject
 
 	// OnRateChange calls the given handler each time the playback rate changes (like when a user switches to a slow motion or fast forward mode).
-	OnRateChange(h EventHandler, scope ...interface{}) HTMLObject
+	OnRateChange(h EventHandler, scope ...any) HTMLObject
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLObject
+	OnReset(h EventHandler, scope ...any) HTMLObject
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLObject
+	OnScroll(h EventHandler, scope ...any) HTMLObject
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLObject
+	OnSearch(h EventHandler, scope ...any) HTMLObject
 
 	// OnSeeked calls the given handler when the seeking attribute is set to false indicating that seeking has ended.
-	OnSeeked(h EventHandler, scope ...interface{}) HTMLObject
+	OnSeeked(h EventHandler, scope ...any) HTMLObject
 
 	// OnSeeking calls the given handler when the seeking attribute is set to true indicating that seeking is active.
-	OnSeeking(h EventHandler, scope ...interface{}) HTMLObject
+	OnSeeking(h EventHandler, scope ...any) HTMLObject
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLObject
+	OnSelect(h EventHandler, scope ...any) HTMLObject
 
 	// OnStalled calls the given handler when the browser is unable to fetch the media data for whatever reason.
-	OnStalled(h EventHandler, scope ...interface{}) HTMLObject
+	OnStalled(h EventHandler, scope ...any) HTMLObject
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLObject
+	OnSubmit(h EventHandler, scope ...any) HTMLObject
 
 	// OnSuspend calls the given handler when fetching the media data is stopped before it is completely loaded for whatever reason.
-	OnSuspend(h EventHandler, scope ...interface{}) HTMLObject
+	OnSuspend(h EventHandler, scope ...any) HTMLObject
 
 	// OnTimeUpdate calls the given handler when the playing position has changed (like when the user fast forwards to a different point in the media).
-	OnTimeUpdate(h EventHandler, scope ...interface{}) HTMLObject
+	OnTimeUpdate(h EventHandler, scope ...any) HTMLObject
 
 	// OnVolumeChange calls the given handler each time the volume is changed which (includes setting the volume to "mute").
-	OnVolumeChange(h EventHandler, scope ...interface{}) HTMLObject
+	OnVolumeChange(h EventHandler, scope ...any) HTMLObject
 
 	// OnWaiting calls the given handler when the media has paused but is expected to resume (like when the media pauses to buffer more data).
-	OnWaiting(h EventHandler, scope ...interface{}) HTMLObject
+	OnWaiting(h EventHandler, scope ...any) HTMLObject
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLObject
+	OnWheel(h EventHandler, scope ...any) HTMLObject
 }
 
 // Object returns an HTML element that defines an embedded object.
@@ -11382,7 +11382,7 @@ type HTMLOl interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLOl
+	Text(v any) HTMLOl
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLOl
@@ -11394,7 +11394,7 @@ type HTMLOl interface {
 	AccessKey(v string) HTMLOl
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLOl
+	Aria(k string, v any) HTMLOl
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLOl
@@ -11403,7 +11403,7 @@ type HTMLOl interface {
 	ContentEditable(v bool) HTMLOl
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLOl
+	DataSet(k string, v any) HTMLOl
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLOl
@@ -11451,100 +11451,100 @@ type HTMLOl interface {
 	On(event string, h EventHandler, scope ...any) HTMLOl
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLOl
+	OnBlur(h EventHandler, scope ...any) HTMLOl
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLOl
+	OnChange(h EventHandler, scope ...any) HTMLOl
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLOl
+	OnClick(h EventHandler, scope ...any) HTMLOl
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLOl
+	OnContextMenu(h EventHandler, scope ...any) HTMLOl
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLOl
+	OnCopy(h EventHandler, scope ...any) HTMLOl
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLOl
+	OnCut(h EventHandler, scope ...any) HTMLOl
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLOl
+	OnDblClick(h EventHandler, scope ...any) HTMLOl
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLOl
+	OnDrag(h EventHandler, scope ...any) HTMLOl
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLOl
+	OnDragEnd(h EventHandler, scope ...any) HTMLOl
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLOl
+	OnDragEnter(h EventHandler, scope ...any) HTMLOl
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLOl
+	OnDragLeave(h EventHandler, scope ...any) HTMLOl
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLOl
+	OnDragOver(h EventHandler, scope ...any) HTMLOl
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLOl
+	OnDragStart(h EventHandler, scope ...any) HTMLOl
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLOl
+	OnDrop(h EventHandler, scope ...any) HTMLOl
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLOl
+	OnFocus(h EventHandler, scope ...any) HTMLOl
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLOl
+	OnInput(h EventHandler, scope ...any) HTMLOl
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLOl
+	OnInvalid(h EventHandler, scope ...any) HTMLOl
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLOl
+	OnKeyDown(h EventHandler, scope ...any) HTMLOl
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLOl
+	OnKeyPress(h EventHandler, scope ...any) HTMLOl
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLOl
+	OnKeyUp(h EventHandler, scope ...any) HTMLOl
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLOl
+	OnMouseDown(h EventHandler, scope ...any) HTMLOl
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLOl
+	OnMouseMove(h EventHandler, scope ...any) HTMLOl
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLOl
+	OnMouseOut(h EventHandler, scope ...any) HTMLOl
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLOl
+	OnMouseOver(h EventHandler, scope ...any) HTMLOl
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLOl
+	OnMouseUp(h EventHandler, scope ...any) HTMLOl
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLOl
+	OnPaste(h EventHandler, scope ...any) HTMLOl
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLOl
+	OnReset(h EventHandler, scope ...any) HTMLOl
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLOl
+	OnScroll(h EventHandler, scope ...any) HTMLOl
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLOl
+	OnSearch(h EventHandler, scope ...any) HTMLOl
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLOl
+	OnSelect(h EventHandler, scope ...any) HTMLOl
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLOl
+	OnSubmit(h EventHandler, scope ...any) HTMLOl
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLOl
+	OnWheel(h EventHandler, scope ...any) HTMLOl
 }
 
 // Ol returns an HTML element that defines an ordered list.
@@ -11560,7 +11560,7 @@ type HTMLOptGroup interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLOptGroup
+	Text(v any) HTMLOptGroup
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLOptGroup
@@ -11572,7 +11572,7 @@ type HTMLOptGroup interface {
 	AccessKey(v string) HTMLOptGroup
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLOptGroup
+	Aria(k string, v any) HTMLOptGroup
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLOptGroup
@@ -11581,7 +11581,7 @@ type HTMLOptGroup interface {
 	ContentEditable(v bool) HTMLOptGroup
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLOptGroup
+	DataSet(k string, v any) HTMLOptGroup
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLOptGroup
@@ -11626,100 +11626,100 @@ type HTMLOptGroup interface {
 	On(event string, h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnBlur(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnChange(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnClick(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnContextMenu(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnCopy(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnCut(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnDblClick(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnDrag(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnDragEnd(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnDragEnter(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnDragLeave(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnDragOver(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnDragStart(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnDrop(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnFocus(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnInput(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnInvalid(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnKeyDown(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnKeyPress(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnKeyUp(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnMouseDown(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnMouseMove(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnMouseOut(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnMouseOver(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnMouseUp(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnPaste(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnReset(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnScroll(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnSearch(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnSelect(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnSubmit(h EventHandler, scope ...any) HTMLOptGroup
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLOptGroup
+	OnWheel(h EventHandler, scope ...any) HTMLOptGroup
 }
 
 // OptGroup returns an HTML element that defines a group of related options in a drop-down list.
@@ -11735,7 +11735,7 @@ type HTMLOption interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLOption
+	Text(v any) HTMLOption
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLOption
@@ -11747,7 +11747,7 @@ type HTMLOption interface {
 	AccessKey(v string) HTMLOption
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLOption
+	Aria(k string, v any) HTMLOption
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLOption
@@ -11756,7 +11756,7 @@ type HTMLOption interface {
 	ContentEditable(v bool) HTMLOption
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLOption
+	DataSet(k string, v any) HTMLOption
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLOption
@@ -11801,106 +11801,106 @@ type HTMLOption interface {
 	Title(v string) HTMLOption
 
 	// Value specifies the value of the element.
-	Value(v interface{}) HTMLOption
+	Value(v any) HTMLOption
 
 	// On calls the given event handler when the named event is triggered.
 	On(event string, h EventHandler, scope ...any) HTMLOption
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLOption
+	OnBlur(h EventHandler, scope ...any) HTMLOption
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLOption
+	OnChange(h EventHandler, scope ...any) HTMLOption
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLOption
+	OnClick(h EventHandler, scope ...any) HTMLOption
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLOption
+	OnContextMenu(h EventHandler, scope ...any) HTMLOption
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLOption
+	OnCopy(h EventHandler, scope ...any) HTMLOption
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLOption
+	OnCut(h EventHandler, scope ...any) HTMLOption
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLOption
+	OnDblClick(h EventHandler, scope ...any) HTMLOption
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLOption
+	OnDrag(h EventHandler, scope ...any) HTMLOption
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLOption
+	OnDragEnd(h EventHandler, scope ...any) HTMLOption
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLOption
+	OnDragEnter(h EventHandler, scope ...any) HTMLOption
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLOption
+	OnDragLeave(h EventHandler, scope ...any) HTMLOption
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLOption
+	OnDragOver(h EventHandler, scope ...any) HTMLOption
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLOption
+	OnDragStart(h EventHandler, scope ...any) HTMLOption
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLOption
+	OnDrop(h EventHandler, scope ...any) HTMLOption
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLOption
+	OnFocus(h EventHandler, scope ...any) HTMLOption
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLOption
+	OnInput(h EventHandler, scope ...any) HTMLOption
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLOption
+	OnInvalid(h EventHandler, scope ...any) HTMLOption
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLOption
+	OnKeyDown(h EventHandler, scope ...any) HTMLOption
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLOption
+	OnKeyPress(h EventHandler, scope ...any) HTMLOption
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLOption
+	OnKeyUp(h EventHandler, scope ...any) HTMLOption
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLOption
+	OnMouseDown(h EventHandler, scope ...any) HTMLOption
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLOption
+	OnMouseMove(h EventHandler, scope ...any) HTMLOption
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLOption
+	OnMouseOut(h EventHandler, scope ...any) HTMLOption
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLOption
+	OnMouseOver(h EventHandler, scope ...any) HTMLOption
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLOption
+	OnMouseUp(h EventHandler, scope ...any) HTMLOption
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLOption
+	OnPaste(h EventHandler, scope ...any) HTMLOption
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLOption
+	OnReset(h EventHandler, scope ...any) HTMLOption
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLOption
+	OnScroll(h EventHandler, scope ...any) HTMLOption
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLOption
+	OnSearch(h EventHandler, scope ...any) HTMLOption
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLOption
+	OnSelect(h EventHandler, scope ...any) HTMLOption
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLOption
+	OnSubmit(h EventHandler, scope ...any) HTMLOption
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLOption
+	OnWheel(h EventHandler, scope ...any) HTMLOption
 }
 
 // Option returns an HTML element that defines an option in a drop-down list.
@@ -11916,7 +11916,7 @@ type HTMLOutput interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLOutput
+	Text(v any) HTMLOutput
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLOutput
@@ -11928,7 +11928,7 @@ type HTMLOutput interface {
 	AccessKey(v string) HTMLOutput
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLOutput
+	Aria(k string, v any) HTMLOutput
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLOutput
@@ -11937,7 +11937,7 @@ type HTMLOutput interface {
 	ContentEditable(v bool) HTMLOutput
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLOutput
+	DataSet(k string, v any) HTMLOutput
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLOutput
@@ -11985,100 +11985,100 @@ type HTMLOutput interface {
 	On(event string, h EventHandler, scope ...any) HTMLOutput
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLOutput
+	OnBlur(h EventHandler, scope ...any) HTMLOutput
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLOutput
+	OnChange(h EventHandler, scope ...any) HTMLOutput
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLOutput
+	OnClick(h EventHandler, scope ...any) HTMLOutput
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLOutput
+	OnContextMenu(h EventHandler, scope ...any) HTMLOutput
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLOutput
+	OnCopy(h EventHandler, scope ...any) HTMLOutput
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLOutput
+	OnCut(h EventHandler, scope ...any) HTMLOutput
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLOutput
+	OnDblClick(h EventHandler, scope ...any) HTMLOutput
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLOutput
+	OnDrag(h EventHandler, scope ...any) HTMLOutput
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLOutput
+	OnDragEnd(h EventHandler, scope ...any) HTMLOutput
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLOutput
+	OnDragEnter(h EventHandler, scope ...any) HTMLOutput
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLOutput
+	OnDragLeave(h EventHandler, scope ...any) HTMLOutput
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLOutput
+	OnDragOver(h EventHandler, scope ...any) HTMLOutput
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLOutput
+	OnDragStart(h EventHandler, scope ...any) HTMLOutput
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLOutput
+	OnDrop(h EventHandler, scope ...any) HTMLOutput
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLOutput
+	OnFocus(h EventHandler, scope ...any) HTMLOutput
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLOutput
+	OnInput(h EventHandler, scope ...any) HTMLOutput
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLOutput
+	OnInvalid(h EventHandler, scope ...any) HTMLOutput
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLOutput
+	OnKeyDown(h EventHandler, scope ...any) HTMLOutput
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLOutput
+	OnKeyPress(h EventHandler, scope ...any) HTMLOutput
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLOutput
+	OnKeyUp(h EventHandler, scope ...any) HTMLOutput
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLOutput
+	OnMouseDown(h EventHandler, scope ...any) HTMLOutput
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLOutput
+	OnMouseMove(h EventHandler, scope ...any) HTMLOutput
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLOutput
+	OnMouseOut(h EventHandler, scope ...any) HTMLOutput
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLOutput
+	OnMouseOver(h EventHandler, scope ...any) HTMLOutput
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLOutput
+	OnMouseUp(h EventHandler, scope ...any) HTMLOutput
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLOutput
+	OnPaste(h EventHandler, scope ...any) HTMLOutput
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLOutput
+	OnReset(h EventHandler, scope ...any) HTMLOutput
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLOutput
+	OnScroll(h EventHandler, scope ...any) HTMLOutput
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLOutput
+	OnSearch(h EventHandler, scope ...any) HTMLOutput
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLOutput
+	OnSelect(h EventHandler, scope ...any) HTMLOutput
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLOutput
+	OnSubmit(h EventHandler, scope ...any) HTMLOutput
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLOutput
+	OnWheel(h EventHandler, scope ...any) HTMLOutput
 }
 
 // Output returns an HTML element that .
@@ -12094,7 +12094,7 @@ type HTMLP interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLP
+	Text(v any) HTMLP
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLP
@@ -12106,7 +12106,7 @@ type HTMLP interface {
 	AccessKey(v string) HTMLP
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLP
+	Aria(k string, v any) HTMLP
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLP
@@ -12115,7 +12115,7 @@ type HTMLP interface {
 	ContentEditable(v bool) HTMLP
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLP
+	DataSet(k string, v any) HTMLP
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLP
@@ -12154,100 +12154,100 @@ type HTMLP interface {
 	On(event string, h EventHandler, scope ...any) HTMLP
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLP
+	OnBlur(h EventHandler, scope ...any) HTMLP
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLP
+	OnChange(h EventHandler, scope ...any) HTMLP
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLP
+	OnClick(h EventHandler, scope ...any) HTMLP
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLP
+	OnContextMenu(h EventHandler, scope ...any) HTMLP
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLP
+	OnCopy(h EventHandler, scope ...any) HTMLP
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLP
+	OnCut(h EventHandler, scope ...any) HTMLP
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLP
+	OnDblClick(h EventHandler, scope ...any) HTMLP
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLP
+	OnDrag(h EventHandler, scope ...any) HTMLP
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLP
+	OnDragEnd(h EventHandler, scope ...any) HTMLP
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLP
+	OnDragEnter(h EventHandler, scope ...any) HTMLP
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLP
+	OnDragLeave(h EventHandler, scope ...any) HTMLP
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLP
+	OnDragOver(h EventHandler, scope ...any) HTMLP
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLP
+	OnDragStart(h EventHandler, scope ...any) HTMLP
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLP
+	OnDrop(h EventHandler, scope ...any) HTMLP
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLP
+	OnFocus(h EventHandler, scope ...any) HTMLP
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLP
+	OnInput(h EventHandler, scope ...any) HTMLP
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLP
+	OnInvalid(h EventHandler, scope ...any) HTMLP
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLP
+	OnKeyDown(h EventHandler, scope ...any) HTMLP
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLP
+	OnKeyPress(h EventHandler, scope ...any) HTMLP
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLP
+	OnKeyUp(h EventHandler, scope ...any) HTMLP
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLP
+	OnMouseDown(h EventHandler, scope ...any) HTMLP
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLP
+	OnMouseMove(h EventHandler, scope ...any) HTMLP
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLP
+	OnMouseOut(h EventHandler, scope ...any) HTMLP
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLP
+	OnMouseOver(h EventHandler, scope ...any) HTMLP
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLP
+	OnMouseUp(h EventHandler, scope ...any) HTMLP
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLP
+	OnPaste(h EventHandler, scope ...any) HTMLP
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLP
+	OnReset(h EventHandler, scope ...any) HTMLP
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLP
+	OnScroll(h EventHandler, scope ...any) HTMLP
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLP
+	OnSearch(h EventHandler, scope ...any) HTMLP
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLP
+	OnSelect(h EventHandler, scope ...any) HTMLP
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLP
+	OnSubmit(h EventHandler, scope ...any) HTMLP
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLP
+	OnWheel(h EventHandler, scope ...any) HTMLP
 }
 
 // P returns an HTML element that defines a paragraph.
@@ -12269,7 +12269,7 @@ type HTMLParam interface {
 	AccessKey(v string) HTMLParam
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLParam
+	Aria(k string, v any) HTMLParam
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLParam
@@ -12278,7 +12278,7 @@ type HTMLParam interface {
 	ContentEditable(v bool) HTMLParam
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLParam
+	DataSet(k string, v any) HTMLParam
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLParam
@@ -12317,106 +12317,106 @@ type HTMLParam interface {
 	Title(v string) HTMLParam
 
 	// Value specifies the value of the element.
-	Value(v interface{}) HTMLParam
+	Value(v any) HTMLParam
 
 	// On calls the given event handler when the named event is triggered.
 	On(event string, h EventHandler, scope ...any) HTMLParam
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLParam
+	OnBlur(h EventHandler, scope ...any) HTMLParam
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLParam
+	OnChange(h EventHandler, scope ...any) HTMLParam
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLParam
+	OnClick(h EventHandler, scope ...any) HTMLParam
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLParam
+	OnContextMenu(h EventHandler, scope ...any) HTMLParam
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLParam
+	OnCopy(h EventHandler, scope ...any) HTMLParam
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLParam
+	OnCut(h EventHandler, scope ...any) HTMLParam
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLParam
+	OnDblClick(h EventHandler, scope ...any) HTMLParam
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLParam
+	OnDrag(h EventHandler, scope ...any) HTMLParam
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLParam
+	OnDragEnd(h EventHandler, scope ...any) HTMLParam
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLParam
+	OnDragEnter(h EventHandler, scope ...any) HTMLParam
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLParam
+	OnDragLeave(h EventHandler, scope ...any) HTMLParam
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLParam
+	OnDragOver(h EventHandler, scope ...any) HTMLParam
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLParam
+	OnDragStart(h EventHandler, scope ...any) HTMLParam
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLParam
+	OnDrop(h EventHandler, scope ...any) HTMLParam
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLParam
+	OnFocus(h EventHandler, scope ...any) HTMLParam
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLParam
+	OnInput(h EventHandler, scope ...any) HTMLParam
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLParam
+	OnInvalid(h EventHandler, scope ...any) HTMLParam
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLParam
+	OnKeyDown(h EventHandler, scope ...any) HTMLParam
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLParam
+	OnKeyPress(h EventHandler, scope ...any) HTMLParam
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLParam
+	OnKeyUp(h EventHandler, scope ...any) HTMLParam
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLParam
+	OnMouseDown(h EventHandler, scope ...any) HTMLParam
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLParam
+	OnMouseMove(h EventHandler, scope ...any) HTMLParam
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLParam
+	OnMouseOut(h EventHandler, scope ...any) HTMLParam
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLParam
+	OnMouseOver(h EventHandler, scope ...any) HTMLParam
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLParam
+	OnMouseUp(h EventHandler, scope ...any) HTMLParam
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLParam
+	OnPaste(h EventHandler, scope ...any) HTMLParam
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLParam
+	OnReset(h EventHandler, scope ...any) HTMLParam
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLParam
+	OnScroll(h EventHandler, scope ...any) HTMLParam
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLParam
+	OnSearch(h EventHandler, scope ...any) HTMLParam
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLParam
+	OnSelect(h EventHandler, scope ...any) HTMLParam
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLParam
+	OnSubmit(h EventHandler, scope ...any) HTMLParam
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLParam
+	OnWheel(h EventHandler, scope ...any) HTMLParam
 }
 
 // Param returns an HTML element that defines a parameter for an object.
@@ -12432,7 +12432,7 @@ type HTMLPicture interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLPicture
+	Text(v any) HTMLPicture
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLPicture
@@ -12444,7 +12444,7 @@ type HTMLPicture interface {
 	AccessKey(v string) HTMLPicture
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLPicture
+	Aria(k string, v any) HTMLPicture
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLPicture
@@ -12453,7 +12453,7 @@ type HTMLPicture interface {
 	ContentEditable(v bool) HTMLPicture
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLPicture
+	DataSet(k string, v any) HTMLPicture
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLPicture
@@ -12492,100 +12492,100 @@ type HTMLPicture interface {
 	On(event string, h EventHandler, scope ...any) HTMLPicture
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLPicture
+	OnBlur(h EventHandler, scope ...any) HTMLPicture
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLPicture
+	OnChange(h EventHandler, scope ...any) HTMLPicture
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLPicture
+	OnClick(h EventHandler, scope ...any) HTMLPicture
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLPicture
+	OnContextMenu(h EventHandler, scope ...any) HTMLPicture
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLPicture
+	OnCopy(h EventHandler, scope ...any) HTMLPicture
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLPicture
+	OnCut(h EventHandler, scope ...any) HTMLPicture
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLPicture
+	OnDblClick(h EventHandler, scope ...any) HTMLPicture
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLPicture
+	OnDrag(h EventHandler, scope ...any) HTMLPicture
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLPicture
+	OnDragEnd(h EventHandler, scope ...any) HTMLPicture
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLPicture
+	OnDragEnter(h EventHandler, scope ...any) HTMLPicture
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLPicture
+	OnDragLeave(h EventHandler, scope ...any) HTMLPicture
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLPicture
+	OnDragOver(h EventHandler, scope ...any) HTMLPicture
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLPicture
+	OnDragStart(h EventHandler, scope ...any) HTMLPicture
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLPicture
+	OnDrop(h EventHandler, scope ...any) HTMLPicture
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLPicture
+	OnFocus(h EventHandler, scope ...any) HTMLPicture
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLPicture
+	OnInput(h EventHandler, scope ...any) HTMLPicture
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLPicture
+	OnInvalid(h EventHandler, scope ...any) HTMLPicture
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLPicture
+	OnKeyDown(h EventHandler, scope ...any) HTMLPicture
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLPicture
+	OnKeyPress(h EventHandler, scope ...any) HTMLPicture
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLPicture
+	OnKeyUp(h EventHandler, scope ...any) HTMLPicture
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLPicture
+	OnMouseDown(h EventHandler, scope ...any) HTMLPicture
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLPicture
+	OnMouseMove(h EventHandler, scope ...any) HTMLPicture
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLPicture
+	OnMouseOut(h EventHandler, scope ...any) HTMLPicture
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLPicture
+	OnMouseOver(h EventHandler, scope ...any) HTMLPicture
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLPicture
+	OnMouseUp(h EventHandler, scope ...any) HTMLPicture
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLPicture
+	OnPaste(h EventHandler, scope ...any) HTMLPicture
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLPicture
+	OnReset(h EventHandler, scope ...any) HTMLPicture
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLPicture
+	OnScroll(h EventHandler, scope ...any) HTMLPicture
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLPicture
+	OnSearch(h EventHandler, scope ...any) HTMLPicture
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLPicture
+	OnSelect(h EventHandler, scope ...any) HTMLPicture
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLPicture
+	OnSubmit(h EventHandler, scope ...any) HTMLPicture
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLPicture
+	OnWheel(h EventHandler, scope ...any) HTMLPicture
 }
 
 // Picture returns an HTML element that defines a container for multiple image resources.
@@ -12601,7 +12601,7 @@ type HTMLPre interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLPre
+	Text(v any) HTMLPre
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLPre
@@ -12613,7 +12613,7 @@ type HTMLPre interface {
 	AccessKey(v string) HTMLPre
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLPre
+	Aria(k string, v any) HTMLPre
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLPre
@@ -12622,7 +12622,7 @@ type HTMLPre interface {
 	ContentEditable(v bool) HTMLPre
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLPre
+	DataSet(k string, v any) HTMLPre
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLPre
@@ -12661,100 +12661,100 @@ type HTMLPre interface {
 	On(event string, h EventHandler, scope ...any) HTMLPre
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLPre
+	OnBlur(h EventHandler, scope ...any) HTMLPre
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLPre
+	OnChange(h EventHandler, scope ...any) HTMLPre
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLPre
+	OnClick(h EventHandler, scope ...any) HTMLPre
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLPre
+	OnContextMenu(h EventHandler, scope ...any) HTMLPre
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLPre
+	OnCopy(h EventHandler, scope ...any) HTMLPre
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLPre
+	OnCut(h EventHandler, scope ...any) HTMLPre
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLPre
+	OnDblClick(h EventHandler, scope ...any) HTMLPre
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLPre
+	OnDrag(h EventHandler, scope ...any) HTMLPre
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLPre
+	OnDragEnd(h EventHandler, scope ...any) HTMLPre
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLPre
+	OnDragEnter(h EventHandler, scope ...any) HTMLPre
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLPre
+	OnDragLeave(h EventHandler, scope ...any) HTMLPre
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLPre
+	OnDragOver(h EventHandler, scope ...any) HTMLPre
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLPre
+	OnDragStart(h EventHandler, scope ...any) HTMLPre
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLPre
+	OnDrop(h EventHandler, scope ...any) HTMLPre
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLPre
+	OnFocus(h EventHandler, scope ...any) HTMLPre
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLPre
+	OnInput(h EventHandler, scope ...any) HTMLPre
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLPre
+	OnInvalid(h EventHandler, scope ...any) HTMLPre
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLPre
+	OnKeyDown(h EventHandler, scope ...any) HTMLPre
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLPre
+	OnKeyPress(h EventHandler, scope ...any) HTMLPre
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLPre
+	OnKeyUp(h EventHandler, scope ...any) HTMLPre
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLPre
+	OnMouseDown(h EventHandler, scope ...any) HTMLPre
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLPre
+	OnMouseMove(h EventHandler, scope ...any) HTMLPre
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLPre
+	OnMouseOut(h EventHandler, scope ...any) HTMLPre
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLPre
+	OnMouseOver(h EventHandler, scope ...any) HTMLPre
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLPre
+	OnMouseUp(h EventHandler, scope ...any) HTMLPre
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLPre
+	OnPaste(h EventHandler, scope ...any) HTMLPre
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLPre
+	OnReset(h EventHandler, scope ...any) HTMLPre
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLPre
+	OnScroll(h EventHandler, scope ...any) HTMLPre
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLPre
+	OnSearch(h EventHandler, scope ...any) HTMLPre
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLPre
+	OnSelect(h EventHandler, scope ...any) HTMLPre
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLPre
+	OnSubmit(h EventHandler, scope ...any) HTMLPre
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLPre
+	OnWheel(h EventHandler, scope ...any) HTMLPre
 }
 
 // Pre returns an HTML element that defines preformatted text.
@@ -12770,7 +12770,7 @@ type HTMLProgress interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLProgress
+	Text(v any) HTMLProgress
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLProgress
@@ -12782,7 +12782,7 @@ type HTMLProgress interface {
 	AccessKey(v string) HTMLProgress
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLProgress
+	Aria(k string, v any) HTMLProgress
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLProgress
@@ -12791,7 +12791,7 @@ type HTMLProgress interface {
 	ContentEditable(v bool) HTMLProgress
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLProgress
+	DataSet(k string, v any) HTMLProgress
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLProgress
@@ -12809,7 +12809,7 @@ type HTMLProgress interface {
 	Lang(v string) HTMLProgress
 
 	// Max Specifies the maximum value.
-	Max(v interface{}) HTMLProgress
+	Max(v any) HTMLProgress
 
 	// Role specifies to parsing software the exact function of an element (and its children).
 	Role(v string) HTMLProgress
@@ -12830,106 +12830,106 @@ type HTMLProgress interface {
 	Title(v string) HTMLProgress
 
 	// Value specifies the value of the element.
-	Value(v interface{}) HTMLProgress
+	Value(v any) HTMLProgress
 
 	// On calls the given event handler when the named event is triggered.
 	On(event string, h EventHandler, scope ...any) HTMLProgress
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLProgress
+	OnBlur(h EventHandler, scope ...any) HTMLProgress
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLProgress
+	OnChange(h EventHandler, scope ...any) HTMLProgress
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLProgress
+	OnClick(h EventHandler, scope ...any) HTMLProgress
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLProgress
+	OnContextMenu(h EventHandler, scope ...any) HTMLProgress
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLProgress
+	OnCopy(h EventHandler, scope ...any) HTMLProgress
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLProgress
+	OnCut(h EventHandler, scope ...any) HTMLProgress
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLProgress
+	OnDblClick(h EventHandler, scope ...any) HTMLProgress
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLProgress
+	OnDrag(h EventHandler, scope ...any) HTMLProgress
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLProgress
+	OnDragEnd(h EventHandler, scope ...any) HTMLProgress
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLProgress
+	OnDragEnter(h EventHandler, scope ...any) HTMLProgress
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLProgress
+	OnDragLeave(h EventHandler, scope ...any) HTMLProgress
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLProgress
+	OnDragOver(h EventHandler, scope ...any) HTMLProgress
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLProgress
+	OnDragStart(h EventHandler, scope ...any) HTMLProgress
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLProgress
+	OnDrop(h EventHandler, scope ...any) HTMLProgress
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLProgress
+	OnFocus(h EventHandler, scope ...any) HTMLProgress
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLProgress
+	OnInput(h EventHandler, scope ...any) HTMLProgress
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLProgress
+	OnInvalid(h EventHandler, scope ...any) HTMLProgress
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLProgress
+	OnKeyDown(h EventHandler, scope ...any) HTMLProgress
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLProgress
+	OnKeyPress(h EventHandler, scope ...any) HTMLProgress
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLProgress
+	OnKeyUp(h EventHandler, scope ...any) HTMLProgress
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLProgress
+	OnMouseDown(h EventHandler, scope ...any) HTMLProgress
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLProgress
+	OnMouseMove(h EventHandler, scope ...any) HTMLProgress
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLProgress
+	OnMouseOut(h EventHandler, scope ...any) HTMLProgress
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLProgress
+	OnMouseOver(h EventHandler, scope ...any) HTMLProgress
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLProgress
+	OnMouseUp(h EventHandler, scope ...any) HTMLProgress
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLProgress
+	OnPaste(h EventHandler, scope ...any) HTMLProgress
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLProgress
+	OnReset(h EventHandler, scope ...any) HTMLProgress
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLProgress
+	OnScroll(h EventHandler, scope ...any) HTMLProgress
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLProgress
+	OnSearch(h EventHandler, scope ...any) HTMLProgress
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLProgress
+	OnSelect(h EventHandler, scope ...any) HTMLProgress
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLProgress
+	OnSubmit(h EventHandler, scope ...any) HTMLProgress
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLProgress
+	OnWheel(h EventHandler, scope ...any) HTMLProgress
 }
 
 // Progress returns an HTML element that represents the progress of a task.
@@ -12945,7 +12945,7 @@ type HTMLQ interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLQ
+	Text(v any) HTMLQ
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLQ
@@ -12957,7 +12957,7 @@ type HTMLQ interface {
 	AccessKey(v string) HTMLQ
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLQ
+	Aria(k string, v any) HTMLQ
 
 	// Cite specifies a URL which explains the quote/deleted/inserted text.
 	Cite(v string) HTMLQ
@@ -12969,7 +12969,7 @@ type HTMLQ interface {
 	ContentEditable(v bool) HTMLQ
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLQ
+	DataSet(k string, v any) HTMLQ
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLQ
@@ -13008,100 +13008,100 @@ type HTMLQ interface {
 	On(event string, h EventHandler, scope ...any) HTMLQ
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLQ
+	OnBlur(h EventHandler, scope ...any) HTMLQ
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLQ
+	OnChange(h EventHandler, scope ...any) HTMLQ
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLQ
+	OnClick(h EventHandler, scope ...any) HTMLQ
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLQ
+	OnContextMenu(h EventHandler, scope ...any) HTMLQ
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLQ
+	OnCopy(h EventHandler, scope ...any) HTMLQ
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLQ
+	OnCut(h EventHandler, scope ...any) HTMLQ
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLQ
+	OnDblClick(h EventHandler, scope ...any) HTMLQ
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLQ
+	OnDrag(h EventHandler, scope ...any) HTMLQ
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLQ
+	OnDragEnd(h EventHandler, scope ...any) HTMLQ
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLQ
+	OnDragEnter(h EventHandler, scope ...any) HTMLQ
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLQ
+	OnDragLeave(h EventHandler, scope ...any) HTMLQ
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLQ
+	OnDragOver(h EventHandler, scope ...any) HTMLQ
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLQ
+	OnDragStart(h EventHandler, scope ...any) HTMLQ
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLQ
+	OnDrop(h EventHandler, scope ...any) HTMLQ
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLQ
+	OnFocus(h EventHandler, scope ...any) HTMLQ
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLQ
+	OnInput(h EventHandler, scope ...any) HTMLQ
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLQ
+	OnInvalid(h EventHandler, scope ...any) HTMLQ
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLQ
+	OnKeyDown(h EventHandler, scope ...any) HTMLQ
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLQ
+	OnKeyPress(h EventHandler, scope ...any) HTMLQ
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLQ
+	OnKeyUp(h EventHandler, scope ...any) HTMLQ
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLQ
+	OnMouseDown(h EventHandler, scope ...any) HTMLQ
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLQ
+	OnMouseMove(h EventHandler, scope ...any) HTMLQ
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLQ
+	OnMouseOut(h EventHandler, scope ...any) HTMLQ
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLQ
+	OnMouseOver(h EventHandler, scope ...any) HTMLQ
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLQ
+	OnMouseUp(h EventHandler, scope ...any) HTMLQ
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLQ
+	OnPaste(h EventHandler, scope ...any) HTMLQ
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLQ
+	OnReset(h EventHandler, scope ...any) HTMLQ
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLQ
+	OnScroll(h EventHandler, scope ...any) HTMLQ
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLQ
+	OnSearch(h EventHandler, scope ...any) HTMLQ
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLQ
+	OnSelect(h EventHandler, scope ...any) HTMLQ
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLQ
+	OnSubmit(h EventHandler, scope ...any) HTMLQ
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLQ
+	OnWheel(h EventHandler, scope ...any) HTMLQ
 }
 
 // Q returns an HTML element that defines a short quotation.
@@ -13117,7 +13117,7 @@ type HTMLRp interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLRp
+	Text(v any) HTMLRp
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLRp
@@ -13129,7 +13129,7 @@ type HTMLRp interface {
 	AccessKey(v string) HTMLRp
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLRp
+	Aria(k string, v any) HTMLRp
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLRp
@@ -13138,7 +13138,7 @@ type HTMLRp interface {
 	ContentEditable(v bool) HTMLRp
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLRp
+	DataSet(k string, v any) HTMLRp
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLRp
@@ -13177,100 +13177,100 @@ type HTMLRp interface {
 	On(event string, h EventHandler, scope ...any) HTMLRp
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLRp
+	OnBlur(h EventHandler, scope ...any) HTMLRp
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLRp
+	OnChange(h EventHandler, scope ...any) HTMLRp
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLRp
+	OnClick(h EventHandler, scope ...any) HTMLRp
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLRp
+	OnContextMenu(h EventHandler, scope ...any) HTMLRp
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLRp
+	OnCopy(h EventHandler, scope ...any) HTMLRp
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLRp
+	OnCut(h EventHandler, scope ...any) HTMLRp
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLRp
+	OnDblClick(h EventHandler, scope ...any) HTMLRp
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLRp
+	OnDrag(h EventHandler, scope ...any) HTMLRp
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLRp
+	OnDragEnd(h EventHandler, scope ...any) HTMLRp
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLRp
+	OnDragEnter(h EventHandler, scope ...any) HTMLRp
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLRp
+	OnDragLeave(h EventHandler, scope ...any) HTMLRp
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLRp
+	OnDragOver(h EventHandler, scope ...any) HTMLRp
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLRp
+	OnDragStart(h EventHandler, scope ...any) HTMLRp
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLRp
+	OnDrop(h EventHandler, scope ...any) HTMLRp
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLRp
+	OnFocus(h EventHandler, scope ...any) HTMLRp
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLRp
+	OnInput(h EventHandler, scope ...any) HTMLRp
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLRp
+	OnInvalid(h EventHandler, scope ...any) HTMLRp
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLRp
+	OnKeyDown(h EventHandler, scope ...any) HTMLRp
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLRp
+	OnKeyPress(h EventHandler, scope ...any) HTMLRp
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLRp
+	OnKeyUp(h EventHandler, scope ...any) HTMLRp
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLRp
+	OnMouseDown(h EventHandler, scope ...any) HTMLRp
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLRp
+	OnMouseMove(h EventHandler, scope ...any) HTMLRp
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLRp
+	OnMouseOut(h EventHandler, scope ...any) HTMLRp
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLRp
+	OnMouseOver(h EventHandler, scope ...any) HTMLRp
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLRp
+	OnMouseUp(h EventHandler, scope ...any) HTMLRp
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLRp
+	OnPaste(h EventHandler, scope ...any) HTMLRp
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLRp
+	OnReset(h EventHandler, scope ...any) HTMLRp
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLRp
+	OnScroll(h EventHandler, scope ...any) HTMLRp
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLRp
+	OnSearch(h EventHandler, scope ...any) HTMLRp
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLRp
+	OnSelect(h EventHandler, scope ...any) HTMLRp
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLRp
+	OnSubmit(h EventHandler, scope ...any) HTMLRp
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLRp
+	OnWheel(h EventHandler, scope ...any) HTMLRp
 }
 
 // Rp returns an HTML element that defines what to show in browsers that do not support ruby annotations.
@@ -13286,7 +13286,7 @@ type HTMLRt interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLRt
+	Text(v any) HTMLRt
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLRt
@@ -13298,7 +13298,7 @@ type HTMLRt interface {
 	AccessKey(v string) HTMLRt
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLRt
+	Aria(k string, v any) HTMLRt
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLRt
@@ -13307,7 +13307,7 @@ type HTMLRt interface {
 	ContentEditable(v bool) HTMLRt
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLRt
+	DataSet(k string, v any) HTMLRt
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLRt
@@ -13346,100 +13346,100 @@ type HTMLRt interface {
 	On(event string, h EventHandler, scope ...any) HTMLRt
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLRt
+	OnBlur(h EventHandler, scope ...any) HTMLRt
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLRt
+	OnChange(h EventHandler, scope ...any) HTMLRt
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLRt
+	OnClick(h EventHandler, scope ...any) HTMLRt
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLRt
+	OnContextMenu(h EventHandler, scope ...any) HTMLRt
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLRt
+	OnCopy(h EventHandler, scope ...any) HTMLRt
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLRt
+	OnCut(h EventHandler, scope ...any) HTMLRt
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLRt
+	OnDblClick(h EventHandler, scope ...any) HTMLRt
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLRt
+	OnDrag(h EventHandler, scope ...any) HTMLRt
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLRt
+	OnDragEnd(h EventHandler, scope ...any) HTMLRt
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLRt
+	OnDragEnter(h EventHandler, scope ...any) HTMLRt
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLRt
+	OnDragLeave(h EventHandler, scope ...any) HTMLRt
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLRt
+	OnDragOver(h EventHandler, scope ...any) HTMLRt
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLRt
+	OnDragStart(h EventHandler, scope ...any) HTMLRt
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLRt
+	OnDrop(h EventHandler, scope ...any) HTMLRt
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLRt
+	OnFocus(h EventHandler, scope ...any) HTMLRt
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLRt
+	OnInput(h EventHandler, scope ...any) HTMLRt
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLRt
+	OnInvalid(h EventHandler, scope ...any) HTMLRt
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLRt
+	OnKeyDown(h EventHandler, scope ...any) HTMLRt
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLRt
+	OnKeyPress(h EventHandler, scope ...any) HTMLRt
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLRt
+	OnKeyUp(h EventHandler, scope ...any) HTMLRt
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLRt
+	OnMouseDown(h EventHandler, scope ...any) HTMLRt
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLRt
+	OnMouseMove(h EventHandler, scope ...any) HTMLRt
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLRt
+	OnMouseOut(h EventHandler, scope ...any) HTMLRt
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLRt
+	OnMouseOver(h EventHandler, scope ...any) HTMLRt
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLRt
+	OnMouseUp(h EventHandler, scope ...any) HTMLRt
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLRt
+	OnPaste(h EventHandler, scope ...any) HTMLRt
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLRt
+	OnReset(h EventHandler, scope ...any) HTMLRt
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLRt
+	OnScroll(h EventHandler, scope ...any) HTMLRt
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLRt
+	OnSearch(h EventHandler, scope ...any) HTMLRt
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLRt
+	OnSelect(h EventHandler, scope ...any) HTMLRt
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLRt
+	OnSubmit(h EventHandler, scope ...any) HTMLRt
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLRt
+	OnWheel(h EventHandler, scope ...any) HTMLRt
 }
 
 // Rt returns an HTML element that defines an explanation/pronunciation of characters (for East Asian typography).
@@ -13455,7 +13455,7 @@ type HTMLRuby interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLRuby
+	Text(v any) HTMLRuby
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLRuby
@@ -13467,7 +13467,7 @@ type HTMLRuby interface {
 	AccessKey(v string) HTMLRuby
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLRuby
+	Aria(k string, v any) HTMLRuby
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLRuby
@@ -13476,7 +13476,7 @@ type HTMLRuby interface {
 	ContentEditable(v bool) HTMLRuby
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLRuby
+	DataSet(k string, v any) HTMLRuby
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLRuby
@@ -13515,100 +13515,100 @@ type HTMLRuby interface {
 	On(event string, h EventHandler, scope ...any) HTMLRuby
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLRuby
+	OnBlur(h EventHandler, scope ...any) HTMLRuby
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLRuby
+	OnChange(h EventHandler, scope ...any) HTMLRuby
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLRuby
+	OnClick(h EventHandler, scope ...any) HTMLRuby
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLRuby
+	OnContextMenu(h EventHandler, scope ...any) HTMLRuby
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLRuby
+	OnCopy(h EventHandler, scope ...any) HTMLRuby
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLRuby
+	OnCut(h EventHandler, scope ...any) HTMLRuby
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLRuby
+	OnDblClick(h EventHandler, scope ...any) HTMLRuby
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLRuby
+	OnDrag(h EventHandler, scope ...any) HTMLRuby
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLRuby
+	OnDragEnd(h EventHandler, scope ...any) HTMLRuby
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLRuby
+	OnDragEnter(h EventHandler, scope ...any) HTMLRuby
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLRuby
+	OnDragLeave(h EventHandler, scope ...any) HTMLRuby
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLRuby
+	OnDragOver(h EventHandler, scope ...any) HTMLRuby
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLRuby
+	OnDragStart(h EventHandler, scope ...any) HTMLRuby
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLRuby
+	OnDrop(h EventHandler, scope ...any) HTMLRuby
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLRuby
+	OnFocus(h EventHandler, scope ...any) HTMLRuby
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLRuby
+	OnInput(h EventHandler, scope ...any) HTMLRuby
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLRuby
+	OnInvalid(h EventHandler, scope ...any) HTMLRuby
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLRuby
+	OnKeyDown(h EventHandler, scope ...any) HTMLRuby
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLRuby
+	OnKeyPress(h EventHandler, scope ...any) HTMLRuby
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLRuby
+	OnKeyUp(h EventHandler, scope ...any) HTMLRuby
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLRuby
+	OnMouseDown(h EventHandler, scope ...any) HTMLRuby
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLRuby
+	OnMouseMove(h EventHandler, scope ...any) HTMLRuby
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLRuby
+	OnMouseOut(h EventHandler, scope ...any) HTMLRuby
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLRuby
+	OnMouseOver(h EventHandler, scope ...any) HTMLRuby
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLRuby
+	OnMouseUp(h EventHandler, scope ...any) HTMLRuby
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLRuby
+	OnPaste(h EventHandler, scope ...any) HTMLRuby
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLRuby
+	OnReset(h EventHandler, scope ...any) HTMLRuby
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLRuby
+	OnScroll(h EventHandler, scope ...any) HTMLRuby
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLRuby
+	OnSearch(h EventHandler, scope ...any) HTMLRuby
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLRuby
+	OnSelect(h EventHandler, scope ...any) HTMLRuby
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLRuby
+	OnSubmit(h EventHandler, scope ...any) HTMLRuby
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLRuby
+	OnWheel(h EventHandler, scope ...any) HTMLRuby
 }
 
 // Ruby returns an HTML element that defines a ruby annotation (for East Asian typography).
@@ -13624,7 +13624,7 @@ type HTMLS interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLS
+	Text(v any) HTMLS
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLS
@@ -13636,7 +13636,7 @@ type HTMLS interface {
 	AccessKey(v string) HTMLS
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLS
+	Aria(k string, v any) HTMLS
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLS
@@ -13645,7 +13645,7 @@ type HTMLS interface {
 	ContentEditable(v bool) HTMLS
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLS
+	DataSet(k string, v any) HTMLS
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLS
@@ -13684,100 +13684,100 @@ type HTMLS interface {
 	On(event string, h EventHandler, scope ...any) HTMLS
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLS
+	OnBlur(h EventHandler, scope ...any) HTMLS
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLS
+	OnChange(h EventHandler, scope ...any) HTMLS
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLS
+	OnClick(h EventHandler, scope ...any) HTMLS
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLS
+	OnContextMenu(h EventHandler, scope ...any) HTMLS
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLS
+	OnCopy(h EventHandler, scope ...any) HTMLS
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLS
+	OnCut(h EventHandler, scope ...any) HTMLS
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLS
+	OnDblClick(h EventHandler, scope ...any) HTMLS
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLS
+	OnDrag(h EventHandler, scope ...any) HTMLS
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLS
+	OnDragEnd(h EventHandler, scope ...any) HTMLS
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLS
+	OnDragEnter(h EventHandler, scope ...any) HTMLS
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLS
+	OnDragLeave(h EventHandler, scope ...any) HTMLS
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLS
+	OnDragOver(h EventHandler, scope ...any) HTMLS
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLS
+	OnDragStart(h EventHandler, scope ...any) HTMLS
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLS
+	OnDrop(h EventHandler, scope ...any) HTMLS
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLS
+	OnFocus(h EventHandler, scope ...any) HTMLS
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLS
+	OnInput(h EventHandler, scope ...any) HTMLS
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLS
+	OnInvalid(h EventHandler, scope ...any) HTMLS
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLS
+	OnKeyDown(h EventHandler, scope ...any) HTMLS
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLS
+	OnKeyPress(h EventHandler, scope ...any) HTMLS
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLS
+	OnKeyUp(h EventHandler, scope ...any) HTMLS
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLS
+	OnMouseDown(h EventHandler, scope ...any) HTMLS
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLS
+	OnMouseMove(h EventHandler, scope ...any) HTMLS
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLS
+	OnMouseOut(h EventHandler, scope ...any) HTMLS
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLS
+	OnMouseOver(h EventHandler, scope ...any) HTMLS
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLS
+	OnMouseUp(h EventHandler, scope ...any) HTMLS
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLS
+	OnPaste(h EventHandler, scope ...any) HTMLS
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLS
+	OnReset(h EventHandler, scope ...any) HTMLS
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLS
+	OnScroll(h EventHandler, scope ...any) HTMLS
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLS
+	OnSearch(h EventHandler, scope ...any) HTMLS
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLS
+	OnSelect(h EventHandler, scope ...any) HTMLS
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLS
+	OnSubmit(h EventHandler, scope ...any) HTMLS
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLS
+	OnWheel(h EventHandler, scope ...any) HTMLS
 }
 
 // S returns an HTML element that Defines text that is no longer correct.
@@ -13793,7 +13793,7 @@ type HTMLSamp interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLSamp
+	Text(v any) HTMLSamp
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLSamp
@@ -13805,7 +13805,7 @@ type HTMLSamp interface {
 	AccessKey(v string) HTMLSamp
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSamp
+	Aria(k string, v any) HTMLSamp
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLSamp
@@ -13814,7 +13814,7 @@ type HTMLSamp interface {
 	ContentEditable(v bool) HTMLSamp
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSamp
+	DataSet(k string, v any) HTMLSamp
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSamp
@@ -13853,100 +13853,100 @@ type HTMLSamp interface {
 	On(event string, h EventHandler, scope ...any) HTMLSamp
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSamp
+	OnBlur(h EventHandler, scope ...any) HTMLSamp
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSamp
+	OnChange(h EventHandler, scope ...any) HTMLSamp
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSamp
+	OnClick(h EventHandler, scope ...any) HTMLSamp
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSamp
+	OnContextMenu(h EventHandler, scope ...any) HTMLSamp
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSamp
+	OnCopy(h EventHandler, scope ...any) HTMLSamp
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSamp
+	OnCut(h EventHandler, scope ...any) HTMLSamp
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSamp
+	OnDblClick(h EventHandler, scope ...any) HTMLSamp
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSamp
+	OnDrag(h EventHandler, scope ...any) HTMLSamp
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSamp
+	OnDragEnd(h EventHandler, scope ...any) HTMLSamp
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSamp
+	OnDragEnter(h EventHandler, scope ...any) HTMLSamp
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSamp
+	OnDragLeave(h EventHandler, scope ...any) HTMLSamp
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSamp
+	OnDragOver(h EventHandler, scope ...any) HTMLSamp
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSamp
+	OnDragStart(h EventHandler, scope ...any) HTMLSamp
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSamp
+	OnDrop(h EventHandler, scope ...any) HTMLSamp
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSamp
+	OnFocus(h EventHandler, scope ...any) HTMLSamp
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSamp
+	OnInput(h EventHandler, scope ...any) HTMLSamp
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSamp
+	OnInvalid(h EventHandler, scope ...any) HTMLSamp
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSamp
+	OnKeyDown(h EventHandler, scope ...any) HTMLSamp
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSamp
+	OnKeyPress(h EventHandler, scope ...any) HTMLSamp
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSamp
+	OnKeyUp(h EventHandler, scope ...any) HTMLSamp
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSamp
+	OnMouseDown(h EventHandler, scope ...any) HTMLSamp
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSamp
+	OnMouseMove(h EventHandler, scope ...any) HTMLSamp
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSamp
+	OnMouseOut(h EventHandler, scope ...any) HTMLSamp
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSamp
+	OnMouseOver(h EventHandler, scope ...any) HTMLSamp
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSamp
+	OnMouseUp(h EventHandler, scope ...any) HTMLSamp
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSamp
+	OnPaste(h EventHandler, scope ...any) HTMLSamp
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSamp
+	OnReset(h EventHandler, scope ...any) HTMLSamp
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSamp
+	OnScroll(h EventHandler, scope ...any) HTMLSamp
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSamp
+	OnSearch(h EventHandler, scope ...any) HTMLSamp
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSamp
+	OnSelect(h EventHandler, scope ...any) HTMLSamp
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSamp
+	OnSubmit(h EventHandler, scope ...any) HTMLSamp
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSamp
+	OnWheel(h EventHandler, scope ...any) HTMLSamp
 }
 
 // Samp returns an HTML element that defines sample output from a computer program.
@@ -13962,7 +13962,7 @@ type HTMLScript interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLScript
+	Text(v any) HTMLScript
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLScript
@@ -13974,7 +13974,7 @@ type HTMLScript interface {
 	AccessKey(v string) HTMLScript
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLScript
+	Aria(k string, v any) HTMLScript
 
 	// Async specifies that the script is executed asynchronously (only for external scripts).
 	Async(v bool) HTMLScript
@@ -13992,7 +13992,7 @@ type HTMLScript interface {
 	CrossOrigin(v string) HTMLScript
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLScript
+	DataSet(k string, v any) HTMLScript
 
 	// Defer specifies that the script is executed when the page has finished parsing (only for external scripts).
 	Defer(v bool) HTMLScript
@@ -14040,7 +14040,7 @@ type HTMLScript interface {
 	On(event string, h EventHandler, scope ...any) HTMLScript
 
 	// OnLoad calls the given handler after the element is finished loading.
-	OnLoad(h EventHandler, scope ...interface{}) HTMLScript
+	OnLoad(h EventHandler, scope ...any) HTMLScript
 }
 
 // Script returns an HTML element that defines a client-side script.
@@ -14056,7 +14056,7 @@ type HTMLSection interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLSection
+	Text(v any) HTMLSection
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLSection
@@ -14068,7 +14068,7 @@ type HTMLSection interface {
 	AccessKey(v string) HTMLSection
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSection
+	Aria(k string, v any) HTMLSection
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLSection
@@ -14077,7 +14077,7 @@ type HTMLSection interface {
 	ContentEditable(v bool) HTMLSection
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSection
+	DataSet(k string, v any) HTMLSection
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSection
@@ -14116,100 +14116,100 @@ type HTMLSection interface {
 	On(event string, h EventHandler, scope ...any) HTMLSection
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSection
+	OnBlur(h EventHandler, scope ...any) HTMLSection
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSection
+	OnChange(h EventHandler, scope ...any) HTMLSection
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSection
+	OnClick(h EventHandler, scope ...any) HTMLSection
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSection
+	OnContextMenu(h EventHandler, scope ...any) HTMLSection
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSection
+	OnCopy(h EventHandler, scope ...any) HTMLSection
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSection
+	OnCut(h EventHandler, scope ...any) HTMLSection
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSection
+	OnDblClick(h EventHandler, scope ...any) HTMLSection
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSection
+	OnDrag(h EventHandler, scope ...any) HTMLSection
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSection
+	OnDragEnd(h EventHandler, scope ...any) HTMLSection
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSection
+	OnDragEnter(h EventHandler, scope ...any) HTMLSection
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSection
+	OnDragLeave(h EventHandler, scope ...any) HTMLSection
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSection
+	OnDragOver(h EventHandler, scope ...any) HTMLSection
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSection
+	OnDragStart(h EventHandler, scope ...any) HTMLSection
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSection
+	OnDrop(h EventHandler, scope ...any) HTMLSection
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSection
+	OnFocus(h EventHandler, scope ...any) HTMLSection
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSection
+	OnInput(h EventHandler, scope ...any) HTMLSection
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSection
+	OnInvalid(h EventHandler, scope ...any) HTMLSection
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSection
+	OnKeyDown(h EventHandler, scope ...any) HTMLSection
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSection
+	OnKeyPress(h EventHandler, scope ...any) HTMLSection
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSection
+	OnKeyUp(h EventHandler, scope ...any) HTMLSection
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSection
+	OnMouseDown(h EventHandler, scope ...any) HTMLSection
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSection
+	OnMouseMove(h EventHandler, scope ...any) HTMLSection
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSection
+	OnMouseOut(h EventHandler, scope ...any) HTMLSection
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSection
+	OnMouseOver(h EventHandler, scope ...any) HTMLSection
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSection
+	OnMouseUp(h EventHandler, scope ...any) HTMLSection
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSection
+	OnPaste(h EventHandler, scope ...any) HTMLSection
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSection
+	OnReset(h EventHandler, scope ...any) HTMLSection
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSection
+	OnScroll(h EventHandler, scope ...any) HTMLSection
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSection
+	OnSearch(h EventHandler, scope ...any) HTMLSection
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSection
+	OnSelect(h EventHandler, scope ...any) HTMLSection
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSection
+	OnSubmit(h EventHandler, scope ...any) HTMLSection
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSection
+	OnWheel(h EventHandler, scope ...any) HTMLSection
 }
 
 // Section returns an HTML element that defines a section in a document.
@@ -14225,7 +14225,7 @@ type HTMLSelect interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLSelect
+	Text(v any) HTMLSelect
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLSelect
@@ -14237,7 +14237,7 @@ type HTMLSelect interface {
 	AccessKey(v string) HTMLSelect
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSelect
+	Aria(k string, v any) HTMLSelect
 
 	// AutoFocus specifies that the element should automatically get focus when the page loads.
 	AutoFocus(v bool) HTMLSelect
@@ -14249,7 +14249,7 @@ type HTMLSelect interface {
 	ContentEditable(v bool) HTMLSelect
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSelect
+	DataSet(k string, v any) HTMLSelect
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSelect
@@ -14306,100 +14306,100 @@ type HTMLSelect interface {
 	On(event string, h EventHandler, scope ...any) HTMLSelect
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSelect
+	OnBlur(h EventHandler, scope ...any) HTMLSelect
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSelect
+	OnChange(h EventHandler, scope ...any) HTMLSelect
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSelect
+	OnClick(h EventHandler, scope ...any) HTMLSelect
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSelect
+	OnContextMenu(h EventHandler, scope ...any) HTMLSelect
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSelect
+	OnCopy(h EventHandler, scope ...any) HTMLSelect
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSelect
+	OnCut(h EventHandler, scope ...any) HTMLSelect
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSelect
+	OnDblClick(h EventHandler, scope ...any) HTMLSelect
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSelect
+	OnDrag(h EventHandler, scope ...any) HTMLSelect
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSelect
+	OnDragEnd(h EventHandler, scope ...any) HTMLSelect
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSelect
+	OnDragEnter(h EventHandler, scope ...any) HTMLSelect
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSelect
+	OnDragLeave(h EventHandler, scope ...any) HTMLSelect
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSelect
+	OnDragOver(h EventHandler, scope ...any) HTMLSelect
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSelect
+	OnDragStart(h EventHandler, scope ...any) HTMLSelect
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSelect
+	OnDrop(h EventHandler, scope ...any) HTMLSelect
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSelect
+	OnFocus(h EventHandler, scope ...any) HTMLSelect
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSelect
+	OnInput(h EventHandler, scope ...any) HTMLSelect
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSelect
+	OnInvalid(h EventHandler, scope ...any) HTMLSelect
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSelect
+	OnKeyDown(h EventHandler, scope ...any) HTMLSelect
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSelect
+	OnKeyPress(h EventHandler, scope ...any) HTMLSelect
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSelect
+	OnKeyUp(h EventHandler, scope ...any) HTMLSelect
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSelect
+	OnMouseDown(h EventHandler, scope ...any) HTMLSelect
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSelect
+	OnMouseMove(h EventHandler, scope ...any) HTMLSelect
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSelect
+	OnMouseOut(h EventHandler, scope ...any) HTMLSelect
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSelect
+	OnMouseOver(h EventHandler, scope ...any) HTMLSelect
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSelect
+	OnMouseUp(h EventHandler, scope ...any) HTMLSelect
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSelect
+	OnPaste(h EventHandler, scope ...any) HTMLSelect
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSelect
+	OnReset(h EventHandler, scope ...any) HTMLSelect
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSelect
+	OnScroll(h EventHandler, scope ...any) HTMLSelect
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSelect
+	OnSearch(h EventHandler, scope ...any) HTMLSelect
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSelect
+	OnSelect(h EventHandler, scope ...any) HTMLSelect
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSelect
+	OnSubmit(h EventHandler, scope ...any) HTMLSelect
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSelect
+	OnWheel(h EventHandler, scope ...any) HTMLSelect
 }
 
 // Select returns an HTML element that defines a drop-down list.
@@ -14415,7 +14415,7 @@ type HTMLSmall interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLSmall
+	Text(v any) HTMLSmall
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLSmall
@@ -14427,7 +14427,7 @@ type HTMLSmall interface {
 	AccessKey(v string) HTMLSmall
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSmall
+	Aria(k string, v any) HTMLSmall
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLSmall
@@ -14436,7 +14436,7 @@ type HTMLSmall interface {
 	ContentEditable(v bool) HTMLSmall
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSmall
+	DataSet(k string, v any) HTMLSmall
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSmall
@@ -14475,100 +14475,100 @@ type HTMLSmall interface {
 	On(event string, h EventHandler, scope ...any) HTMLSmall
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSmall
+	OnBlur(h EventHandler, scope ...any) HTMLSmall
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSmall
+	OnChange(h EventHandler, scope ...any) HTMLSmall
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSmall
+	OnClick(h EventHandler, scope ...any) HTMLSmall
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSmall
+	OnContextMenu(h EventHandler, scope ...any) HTMLSmall
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSmall
+	OnCopy(h EventHandler, scope ...any) HTMLSmall
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSmall
+	OnCut(h EventHandler, scope ...any) HTMLSmall
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSmall
+	OnDblClick(h EventHandler, scope ...any) HTMLSmall
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSmall
+	OnDrag(h EventHandler, scope ...any) HTMLSmall
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSmall
+	OnDragEnd(h EventHandler, scope ...any) HTMLSmall
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSmall
+	OnDragEnter(h EventHandler, scope ...any) HTMLSmall
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSmall
+	OnDragLeave(h EventHandler, scope ...any) HTMLSmall
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSmall
+	OnDragOver(h EventHandler, scope ...any) HTMLSmall
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSmall
+	OnDragStart(h EventHandler, scope ...any) HTMLSmall
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSmall
+	OnDrop(h EventHandler, scope ...any) HTMLSmall
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSmall
+	OnFocus(h EventHandler, scope ...any) HTMLSmall
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSmall
+	OnInput(h EventHandler, scope ...any) HTMLSmall
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSmall
+	OnInvalid(h EventHandler, scope ...any) HTMLSmall
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSmall
+	OnKeyDown(h EventHandler, scope ...any) HTMLSmall
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSmall
+	OnKeyPress(h EventHandler, scope ...any) HTMLSmall
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSmall
+	OnKeyUp(h EventHandler, scope ...any) HTMLSmall
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSmall
+	OnMouseDown(h EventHandler, scope ...any) HTMLSmall
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSmall
+	OnMouseMove(h EventHandler, scope ...any) HTMLSmall
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSmall
+	OnMouseOut(h EventHandler, scope ...any) HTMLSmall
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSmall
+	OnMouseOver(h EventHandler, scope ...any) HTMLSmall
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSmall
+	OnMouseUp(h EventHandler, scope ...any) HTMLSmall
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSmall
+	OnPaste(h EventHandler, scope ...any) HTMLSmall
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSmall
+	OnReset(h EventHandler, scope ...any) HTMLSmall
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSmall
+	OnScroll(h EventHandler, scope ...any) HTMLSmall
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSmall
+	OnSearch(h EventHandler, scope ...any) HTMLSmall
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSmall
+	OnSelect(h EventHandler, scope ...any) HTMLSmall
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSmall
+	OnSubmit(h EventHandler, scope ...any) HTMLSmall
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSmall
+	OnWheel(h EventHandler, scope ...any) HTMLSmall
 }
 
 // Small returns an HTML element that defines smaller text.
@@ -14590,7 +14590,7 @@ type HTMLSource interface {
 	AccessKey(v string) HTMLSource
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSource
+	Aria(k string, v any) HTMLSource
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLSource
@@ -14599,7 +14599,7 @@ type HTMLSource interface {
 	ContentEditable(v bool) HTMLSource
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSource
+	DataSet(k string, v any) HTMLSource
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSource
@@ -14653,100 +14653,100 @@ type HTMLSource interface {
 	On(event string, h EventHandler, scope ...any) HTMLSource
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSource
+	OnBlur(h EventHandler, scope ...any) HTMLSource
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSource
+	OnChange(h EventHandler, scope ...any) HTMLSource
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSource
+	OnClick(h EventHandler, scope ...any) HTMLSource
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSource
+	OnContextMenu(h EventHandler, scope ...any) HTMLSource
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSource
+	OnCopy(h EventHandler, scope ...any) HTMLSource
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSource
+	OnCut(h EventHandler, scope ...any) HTMLSource
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSource
+	OnDblClick(h EventHandler, scope ...any) HTMLSource
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSource
+	OnDrag(h EventHandler, scope ...any) HTMLSource
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSource
+	OnDragEnd(h EventHandler, scope ...any) HTMLSource
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSource
+	OnDragEnter(h EventHandler, scope ...any) HTMLSource
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSource
+	OnDragLeave(h EventHandler, scope ...any) HTMLSource
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSource
+	OnDragOver(h EventHandler, scope ...any) HTMLSource
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSource
+	OnDragStart(h EventHandler, scope ...any) HTMLSource
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSource
+	OnDrop(h EventHandler, scope ...any) HTMLSource
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSource
+	OnFocus(h EventHandler, scope ...any) HTMLSource
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSource
+	OnInput(h EventHandler, scope ...any) HTMLSource
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSource
+	OnInvalid(h EventHandler, scope ...any) HTMLSource
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSource
+	OnKeyDown(h EventHandler, scope ...any) HTMLSource
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSource
+	OnKeyPress(h EventHandler, scope ...any) HTMLSource
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSource
+	OnKeyUp(h EventHandler, scope ...any) HTMLSource
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSource
+	OnMouseDown(h EventHandler, scope ...any) HTMLSource
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSource
+	OnMouseMove(h EventHandler, scope ...any) HTMLSource
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSource
+	OnMouseOut(h EventHandler, scope ...any) HTMLSource
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSource
+	OnMouseOver(h EventHandler, scope ...any) HTMLSource
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSource
+	OnMouseUp(h EventHandler, scope ...any) HTMLSource
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSource
+	OnPaste(h EventHandler, scope ...any) HTMLSource
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSource
+	OnReset(h EventHandler, scope ...any) HTMLSource
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSource
+	OnScroll(h EventHandler, scope ...any) HTMLSource
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSource
+	OnSearch(h EventHandler, scope ...any) HTMLSource
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSource
+	OnSelect(h EventHandler, scope ...any) HTMLSource
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSource
+	OnSubmit(h EventHandler, scope ...any) HTMLSource
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSource
+	OnWheel(h EventHandler, scope ...any) HTMLSource
 }
 
 // Source returns an HTML element that .
@@ -14762,7 +14762,7 @@ type HTMLSpan interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLSpan
+	Text(v any) HTMLSpan
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLSpan
@@ -14774,7 +14774,7 @@ type HTMLSpan interface {
 	AccessKey(v string) HTMLSpan
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSpan
+	Aria(k string, v any) HTMLSpan
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLSpan
@@ -14783,7 +14783,7 @@ type HTMLSpan interface {
 	ContentEditable(v bool) HTMLSpan
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSpan
+	DataSet(k string, v any) HTMLSpan
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSpan
@@ -14822,100 +14822,100 @@ type HTMLSpan interface {
 	On(event string, h EventHandler, scope ...any) HTMLSpan
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSpan
+	OnBlur(h EventHandler, scope ...any) HTMLSpan
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSpan
+	OnChange(h EventHandler, scope ...any) HTMLSpan
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSpan
+	OnClick(h EventHandler, scope ...any) HTMLSpan
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSpan
+	OnContextMenu(h EventHandler, scope ...any) HTMLSpan
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSpan
+	OnCopy(h EventHandler, scope ...any) HTMLSpan
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSpan
+	OnCut(h EventHandler, scope ...any) HTMLSpan
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSpan
+	OnDblClick(h EventHandler, scope ...any) HTMLSpan
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSpan
+	OnDrag(h EventHandler, scope ...any) HTMLSpan
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSpan
+	OnDragEnd(h EventHandler, scope ...any) HTMLSpan
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSpan
+	OnDragEnter(h EventHandler, scope ...any) HTMLSpan
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSpan
+	OnDragLeave(h EventHandler, scope ...any) HTMLSpan
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSpan
+	OnDragOver(h EventHandler, scope ...any) HTMLSpan
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSpan
+	OnDragStart(h EventHandler, scope ...any) HTMLSpan
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSpan
+	OnDrop(h EventHandler, scope ...any) HTMLSpan
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSpan
+	OnFocus(h EventHandler, scope ...any) HTMLSpan
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSpan
+	OnInput(h EventHandler, scope ...any) HTMLSpan
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSpan
+	OnInvalid(h EventHandler, scope ...any) HTMLSpan
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSpan
+	OnKeyDown(h EventHandler, scope ...any) HTMLSpan
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSpan
+	OnKeyPress(h EventHandler, scope ...any) HTMLSpan
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSpan
+	OnKeyUp(h EventHandler, scope ...any) HTMLSpan
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSpan
+	OnMouseDown(h EventHandler, scope ...any) HTMLSpan
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSpan
+	OnMouseMove(h EventHandler, scope ...any) HTMLSpan
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSpan
+	OnMouseOut(h EventHandler, scope ...any) HTMLSpan
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSpan
+	OnMouseOver(h EventHandler, scope ...any) HTMLSpan
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSpan
+	OnMouseUp(h EventHandler, scope ...any) HTMLSpan
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSpan
+	OnPaste(h EventHandler, scope ...any) HTMLSpan
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSpan
+	OnReset(h EventHandler, scope ...any) HTMLSpan
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSpan
+	OnScroll(h EventHandler, scope ...any) HTMLSpan
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSpan
+	OnSearch(h EventHandler, scope ...any) HTMLSpan
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSpan
+	OnSelect(h EventHandler, scope ...any) HTMLSpan
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSpan
+	OnSubmit(h EventHandler, scope ...any) HTMLSpan
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSpan
+	OnWheel(h EventHandler, scope ...any) HTMLSpan
 }
 
 // Span returns an HTML element that defines a section in a document.
@@ -14931,7 +14931,7 @@ type HTMLStrong interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLStrong
+	Text(v any) HTMLStrong
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLStrong
@@ -14943,7 +14943,7 @@ type HTMLStrong interface {
 	AccessKey(v string) HTMLStrong
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLStrong
+	Aria(k string, v any) HTMLStrong
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLStrong
@@ -14952,7 +14952,7 @@ type HTMLStrong interface {
 	ContentEditable(v bool) HTMLStrong
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLStrong
+	DataSet(k string, v any) HTMLStrong
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLStrong
@@ -14991,100 +14991,100 @@ type HTMLStrong interface {
 	On(event string, h EventHandler, scope ...any) HTMLStrong
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLStrong
+	OnBlur(h EventHandler, scope ...any) HTMLStrong
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLStrong
+	OnChange(h EventHandler, scope ...any) HTMLStrong
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLStrong
+	OnClick(h EventHandler, scope ...any) HTMLStrong
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLStrong
+	OnContextMenu(h EventHandler, scope ...any) HTMLStrong
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLStrong
+	OnCopy(h EventHandler, scope ...any) HTMLStrong
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLStrong
+	OnCut(h EventHandler, scope ...any) HTMLStrong
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLStrong
+	OnDblClick(h EventHandler, scope ...any) HTMLStrong
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLStrong
+	OnDrag(h EventHandler, scope ...any) HTMLStrong
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLStrong
+	OnDragEnd(h EventHandler, scope ...any) HTMLStrong
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLStrong
+	OnDragEnter(h EventHandler, scope ...any) HTMLStrong
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLStrong
+	OnDragLeave(h EventHandler, scope ...any) HTMLStrong
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLStrong
+	OnDragOver(h EventHandler, scope ...any) HTMLStrong
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLStrong
+	OnDragStart(h EventHandler, scope ...any) HTMLStrong
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLStrong
+	OnDrop(h EventHandler, scope ...any) HTMLStrong
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLStrong
+	OnFocus(h EventHandler, scope ...any) HTMLStrong
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLStrong
+	OnInput(h EventHandler, scope ...any) HTMLStrong
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLStrong
+	OnInvalid(h EventHandler, scope ...any) HTMLStrong
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLStrong
+	OnKeyDown(h EventHandler, scope ...any) HTMLStrong
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLStrong
+	OnKeyPress(h EventHandler, scope ...any) HTMLStrong
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLStrong
+	OnKeyUp(h EventHandler, scope ...any) HTMLStrong
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLStrong
+	OnMouseDown(h EventHandler, scope ...any) HTMLStrong
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLStrong
+	OnMouseMove(h EventHandler, scope ...any) HTMLStrong
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLStrong
+	OnMouseOut(h EventHandler, scope ...any) HTMLStrong
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLStrong
+	OnMouseOver(h EventHandler, scope ...any) HTMLStrong
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLStrong
+	OnMouseUp(h EventHandler, scope ...any) HTMLStrong
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLStrong
+	OnPaste(h EventHandler, scope ...any) HTMLStrong
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLStrong
+	OnReset(h EventHandler, scope ...any) HTMLStrong
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLStrong
+	OnScroll(h EventHandler, scope ...any) HTMLStrong
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLStrong
+	OnSearch(h EventHandler, scope ...any) HTMLStrong
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLStrong
+	OnSelect(h EventHandler, scope ...any) HTMLStrong
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLStrong
+	OnSubmit(h EventHandler, scope ...any) HTMLStrong
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLStrong
+	OnWheel(h EventHandler, scope ...any) HTMLStrong
 }
 
 // Strong returns an HTML element that defines important text.
@@ -15100,7 +15100,7 @@ type HTMLStyle interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLStyle
+	Text(v any) HTMLStyle
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLStyle
@@ -15112,7 +15112,7 @@ type HTMLStyle interface {
 	AccessKey(v string) HTMLStyle
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLStyle
+	Aria(k string, v any) HTMLStyle
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLStyle
@@ -15121,7 +15121,7 @@ type HTMLStyle interface {
 	ContentEditable(v bool) HTMLStyle
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLStyle
+	DataSet(k string, v any) HTMLStyle
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLStyle
@@ -15166,103 +15166,103 @@ type HTMLStyle interface {
 	On(event string, h EventHandler, scope ...any) HTMLStyle
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLStyle
+	OnBlur(h EventHandler, scope ...any) HTMLStyle
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLStyle
+	OnChange(h EventHandler, scope ...any) HTMLStyle
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLStyle
+	OnClick(h EventHandler, scope ...any) HTMLStyle
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLStyle
+	OnContextMenu(h EventHandler, scope ...any) HTMLStyle
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLStyle
+	OnCopy(h EventHandler, scope ...any) HTMLStyle
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLStyle
+	OnCut(h EventHandler, scope ...any) HTMLStyle
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLStyle
+	OnDblClick(h EventHandler, scope ...any) HTMLStyle
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLStyle
+	OnDrag(h EventHandler, scope ...any) HTMLStyle
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLStyle
+	OnDragEnd(h EventHandler, scope ...any) HTMLStyle
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLStyle
+	OnDragEnter(h EventHandler, scope ...any) HTMLStyle
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLStyle
+	OnDragLeave(h EventHandler, scope ...any) HTMLStyle
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLStyle
+	OnDragOver(h EventHandler, scope ...any) HTMLStyle
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLStyle
+	OnDragStart(h EventHandler, scope ...any) HTMLStyle
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLStyle
+	OnDrop(h EventHandler, scope ...any) HTMLStyle
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLStyle
+	OnFocus(h EventHandler, scope ...any) HTMLStyle
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLStyle
+	OnInput(h EventHandler, scope ...any) HTMLStyle
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLStyle
+	OnInvalid(h EventHandler, scope ...any) HTMLStyle
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLStyle
+	OnKeyDown(h EventHandler, scope ...any) HTMLStyle
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLStyle
+	OnKeyPress(h EventHandler, scope ...any) HTMLStyle
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLStyle
+	OnKeyUp(h EventHandler, scope ...any) HTMLStyle
 
 	// OnLoad calls the given handler after the element is finished loading.
-	OnLoad(h EventHandler, scope ...interface{}) HTMLStyle
+	OnLoad(h EventHandler, scope ...any) HTMLStyle
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLStyle
+	OnMouseDown(h EventHandler, scope ...any) HTMLStyle
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLStyle
+	OnMouseMove(h EventHandler, scope ...any) HTMLStyle
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLStyle
+	OnMouseOut(h EventHandler, scope ...any) HTMLStyle
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLStyle
+	OnMouseOver(h EventHandler, scope ...any) HTMLStyle
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLStyle
+	OnMouseUp(h EventHandler, scope ...any) HTMLStyle
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLStyle
+	OnPaste(h EventHandler, scope ...any) HTMLStyle
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLStyle
+	OnReset(h EventHandler, scope ...any) HTMLStyle
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLStyle
+	OnScroll(h EventHandler, scope ...any) HTMLStyle
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLStyle
+	OnSearch(h EventHandler, scope ...any) HTMLStyle
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLStyle
+	OnSelect(h EventHandler, scope ...any) HTMLStyle
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLStyle
+	OnSubmit(h EventHandler, scope ...any) HTMLStyle
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLStyle
+	OnWheel(h EventHandler, scope ...any) HTMLStyle
 }
 
 // Style returns an HTML element that defines style information for a document.
@@ -15278,7 +15278,7 @@ type HTMLSub interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLSub
+	Text(v any) HTMLSub
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLSub
@@ -15290,7 +15290,7 @@ type HTMLSub interface {
 	AccessKey(v string) HTMLSub
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSub
+	Aria(k string, v any) HTMLSub
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLSub
@@ -15299,7 +15299,7 @@ type HTMLSub interface {
 	ContentEditable(v bool) HTMLSub
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSub
+	DataSet(k string, v any) HTMLSub
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSub
@@ -15338,100 +15338,100 @@ type HTMLSub interface {
 	On(event string, h EventHandler, scope ...any) HTMLSub
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSub
+	OnBlur(h EventHandler, scope ...any) HTMLSub
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSub
+	OnChange(h EventHandler, scope ...any) HTMLSub
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSub
+	OnClick(h EventHandler, scope ...any) HTMLSub
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSub
+	OnContextMenu(h EventHandler, scope ...any) HTMLSub
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSub
+	OnCopy(h EventHandler, scope ...any) HTMLSub
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSub
+	OnCut(h EventHandler, scope ...any) HTMLSub
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSub
+	OnDblClick(h EventHandler, scope ...any) HTMLSub
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSub
+	OnDrag(h EventHandler, scope ...any) HTMLSub
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSub
+	OnDragEnd(h EventHandler, scope ...any) HTMLSub
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSub
+	OnDragEnter(h EventHandler, scope ...any) HTMLSub
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSub
+	OnDragLeave(h EventHandler, scope ...any) HTMLSub
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSub
+	OnDragOver(h EventHandler, scope ...any) HTMLSub
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSub
+	OnDragStart(h EventHandler, scope ...any) HTMLSub
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSub
+	OnDrop(h EventHandler, scope ...any) HTMLSub
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSub
+	OnFocus(h EventHandler, scope ...any) HTMLSub
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSub
+	OnInput(h EventHandler, scope ...any) HTMLSub
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSub
+	OnInvalid(h EventHandler, scope ...any) HTMLSub
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSub
+	OnKeyDown(h EventHandler, scope ...any) HTMLSub
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSub
+	OnKeyPress(h EventHandler, scope ...any) HTMLSub
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSub
+	OnKeyUp(h EventHandler, scope ...any) HTMLSub
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSub
+	OnMouseDown(h EventHandler, scope ...any) HTMLSub
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSub
+	OnMouseMove(h EventHandler, scope ...any) HTMLSub
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSub
+	OnMouseOut(h EventHandler, scope ...any) HTMLSub
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSub
+	OnMouseOver(h EventHandler, scope ...any) HTMLSub
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSub
+	OnMouseUp(h EventHandler, scope ...any) HTMLSub
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSub
+	OnPaste(h EventHandler, scope ...any) HTMLSub
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSub
+	OnReset(h EventHandler, scope ...any) HTMLSub
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSub
+	OnScroll(h EventHandler, scope ...any) HTMLSub
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSub
+	OnSearch(h EventHandler, scope ...any) HTMLSub
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSub
+	OnSelect(h EventHandler, scope ...any) HTMLSub
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSub
+	OnSubmit(h EventHandler, scope ...any) HTMLSub
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSub
+	OnWheel(h EventHandler, scope ...any) HTMLSub
 }
 
 // Sub returns an HTML element that defines subscripted text.
@@ -15447,7 +15447,7 @@ type HTMLSummary interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLSummary
+	Text(v any) HTMLSummary
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLSummary
@@ -15459,7 +15459,7 @@ type HTMLSummary interface {
 	AccessKey(v string) HTMLSummary
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSummary
+	Aria(k string, v any) HTMLSummary
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLSummary
@@ -15468,7 +15468,7 @@ type HTMLSummary interface {
 	ContentEditable(v bool) HTMLSummary
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSummary
+	DataSet(k string, v any) HTMLSummary
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSummary
@@ -15507,100 +15507,100 @@ type HTMLSummary interface {
 	On(event string, h EventHandler, scope ...any) HTMLSummary
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSummary
+	OnBlur(h EventHandler, scope ...any) HTMLSummary
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSummary
+	OnChange(h EventHandler, scope ...any) HTMLSummary
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSummary
+	OnClick(h EventHandler, scope ...any) HTMLSummary
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSummary
+	OnContextMenu(h EventHandler, scope ...any) HTMLSummary
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSummary
+	OnCopy(h EventHandler, scope ...any) HTMLSummary
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSummary
+	OnCut(h EventHandler, scope ...any) HTMLSummary
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSummary
+	OnDblClick(h EventHandler, scope ...any) HTMLSummary
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSummary
+	OnDrag(h EventHandler, scope ...any) HTMLSummary
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSummary
+	OnDragEnd(h EventHandler, scope ...any) HTMLSummary
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSummary
+	OnDragEnter(h EventHandler, scope ...any) HTMLSummary
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSummary
+	OnDragLeave(h EventHandler, scope ...any) HTMLSummary
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSummary
+	OnDragOver(h EventHandler, scope ...any) HTMLSummary
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSummary
+	OnDragStart(h EventHandler, scope ...any) HTMLSummary
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSummary
+	OnDrop(h EventHandler, scope ...any) HTMLSummary
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSummary
+	OnFocus(h EventHandler, scope ...any) HTMLSummary
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSummary
+	OnInput(h EventHandler, scope ...any) HTMLSummary
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSummary
+	OnInvalid(h EventHandler, scope ...any) HTMLSummary
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSummary
+	OnKeyDown(h EventHandler, scope ...any) HTMLSummary
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSummary
+	OnKeyPress(h EventHandler, scope ...any) HTMLSummary
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSummary
+	OnKeyUp(h EventHandler, scope ...any) HTMLSummary
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSummary
+	OnMouseDown(h EventHandler, scope ...any) HTMLSummary
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSummary
+	OnMouseMove(h EventHandler, scope ...any) HTMLSummary
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSummary
+	OnMouseOut(h EventHandler, scope ...any) HTMLSummary
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSummary
+	OnMouseOver(h EventHandler, scope ...any) HTMLSummary
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSummary
+	OnMouseUp(h EventHandler, scope ...any) HTMLSummary
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSummary
+	OnPaste(h EventHandler, scope ...any) HTMLSummary
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSummary
+	OnReset(h EventHandler, scope ...any) HTMLSummary
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSummary
+	OnScroll(h EventHandler, scope ...any) HTMLSummary
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSummary
+	OnSearch(h EventHandler, scope ...any) HTMLSummary
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSummary
+	OnSelect(h EventHandler, scope ...any) HTMLSummary
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSummary
+	OnSubmit(h EventHandler, scope ...any) HTMLSummary
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSummary
+	OnWheel(h EventHandler, scope ...any) HTMLSummary
 }
 
 // Summary returns an HTML element that defines a visible heading for a details element.
@@ -15616,7 +15616,7 @@ type HTMLSup interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLSup
+	Text(v any) HTMLSup
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLSup
@@ -15628,7 +15628,7 @@ type HTMLSup interface {
 	AccessKey(v string) HTMLSup
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLSup
+	Aria(k string, v any) HTMLSup
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLSup
@@ -15637,7 +15637,7 @@ type HTMLSup interface {
 	ContentEditable(v bool) HTMLSup
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLSup
+	DataSet(k string, v any) HTMLSup
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLSup
@@ -15676,100 +15676,100 @@ type HTMLSup interface {
 	On(event string, h EventHandler, scope ...any) HTMLSup
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLSup
+	OnBlur(h EventHandler, scope ...any) HTMLSup
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLSup
+	OnChange(h EventHandler, scope ...any) HTMLSup
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLSup
+	OnClick(h EventHandler, scope ...any) HTMLSup
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLSup
+	OnContextMenu(h EventHandler, scope ...any) HTMLSup
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLSup
+	OnCopy(h EventHandler, scope ...any) HTMLSup
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLSup
+	OnCut(h EventHandler, scope ...any) HTMLSup
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLSup
+	OnDblClick(h EventHandler, scope ...any) HTMLSup
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLSup
+	OnDrag(h EventHandler, scope ...any) HTMLSup
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLSup
+	OnDragEnd(h EventHandler, scope ...any) HTMLSup
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLSup
+	OnDragEnter(h EventHandler, scope ...any) HTMLSup
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLSup
+	OnDragLeave(h EventHandler, scope ...any) HTMLSup
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLSup
+	OnDragOver(h EventHandler, scope ...any) HTMLSup
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLSup
+	OnDragStart(h EventHandler, scope ...any) HTMLSup
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLSup
+	OnDrop(h EventHandler, scope ...any) HTMLSup
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLSup
+	OnFocus(h EventHandler, scope ...any) HTMLSup
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLSup
+	OnInput(h EventHandler, scope ...any) HTMLSup
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLSup
+	OnInvalid(h EventHandler, scope ...any) HTMLSup
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLSup
+	OnKeyDown(h EventHandler, scope ...any) HTMLSup
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLSup
+	OnKeyPress(h EventHandler, scope ...any) HTMLSup
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLSup
+	OnKeyUp(h EventHandler, scope ...any) HTMLSup
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLSup
+	OnMouseDown(h EventHandler, scope ...any) HTMLSup
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLSup
+	OnMouseMove(h EventHandler, scope ...any) HTMLSup
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLSup
+	OnMouseOut(h EventHandler, scope ...any) HTMLSup
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLSup
+	OnMouseOver(h EventHandler, scope ...any) HTMLSup
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLSup
+	OnMouseUp(h EventHandler, scope ...any) HTMLSup
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLSup
+	OnPaste(h EventHandler, scope ...any) HTMLSup
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLSup
+	OnReset(h EventHandler, scope ...any) HTMLSup
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLSup
+	OnScroll(h EventHandler, scope ...any) HTMLSup
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLSup
+	OnSearch(h EventHandler, scope ...any) HTMLSup
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLSup
+	OnSelect(h EventHandler, scope ...any) HTMLSup
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLSup
+	OnSubmit(h EventHandler, scope ...any) HTMLSup
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLSup
+	OnWheel(h EventHandler, scope ...any) HTMLSup
 }
 
 // Sup returns an HTML element that defines superscripted text.
@@ -15785,7 +15785,7 @@ type HTMLTable interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTable
+	Text(v any) HTMLTable
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTable
@@ -15797,7 +15797,7 @@ type HTMLTable interface {
 	AccessKey(v string) HTMLTable
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTable
+	Aria(k string, v any) HTMLTable
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTable
@@ -15806,7 +15806,7 @@ type HTMLTable interface {
 	ContentEditable(v bool) HTMLTable
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTable
+	DataSet(k string, v any) HTMLTable
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTable
@@ -15845,100 +15845,100 @@ type HTMLTable interface {
 	On(event string, h EventHandler, scope ...any) HTMLTable
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTable
+	OnBlur(h EventHandler, scope ...any) HTMLTable
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTable
+	OnChange(h EventHandler, scope ...any) HTMLTable
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTable
+	OnClick(h EventHandler, scope ...any) HTMLTable
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTable
+	OnContextMenu(h EventHandler, scope ...any) HTMLTable
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTable
+	OnCopy(h EventHandler, scope ...any) HTMLTable
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTable
+	OnCut(h EventHandler, scope ...any) HTMLTable
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTable
+	OnDblClick(h EventHandler, scope ...any) HTMLTable
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTable
+	OnDrag(h EventHandler, scope ...any) HTMLTable
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTable
+	OnDragEnd(h EventHandler, scope ...any) HTMLTable
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTable
+	OnDragEnter(h EventHandler, scope ...any) HTMLTable
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTable
+	OnDragLeave(h EventHandler, scope ...any) HTMLTable
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTable
+	OnDragOver(h EventHandler, scope ...any) HTMLTable
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTable
+	OnDragStart(h EventHandler, scope ...any) HTMLTable
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTable
+	OnDrop(h EventHandler, scope ...any) HTMLTable
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTable
+	OnFocus(h EventHandler, scope ...any) HTMLTable
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTable
+	OnInput(h EventHandler, scope ...any) HTMLTable
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTable
+	OnInvalid(h EventHandler, scope ...any) HTMLTable
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTable
+	OnKeyDown(h EventHandler, scope ...any) HTMLTable
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTable
+	OnKeyPress(h EventHandler, scope ...any) HTMLTable
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTable
+	OnKeyUp(h EventHandler, scope ...any) HTMLTable
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTable
+	OnMouseDown(h EventHandler, scope ...any) HTMLTable
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTable
+	OnMouseMove(h EventHandler, scope ...any) HTMLTable
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTable
+	OnMouseOut(h EventHandler, scope ...any) HTMLTable
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTable
+	OnMouseOver(h EventHandler, scope ...any) HTMLTable
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTable
+	OnMouseUp(h EventHandler, scope ...any) HTMLTable
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTable
+	OnPaste(h EventHandler, scope ...any) HTMLTable
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTable
+	OnReset(h EventHandler, scope ...any) HTMLTable
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTable
+	OnScroll(h EventHandler, scope ...any) HTMLTable
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTable
+	OnSearch(h EventHandler, scope ...any) HTMLTable
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTable
+	OnSelect(h EventHandler, scope ...any) HTMLTable
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTable
+	OnSubmit(h EventHandler, scope ...any) HTMLTable
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTable
+	OnWheel(h EventHandler, scope ...any) HTMLTable
 }
 
 // Table returns an HTML element that defines a table.
@@ -15954,7 +15954,7 @@ type HTMLTBody interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTBody
+	Text(v any) HTMLTBody
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTBody
@@ -15966,7 +15966,7 @@ type HTMLTBody interface {
 	AccessKey(v string) HTMLTBody
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTBody
+	Aria(k string, v any) HTMLTBody
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTBody
@@ -15975,7 +15975,7 @@ type HTMLTBody interface {
 	ContentEditable(v bool) HTMLTBody
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTBody
+	DataSet(k string, v any) HTMLTBody
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTBody
@@ -16014,100 +16014,100 @@ type HTMLTBody interface {
 	On(event string, h EventHandler, scope ...any) HTMLTBody
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTBody
+	OnBlur(h EventHandler, scope ...any) HTMLTBody
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTBody
+	OnChange(h EventHandler, scope ...any) HTMLTBody
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTBody
+	OnClick(h EventHandler, scope ...any) HTMLTBody
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTBody
+	OnContextMenu(h EventHandler, scope ...any) HTMLTBody
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTBody
+	OnCopy(h EventHandler, scope ...any) HTMLTBody
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTBody
+	OnCut(h EventHandler, scope ...any) HTMLTBody
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTBody
+	OnDblClick(h EventHandler, scope ...any) HTMLTBody
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTBody
+	OnDrag(h EventHandler, scope ...any) HTMLTBody
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTBody
+	OnDragEnd(h EventHandler, scope ...any) HTMLTBody
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTBody
+	OnDragEnter(h EventHandler, scope ...any) HTMLTBody
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTBody
+	OnDragLeave(h EventHandler, scope ...any) HTMLTBody
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTBody
+	OnDragOver(h EventHandler, scope ...any) HTMLTBody
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTBody
+	OnDragStart(h EventHandler, scope ...any) HTMLTBody
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTBody
+	OnDrop(h EventHandler, scope ...any) HTMLTBody
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTBody
+	OnFocus(h EventHandler, scope ...any) HTMLTBody
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTBody
+	OnInput(h EventHandler, scope ...any) HTMLTBody
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTBody
+	OnInvalid(h EventHandler, scope ...any) HTMLTBody
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTBody
+	OnKeyDown(h EventHandler, scope ...any) HTMLTBody
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTBody
+	OnKeyPress(h EventHandler, scope ...any) HTMLTBody
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTBody
+	OnKeyUp(h EventHandler, scope ...any) HTMLTBody
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTBody
+	OnMouseDown(h EventHandler, scope ...any) HTMLTBody
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTBody
+	OnMouseMove(h EventHandler, scope ...any) HTMLTBody
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTBody
+	OnMouseOut(h EventHandler, scope ...any) HTMLTBody
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTBody
+	OnMouseOver(h EventHandler, scope ...any) HTMLTBody
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTBody
+	OnMouseUp(h EventHandler, scope ...any) HTMLTBody
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTBody
+	OnPaste(h EventHandler, scope ...any) HTMLTBody
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTBody
+	OnReset(h EventHandler, scope ...any) HTMLTBody
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTBody
+	OnScroll(h EventHandler, scope ...any) HTMLTBody
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTBody
+	OnSearch(h EventHandler, scope ...any) HTMLTBody
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTBody
+	OnSelect(h EventHandler, scope ...any) HTMLTBody
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTBody
+	OnSubmit(h EventHandler, scope ...any) HTMLTBody
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTBody
+	OnWheel(h EventHandler, scope ...any) HTMLTBody
 }
 
 // TBody returns an HTML element that groups the body content in a table.
@@ -16123,7 +16123,7 @@ type HTMLTd interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTd
+	Text(v any) HTMLTd
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTd
@@ -16135,7 +16135,7 @@ type HTMLTd interface {
 	AccessKey(v string) HTMLTd
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTd
+	Aria(k string, v any) HTMLTd
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTd
@@ -16147,7 +16147,7 @@ type HTMLTd interface {
 	ContentEditable(v bool) HTMLTd
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTd
+	DataSet(k string, v any) HTMLTd
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTd
@@ -16192,100 +16192,100 @@ type HTMLTd interface {
 	On(event string, h EventHandler, scope ...any) HTMLTd
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTd
+	OnBlur(h EventHandler, scope ...any) HTMLTd
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTd
+	OnChange(h EventHandler, scope ...any) HTMLTd
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTd
+	OnClick(h EventHandler, scope ...any) HTMLTd
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTd
+	OnContextMenu(h EventHandler, scope ...any) HTMLTd
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTd
+	OnCopy(h EventHandler, scope ...any) HTMLTd
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTd
+	OnCut(h EventHandler, scope ...any) HTMLTd
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTd
+	OnDblClick(h EventHandler, scope ...any) HTMLTd
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTd
+	OnDrag(h EventHandler, scope ...any) HTMLTd
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTd
+	OnDragEnd(h EventHandler, scope ...any) HTMLTd
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTd
+	OnDragEnter(h EventHandler, scope ...any) HTMLTd
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTd
+	OnDragLeave(h EventHandler, scope ...any) HTMLTd
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTd
+	OnDragOver(h EventHandler, scope ...any) HTMLTd
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTd
+	OnDragStart(h EventHandler, scope ...any) HTMLTd
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTd
+	OnDrop(h EventHandler, scope ...any) HTMLTd
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTd
+	OnFocus(h EventHandler, scope ...any) HTMLTd
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTd
+	OnInput(h EventHandler, scope ...any) HTMLTd
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTd
+	OnInvalid(h EventHandler, scope ...any) HTMLTd
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTd
+	OnKeyDown(h EventHandler, scope ...any) HTMLTd
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTd
+	OnKeyPress(h EventHandler, scope ...any) HTMLTd
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTd
+	OnKeyUp(h EventHandler, scope ...any) HTMLTd
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTd
+	OnMouseDown(h EventHandler, scope ...any) HTMLTd
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTd
+	OnMouseMove(h EventHandler, scope ...any) HTMLTd
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTd
+	OnMouseOut(h EventHandler, scope ...any) HTMLTd
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTd
+	OnMouseOver(h EventHandler, scope ...any) HTMLTd
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTd
+	OnMouseUp(h EventHandler, scope ...any) HTMLTd
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTd
+	OnPaste(h EventHandler, scope ...any) HTMLTd
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTd
+	OnReset(h EventHandler, scope ...any) HTMLTd
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTd
+	OnScroll(h EventHandler, scope ...any) HTMLTd
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTd
+	OnSearch(h EventHandler, scope ...any) HTMLTd
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTd
+	OnSelect(h EventHandler, scope ...any) HTMLTd
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTd
+	OnSubmit(h EventHandler, scope ...any) HTMLTd
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTd
+	OnWheel(h EventHandler, scope ...any) HTMLTd
 }
 
 // Td returns an HTML element that defines a cell in a table.
@@ -16301,7 +16301,7 @@ type HTMLTemplate interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTemplate
+	Text(v any) HTMLTemplate
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTemplate
@@ -16313,7 +16313,7 @@ type HTMLTemplate interface {
 	AccessKey(v string) HTMLTemplate
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTemplate
+	Aria(k string, v any) HTMLTemplate
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTemplate
@@ -16322,7 +16322,7 @@ type HTMLTemplate interface {
 	ContentEditable(v bool) HTMLTemplate
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTemplate
+	DataSet(k string, v any) HTMLTemplate
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTemplate
@@ -16374,7 +16374,7 @@ type HTMLTextarea interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTextarea
+	Text(v any) HTMLTextarea
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTextarea
@@ -16386,7 +16386,7 @@ type HTMLTextarea interface {
 	AccessKey(v string) HTMLTextarea
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTextarea
+	Aria(k string, v any) HTMLTextarea
 
 	// AutoFocus specifies that the element should automatically get focus when the page loads.
 	AutoFocus(v bool) HTMLTextarea
@@ -16401,7 +16401,7 @@ type HTMLTextarea interface {
 	ContentEditable(v bool) HTMLTextarea
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTextarea
+	DataSet(k string, v any) HTMLTextarea
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTextarea
@@ -16470,100 +16470,100 @@ type HTMLTextarea interface {
 	On(event string, h EventHandler, scope ...any) HTMLTextarea
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnBlur(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnChange(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnClick(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnContextMenu(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnCopy(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnCut(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnDblClick(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnDrag(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnDragEnd(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnDragEnter(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnDragLeave(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnDragOver(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnDragStart(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnDrop(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnFocus(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnInput(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnInvalid(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnKeyDown(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnKeyPress(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnKeyUp(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnMouseDown(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnMouseMove(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnMouseOut(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnMouseOver(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnMouseUp(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnPaste(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnReset(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnScroll(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnSearch(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnSelect(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnSubmit(h EventHandler, scope ...any) HTMLTextarea
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTextarea
+	OnWheel(h EventHandler, scope ...any) HTMLTextarea
 }
 
 // Textarea returns an HTML element that defines a multiline input control (text area).
@@ -16579,7 +16579,7 @@ type HTMLTFoot interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTFoot
+	Text(v any) HTMLTFoot
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTFoot
@@ -16591,7 +16591,7 @@ type HTMLTFoot interface {
 	AccessKey(v string) HTMLTFoot
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTFoot
+	Aria(k string, v any) HTMLTFoot
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTFoot
@@ -16600,7 +16600,7 @@ type HTMLTFoot interface {
 	ContentEditable(v bool) HTMLTFoot
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTFoot
+	DataSet(k string, v any) HTMLTFoot
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTFoot
@@ -16639,100 +16639,100 @@ type HTMLTFoot interface {
 	On(event string, h EventHandler, scope ...any) HTMLTFoot
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnBlur(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnChange(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnClick(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnContextMenu(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnCopy(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnCut(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnDblClick(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnDrag(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnDragEnd(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnDragEnter(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnDragLeave(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnDragOver(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnDragStart(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnDrop(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnFocus(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnInput(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnInvalid(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnKeyDown(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnKeyPress(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnKeyUp(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnMouseDown(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnMouseMove(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnMouseOut(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnMouseOver(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnMouseUp(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnPaste(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnReset(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnScroll(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnSearch(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnSelect(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnSubmit(h EventHandler, scope ...any) HTMLTFoot
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTFoot
+	OnWheel(h EventHandler, scope ...any) HTMLTFoot
 }
 
 // TFoot returns an HTML element that groups the footer content in a table.
@@ -16748,7 +16748,7 @@ type HTMLTh interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTh
+	Text(v any) HTMLTh
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTh
@@ -16763,7 +16763,7 @@ type HTMLTh interface {
 	AccessKey(v string) HTMLTh
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTh
+	Aria(k string, v any) HTMLTh
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTh
@@ -16775,7 +16775,7 @@ type HTMLTh interface {
 	ContentEditable(v bool) HTMLTh
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTh
+	DataSet(k string, v any) HTMLTh
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTh
@@ -16823,100 +16823,100 @@ type HTMLTh interface {
 	On(event string, h EventHandler, scope ...any) HTMLTh
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTh
+	OnBlur(h EventHandler, scope ...any) HTMLTh
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTh
+	OnChange(h EventHandler, scope ...any) HTMLTh
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTh
+	OnClick(h EventHandler, scope ...any) HTMLTh
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTh
+	OnContextMenu(h EventHandler, scope ...any) HTMLTh
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTh
+	OnCopy(h EventHandler, scope ...any) HTMLTh
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTh
+	OnCut(h EventHandler, scope ...any) HTMLTh
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTh
+	OnDblClick(h EventHandler, scope ...any) HTMLTh
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTh
+	OnDrag(h EventHandler, scope ...any) HTMLTh
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTh
+	OnDragEnd(h EventHandler, scope ...any) HTMLTh
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTh
+	OnDragEnter(h EventHandler, scope ...any) HTMLTh
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTh
+	OnDragLeave(h EventHandler, scope ...any) HTMLTh
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTh
+	OnDragOver(h EventHandler, scope ...any) HTMLTh
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTh
+	OnDragStart(h EventHandler, scope ...any) HTMLTh
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTh
+	OnDrop(h EventHandler, scope ...any) HTMLTh
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTh
+	OnFocus(h EventHandler, scope ...any) HTMLTh
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTh
+	OnInput(h EventHandler, scope ...any) HTMLTh
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTh
+	OnInvalid(h EventHandler, scope ...any) HTMLTh
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTh
+	OnKeyDown(h EventHandler, scope ...any) HTMLTh
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTh
+	OnKeyPress(h EventHandler, scope ...any) HTMLTh
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTh
+	OnKeyUp(h EventHandler, scope ...any) HTMLTh
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTh
+	OnMouseDown(h EventHandler, scope ...any) HTMLTh
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTh
+	OnMouseMove(h EventHandler, scope ...any) HTMLTh
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTh
+	OnMouseOut(h EventHandler, scope ...any) HTMLTh
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTh
+	OnMouseOver(h EventHandler, scope ...any) HTMLTh
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTh
+	OnMouseUp(h EventHandler, scope ...any) HTMLTh
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTh
+	OnPaste(h EventHandler, scope ...any) HTMLTh
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTh
+	OnReset(h EventHandler, scope ...any) HTMLTh
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTh
+	OnScroll(h EventHandler, scope ...any) HTMLTh
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTh
+	OnSearch(h EventHandler, scope ...any) HTMLTh
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTh
+	OnSelect(h EventHandler, scope ...any) HTMLTh
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTh
+	OnSubmit(h EventHandler, scope ...any) HTMLTh
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTh
+	OnWheel(h EventHandler, scope ...any) HTMLTh
 }
 
 // Th returns an HTML element that defines a header cell in a table.
@@ -16932,7 +16932,7 @@ type HTMLTHead interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTHead
+	Text(v any) HTMLTHead
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTHead
@@ -16944,7 +16944,7 @@ type HTMLTHead interface {
 	AccessKey(v string) HTMLTHead
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTHead
+	Aria(k string, v any) HTMLTHead
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTHead
@@ -16953,7 +16953,7 @@ type HTMLTHead interface {
 	ContentEditable(v bool) HTMLTHead
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTHead
+	DataSet(k string, v any) HTMLTHead
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTHead
@@ -16992,100 +16992,100 @@ type HTMLTHead interface {
 	On(event string, h EventHandler, scope ...any) HTMLTHead
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTHead
+	OnBlur(h EventHandler, scope ...any) HTMLTHead
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTHead
+	OnChange(h EventHandler, scope ...any) HTMLTHead
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTHead
+	OnClick(h EventHandler, scope ...any) HTMLTHead
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTHead
+	OnContextMenu(h EventHandler, scope ...any) HTMLTHead
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTHead
+	OnCopy(h EventHandler, scope ...any) HTMLTHead
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTHead
+	OnCut(h EventHandler, scope ...any) HTMLTHead
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTHead
+	OnDblClick(h EventHandler, scope ...any) HTMLTHead
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTHead
+	OnDrag(h EventHandler, scope ...any) HTMLTHead
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTHead
+	OnDragEnd(h EventHandler, scope ...any) HTMLTHead
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTHead
+	OnDragEnter(h EventHandler, scope ...any) HTMLTHead
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTHead
+	OnDragLeave(h EventHandler, scope ...any) HTMLTHead
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTHead
+	OnDragOver(h EventHandler, scope ...any) HTMLTHead
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTHead
+	OnDragStart(h EventHandler, scope ...any) HTMLTHead
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTHead
+	OnDrop(h EventHandler, scope ...any) HTMLTHead
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTHead
+	OnFocus(h EventHandler, scope ...any) HTMLTHead
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTHead
+	OnInput(h EventHandler, scope ...any) HTMLTHead
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTHead
+	OnInvalid(h EventHandler, scope ...any) HTMLTHead
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTHead
+	OnKeyDown(h EventHandler, scope ...any) HTMLTHead
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTHead
+	OnKeyPress(h EventHandler, scope ...any) HTMLTHead
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTHead
+	OnKeyUp(h EventHandler, scope ...any) HTMLTHead
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTHead
+	OnMouseDown(h EventHandler, scope ...any) HTMLTHead
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTHead
+	OnMouseMove(h EventHandler, scope ...any) HTMLTHead
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTHead
+	OnMouseOut(h EventHandler, scope ...any) HTMLTHead
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTHead
+	OnMouseOver(h EventHandler, scope ...any) HTMLTHead
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTHead
+	OnMouseUp(h EventHandler, scope ...any) HTMLTHead
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTHead
+	OnPaste(h EventHandler, scope ...any) HTMLTHead
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTHead
+	OnReset(h EventHandler, scope ...any) HTMLTHead
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTHead
+	OnScroll(h EventHandler, scope ...any) HTMLTHead
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTHead
+	OnSearch(h EventHandler, scope ...any) HTMLTHead
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTHead
+	OnSelect(h EventHandler, scope ...any) HTMLTHead
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTHead
+	OnSubmit(h EventHandler, scope ...any) HTMLTHead
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTHead
+	OnWheel(h EventHandler, scope ...any) HTMLTHead
 }
 
 // THead returns an HTML element that groups the header content in a table
@@ -17101,7 +17101,7 @@ type HTMLTime interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTime
+	Text(v any) HTMLTime
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTime
@@ -17113,7 +17113,7 @@ type HTMLTime interface {
 	AccessKey(v string) HTMLTime
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTime
+	Aria(k string, v any) HTMLTime
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTime
@@ -17122,7 +17122,7 @@ type HTMLTime interface {
 	ContentEditable(v bool) HTMLTime
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTime
+	DataSet(k string, v any) HTMLTime
 
 	// DateTime specifies the date and time.
 	DateTime(v string) HTMLTime
@@ -17164,100 +17164,100 @@ type HTMLTime interface {
 	On(event string, h EventHandler, scope ...any) HTMLTime
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTime
+	OnBlur(h EventHandler, scope ...any) HTMLTime
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTime
+	OnChange(h EventHandler, scope ...any) HTMLTime
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTime
+	OnClick(h EventHandler, scope ...any) HTMLTime
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTime
+	OnContextMenu(h EventHandler, scope ...any) HTMLTime
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTime
+	OnCopy(h EventHandler, scope ...any) HTMLTime
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTime
+	OnCut(h EventHandler, scope ...any) HTMLTime
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTime
+	OnDblClick(h EventHandler, scope ...any) HTMLTime
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTime
+	OnDrag(h EventHandler, scope ...any) HTMLTime
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTime
+	OnDragEnd(h EventHandler, scope ...any) HTMLTime
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTime
+	OnDragEnter(h EventHandler, scope ...any) HTMLTime
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTime
+	OnDragLeave(h EventHandler, scope ...any) HTMLTime
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTime
+	OnDragOver(h EventHandler, scope ...any) HTMLTime
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTime
+	OnDragStart(h EventHandler, scope ...any) HTMLTime
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTime
+	OnDrop(h EventHandler, scope ...any) HTMLTime
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTime
+	OnFocus(h EventHandler, scope ...any) HTMLTime
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTime
+	OnInput(h EventHandler, scope ...any) HTMLTime
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTime
+	OnInvalid(h EventHandler, scope ...any) HTMLTime
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTime
+	OnKeyDown(h EventHandler, scope ...any) HTMLTime
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTime
+	OnKeyPress(h EventHandler, scope ...any) HTMLTime
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTime
+	OnKeyUp(h EventHandler, scope ...any) HTMLTime
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTime
+	OnMouseDown(h EventHandler, scope ...any) HTMLTime
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTime
+	OnMouseMove(h EventHandler, scope ...any) HTMLTime
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTime
+	OnMouseOut(h EventHandler, scope ...any) HTMLTime
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTime
+	OnMouseOver(h EventHandler, scope ...any) HTMLTime
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTime
+	OnMouseUp(h EventHandler, scope ...any) HTMLTime
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTime
+	OnPaste(h EventHandler, scope ...any) HTMLTime
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTime
+	OnReset(h EventHandler, scope ...any) HTMLTime
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTime
+	OnScroll(h EventHandler, scope ...any) HTMLTime
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTime
+	OnSearch(h EventHandler, scope ...any) HTMLTime
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTime
+	OnSelect(h EventHandler, scope ...any) HTMLTime
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTime
+	OnSubmit(h EventHandler, scope ...any) HTMLTime
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTime
+	OnWheel(h EventHandler, scope ...any) HTMLTime
 }
 
 // Time returns an HTML element that defines a date/time.
@@ -17273,7 +17273,7 @@ type HTMLTitle interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTitle
+	Text(v any) HTMLTitle
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTitle
@@ -17285,7 +17285,7 @@ type HTMLTitle interface {
 	AccessKey(v string) HTMLTitle
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTitle
+	Aria(k string, v any) HTMLTitle
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTitle
@@ -17294,7 +17294,7 @@ type HTMLTitle interface {
 	ContentEditable(v bool) HTMLTitle
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTitle
+	DataSet(k string, v any) HTMLTitle
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTitle
@@ -17346,7 +17346,7 @@ type HTMLTr interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLTr
+	Text(v any) HTMLTr
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLTr
@@ -17358,7 +17358,7 @@ type HTMLTr interface {
 	AccessKey(v string) HTMLTr
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLTr
+	Aria(k string, v any) HTMLTr
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLTr
@@ -17367,7 +17367,7 @@ type HTMLTr interface {
 	ContentEditable(v bool) HTMLTr
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLTr
+	DataSet(k string, v any) HTMLTr
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLTr
@@ -17406,100 +17406,100 @@ type HTMLTr interface {
 	On(event string, h EventHandler, scope ...any) HTMLTr
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLTr
+	OnBlur(h EventHandler, scope ...any) HTMLTr
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLTr
+	OnChange(h EventHandler, scope ...any) HTMLTr
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLTr
+	OnClick(h EventHandler, scope ...any) HTMLTr
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLTr
+	OnContextMenu(h EventHandler, scope ...any) HTMLTr
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLTr
+	OnCopy(h EventHandler, scope ...any) HTMLTr
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLTr
+	OnCut(h EventHandler, scope ...any) HTMLTr
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLTr
+	OnDblClick(h EventHandler, scope ...any) HTMLTr
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLTr
+	OnDrag(h EventHandler, scope ...any) HTMLTr
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLTr
+	OnDragEnd(h EventHandler, scope ...any) HTMLTr
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLTr
+	OnDragEnter(h EventHandler, scope ...any) HTMLTr
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLTr
+	OnDragLeave(h EventHandler, scope ...any) HTMLTr
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLTr
+	OnDragOver(h EventHandler, scope ...any) HTMLTr
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLTr
+	OnDragStart(h EventHandler, scope ...any) HTMLTr
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLTr
+	OnDrop(h EventHandler, scope ...any) HTMLTr
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLTr
+	OnFocus(h EventHandler, scope ...any) HTMLTr
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLTr
+	OnInput(h EventHandler, scope ...any) HTMLTr
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLTr
+	OnInvalid(h EventHandler, scope ...any) HTMLTr
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLTr
+	OnKeyDown(h EventHandler, scope ...any) HTMLTr
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLTr
+	OnKeyPress(h EventHandler, scope ...any) HTMLTr
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLTr
+	OnKeyUp(h EventHandler, scope ...any) HTMLTr
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLTr
+	OnMouseDown(h EventHandler, scope ...any) HTMLTr
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLTr
+	OnMouseMove(h EventHandler, scope ...any) HTMLTr
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLTr
+	OnMouseOut(h EventHandler, scope ...any) HTMLTr
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLTr
+	OnMouseOver(h EventHandler, scope ...any) HTMLTr
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLTr
+	OnMouseUp(h EventHandler, scope ...any) HTMLTr
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLTr
+	OnPaste(h EventHandler, scope ...any) HTMLTr
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLTr
+	OnReset(h EventHandler, scope ...any) HTMLTr
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLTr
+	OnScroll(h EventHandler, scope ...any) HTMLTr
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLTr
+	OnSearch(h EventHandler, scope ...any) HTMLTr
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLTr
+	OnSelect(h EventHandler, scope ...any) HTMLTr
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLTr
+	OnSubmit(h EventHandler, scope ...any) HTMLTr
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLTr
+	OnWheel(h EventHandler, scope ...any) HTMLTr
 }
 
 // Tr returns an HTML element that defines a row in a table.
@@ -17515,7 +17515,7 @@ type HTMLU interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLU
+	Text(v any) HTMLU
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLU
@@ -17527,7 +17527,7 @@ type HTMLU interface {
 	AccessKey(v string) HTMLU
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLU
+	Aria(k string, v any) HTMLU
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLU
@@ -17536,7 +17536,7 @@ type HTMLU interface {
 	ContentEditable(v bool) HTMLU
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLU
+	DataSet(k string, v any) HTMLU
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLU
@@ -17575,100 +17575,100 @@ type HTMLU interface {
 	On(event string, h EventHandler, scope ...any) HTMLU
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLU
+	OnBlur(h EventHandler, scope ...any) HTMLU
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLU
+	OnChange(h EventHandler, scope ...any) HTMLU
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLU
+	OnClick(h EventHandler, scope ...any) HTMLU
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLU
+	OnContextMenu(h EventHandler, scope ...any) HTMLU
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLU
+	OnCopy(h EventHandler, scope ...any) HTMLU
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLU
+	OnCut(h EventHandler, scope ...any) HTMLU
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLU
+	OnDblClick(h EventHandler, scope ...any) HTMLU
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLU
+	OnDrag(h EventHandler, scope ...any) HTMLU
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLU
+	OnDragEnd(h EventHandler, scope ...any) HTMLU
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLU
+	OnDragEnter(h EventHandler, scope ...any) HTMLU
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLU
+	OnDragLeave(h EventHandler, scope ...any) HTMLU
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLU
+	OnDragOver(h EventHandler, scope ...any) HTMLU
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLU
+	OnDragStart(h EventHandler, scope ...any) HTMLU
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLU
+	OnDrop(h EventHandler, scope ...any) HTMLU
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLU
+	OnFocus(h EventHandler, scope ...any) HTMLU
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLU
+	OnInput(h EventHandler, scope ...any) HTMLU
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLU
+	OnInvalid(h EventHandler, scope ...any) HTMLU
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLU
+	OnKeyDown(h EventHandler, scope ...any) HTMLU
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLU
+	OnKeyPress(h EventHandler, scope ...any) HTMLU
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLU
+	OnKeyUp(h EventHandler, scope ...any) HTMLU
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLU
+	OnMouseDown(h EventHandler, scope ...any) HTMLU
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLU
+	OnMouseMove(h EventHandler, scope ...any) HTMLU
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLU
+	OnMouseOut(h EventHandler, scope ...any) HTMLU
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLU
+	OnMouseOver(h EventHandler, scope ...any) HTMLU
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLU
+	OnMouseUp(h EventHandler, scope ...any) HTMLU
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLU
+	OnPaste(h EventHandler, scope ...any) HTMLU
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLU
+	OnReset(h EventHandler, scope ...any) HTMLU
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLU
+	OnScroll(h EventHandler, scope ...any) HTMLU
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLU
+	OnSearch(h EventHandler, scope ...any) HTMLU
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLU
+	OnSelect(h EventHandler, scope ...any) HTMLU
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLU
+	OnSubmit(h EventHandler, scope ...any) HTMLU
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLU
+	OnWheel(h EventHandler, scope ...any) HTMLU
 }
 
 // U returns an HTML element that defines text that should be stylistically different from normal text.
@@ -17684,7 +17684,7 @@ type HTMLUl interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLUl
+	Text(v any) HTMLUl
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLUl
@@ -17696,7 +17696,7 @@ type HTMLUl interface {
 	AccessKey(v string) HTMLUl
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLUl
+	Aria(k string, v any) HTMLUl
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLUl
@@ -17705,7 +17705,7 @@ type HTMLUl interface {
 	ContentEditable(v bool) HTMLUl
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLUl
+	DataSet(k string, v any) HTMLUl
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLUl
@@ -17744,100 +17744,100 @@ type HTMLUl interface {
 	On(event string, h EventHandler, scope ...any) HTMLUl
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLUl
+	OnBlur(h EventHandler, scope ...any) HTMLUl
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLUl
+	OnChange(h EventHandler, scope ...any) HTMLUl
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLUl
+	OnClick(h EventHandler, scope ...any) HTMLUl
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLUl
+	OnContextMenu(h EventHandler, scope ...any) HTMLUl
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLUl
+	OnCopy(h EventHandler, scope ...any) HTMLUl
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLUl
+	OnCut(h EventHandler, scope ...any) HTMLUl
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLUl
+	OnDblClick(h EventHandler, scope ...any) HTMLUl
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLUl
+	OnDrag(h EventHandler, scope ...any) HTMLUl
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLUl
+	OnDragEnd(h EventHandler, scope ...any) HTMLUl
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLUl
+	OnDragEnter(h EventHandler, scope ...any) HTMLUl
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLUl
+	OnDragLeave(h EventHandler, scope ...any) HTMLUl
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLUl
+	OnDragOver(h EventHandler, scope ...any) HTMLUl
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLUl
+	OnDragStart(h EventHandler, scope ...any) HTMLUl
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLUl
+	OnDrop(h EventHandler, scope ...any) HTMLUl
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLUl
+	OnFocus(h EventHandler, scope ...any) HTMLUl
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLUl
+	OnInput(h EventHandler, scope ...any) HTMLUl
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLUl
+	OnInvalid(h EventHandler, scope ...any) HTMLUl
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLUl
+	OnKeyDown(h EventHandler, scope ...any) HTMLUl
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLUl
+	OnKeyPress(h EventHandler, scope ...any) HTMLUl
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLUl
+	OnKeyUp(h EventHandler, scope ...any) HTMLUl
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLUl
+	OnMouseDown(h EventHandler, scope ...any) HTMLUl
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLUl
+	OnMouseMove(h EventHandler, scope ...any) HTMLUl
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLUl
+	OnMouseOut(h EventHandler, scope ...any) HTMLUl
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLUl
+	OnMouseOver(h EventHandler, scope ...any) HTMLUl
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLUl
+	OnMouseUp(h EventHandler, scope ...any) HTMLUl
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLUl
+	OnPaste(h EventHandler, scope ...any) HTMLUl
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLUl
+	OnReset(h EventHandler, scope ...any) HTMLUl
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLUl
+	OnScroll(h EventHandler, scope ...any) HTMLUl
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLUl
+	OnSearch(h EventHandler, scope ...any) HTMLUl
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLUl
+	OnSelect(h EventHandler, scope ...any) HTMLUl
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLUl
+	OnSubmit(h EventHandler, scope ...any) HTMLUl
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLUl
+	OnWheel(h EventHandler, scope ...any) HTMLUl
 }
 
 // Ul returns an HTML element that defines an unordered list.
@@ -17853,7 +17853,7 @@ type HTMLVar interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLVar
+	Text(v any) HTMLVar
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLVar
@@ -17865,7 +17865,7 @@ type HTMLVar interface {
 	AccessKey(v string) HTMLVar
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLVar
+	Aria(k string, v any) HTMLVar
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLVar
@@ -17874,7 +17874,7 @@ type HTMLVar interface {
 	ContentEditable(v bool) HTMLVar
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLVar
+	DataSet(k string, v any) HTMLVar
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLVar
@@ -17913,100 +17913,100 @@ type HTMLVar interface {
 	On(event string, h EventHandler, scope ...any) HTMLVar
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLVar
+	OnBlur(h EventHandler, scope ...any) HTMLVar
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLVar
+	OnChange(h EventHandler, scope ...any) HTMLVar
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLVar
+	OnClick(h EventHandler, scope ...any) HTMLVar
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLVar
+	OnContextMenu(h EventHandler, scope ...any) HTMLVar
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLVar
+	OnCopy(h EventHandler, scope ...any) HTMLVar
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLVar
+	OnCut(h EventHandler, scope ...any) HTMLVar
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLVar
+	OnDblClick(h EventHandler, scope ...any) HTMLVar
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLVar
+	OnDrag(h EventHandler, scope ...any) HTMLVar
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLVar
+	OnDragEnd(h EventHandler, scope ...any) HTMLVar
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLVar
+	OnDragEnter(h EventHandler, scope ...any) HTMLVar
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLVar
+	OnDragLeave(h EventHandler, scope ...any) HTMLVar
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLVar
+	OnDragOver(h EventHandler, scope ...any) HTMLVar
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLVar
+	OnDragStart(h EventHandler, scope ...any) HTMLVar
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLVar
+	OnDrop(h EventHandler, scope ...any) HTMLVar
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLVar
+	OnFocus(h EventHandler, scope ...any) HTMLVar
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLVar
+	OnInput(h EventHandler, scope ...any) HTMLVar
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLVar
+	OnInvalid(h EventHandler, scope ...any) HTMLVar
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLVar
+	OnKeyDown(h EventHandler, scope ...any) HTMLVar
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLVar
+	OnKeyPress(h EventHandler, scope ...any) HTMLVar
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLVar
+	OnKeyUp(h EventHandler, scope ...any) HTMLVar
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLVar
+	OnMouseDown(h EventHandler, scope ...any) HTMLVar
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLVar
+	OnMouseMove(h EventHandler, scope ...any) HTMLVar
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLVar
+	OnMouseOut(h EventHandler, scope ...any) HTMLVar
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLVar
+	OnMouseOver(h EventHandler, scope ...any) HTMLVar
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLVar
+	OnMouseUp(h EventHandler, scope ...any) HTMLVar
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLVar
+	OnPaste(h EventHandler, scope ...any) HTMLVar
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLVar
+	OnReset(h EventHandler, scope ...any) HTMLVar
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLVar
+	OnScroll(h EventHandler, scope ...any) HTMLVar
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLVar
+	OnSearch(h EventHandler, scope ...any) HTMLVar
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLVar
+	OnSelect(h EventHandler, scope ...any) HTMLVar
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLVar
+	OnSubmit(h EventHandler, scope ...any) HTMLVar
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLVar
+	OnWheel(h EventHandler, scope ...any) HTMLVar
 }
 
 // Var returns an HTML element that defines a variable.
@@ -18022,7 +18022,7 @@ type HTMLVideo interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLVideo
+	Text(v any) HTMLVideo
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLVideo
@@ -18034,7 +18034,7 @@ type HTMLVideo interface {
 	AccessKey(v string) HTMLVideo
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLVideo
+	Aria(k string, v any) HTMLVideo
 
 	// AutoPlay specifies that the audio/video will start playing as soon as it is ready.
 	AutoPlay(v bool) HTMLVideo
@@ -18052,7 +18052,7 @@ type HTMLVideo interface {
 	CrossOrigin(v string) HTMLVideo
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLVideo
+	DataSet(k string, v any) HTMLVideo
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLVideo
@@ -18112,169 +18112,169 @@ type HTMLVideo interface {
 	On(event string, h EventHandler, scope ...any) HTMLVideo
 
 	// OnAbort calls the given handler on abort.
-	OnAbort(h EventHandler, scope ...interface{}) HTMLVideo
+	OnAbort(h EventHandler, scope ...any) HTMLVideo
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLVideo
+	OnBlur(h EventHandler, scope ...any) HTMLVideo
 
 	// OnCanPlay calls the given handler when a file is ready to start playing (when it has buffered enough to begin).
-	OnCanPlay(h EventHandler, scope ...interface{}) HTMLVideo
+	OnCanPlay(h EventHandler, scope ...any) HTMLVideo
 
 	// OnCanPlayThrough calls the given handler when a file can be played all the way to the end without pausing for buffering.
-	OnCanPlayThrough(h EventHandler, scope ...interface{}) HTMLVideo
+	OnCanPlayThrough(h EventHandler, scope ...any) HTMLVideo
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLVideo
+	OnChange(h EventHandler, scope ...any) HTMLVideo
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLVideo
+	OnClick(h EventHandler, scope ...any) HTMLVideo
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLVideo
+	OnContextMenu(h EventHandler, scope ...any) HTMLVideo
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLVideo
+	OnCopy(h EventHandler, scope ...any) HTMLVideo
 
 	// OnCueChange calls the given handler when the cue changes in a track element.
-	OnCueChange(h EventHandler, scope ...interface{}) HTMLVideo
+	OnCueChange(h EventHandler, scope ...any) HTMLVideo
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLVideo
+	OnCut(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDblClick(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDrag(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDragEnd(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDragEnter(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDragLeave(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDragOver(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDragStart(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDrop(h EventHandler, scope ...any) HTMLVideo
 
 	// OnDurationChange calls the given handler when the length of the media changes.
-	OnDurationChange(h EventHandler, scope ...interface{}) HTMLVideo
+	OnDurationChange(h EventHandler, scope ...any) HTMLVideo
 
 	// OnEmptied calls the given handler when something bad happens and the file is suddenly unavailable (like unexpectedly disconnects).
-	OnEmptied(h EventHandler, scope ...interface{}) HTMLVideo
+	OnEmptied(h EventHandler, scope ...any) HTMLVideo
 
 	// OnEnded calls the given handler when the media has reach the end.
-	OnEnded(h EventHandler, scope ...interface{}) HTMLVideo
+	OnEnded(h EventHandler, scope ...any) HTMLVideo
 
 	// OnError calls the given handler when an error occurs.
-	OnError(h EventHandler, scope ...interface{}) HTMLVideo
+	OnError(h EventHandler, scope ...any) HTMLVideo
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLVideo
+	OnFocus(h EventHandler, scope ...any) HTMLVideo
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLVideo
+	OnInput(h EventHandler, scope ...any) HTMLVideo
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLVideo
+	OnInvalid(h EventHandler, scope ...any) HTMLVideo
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLVideo
+	OnKeyDown(h EventHandler, scope ...any) HTMLVideo
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLVideo
+	OnKeyPress(h EventHandler, scope ...any) HTMLVideo
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLVideo
+	OnKeyUp(h EventHandler, scope ...any) HTMLVideo
 
 	// OnLoadStart calls the given handler just as the file begins to load before anything is actually loaded.
-	OnLoadStart(h EventHandler, scope ...interface{}) HTMLVideo
+	OnLoadStart(h EventHandler, scope ...any) HTMLVideo
 
 	// OnLoadedData calls the given handler when media data is loaded.
-	OnLoadedData(h EventHandler, scope ...interface{}) HTMLVideo
+	OnLoadedData(h EventHandler, scope ...any) HTMLVideo
 
 	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLVideo
+	OnLoadedMetaData(h EventHandler, scope ...any) HTMLVideo
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLVideo
+	OnMouseDown(h EventHandler, scope ...any) HTMLVideo
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLVideo
+	OnMouseMove(h EventHandler, scope ...any) HTMLVideo
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLVideo
+	OnMouseOut(h EventHandler, scope ...any) HTMLVideo
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLVideo
+	OnMouseOver(h EventHandler, scope ...any) HTMLVideo
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLVideo
+	OnMouseUp(h EventHandler, scope ...any) HTMLVideo
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLVideo
+	OnPaste(h EventHandler, scope ...any) HTMLVideo
 
 	// OnPause calls the given handler when the media is paused either by the user or programmatically.
-	OnPause(h EventHandler, scope ...interface{}) HTMLVideo
+	OnPause(h EventHandler, scope ...any) HTMLVideo
 
 	// OnPlay calls the given handler when the media is ready to start playing.
-	OnPlay(h EventHandler, scope ...interface{}) HTMLVideo
+	OnPlay(h EventHandler, scope ...any) HTMLVideo
 
 	// OnPlaying calls the given handler when the media actually has started playing.
-	OnPlaying(h EventHandler, scope ...interface{}) HTMLVideo
+	OnPlaying(h EventHandler, scope ...any) HTMLVideo
 
 	// OnProgress calls the given handler when the browser is in the process of getting the media data.
-	OnProgress(h EventHandler, scope ...interface{}) HTMLVideo
+	OnProgress(h EventHandler, scope ...any) HTMLVideo
 
 	// OnRateChange calls the given handler each time the playback rate changes (like when a user switches to a slow motion or fast forward mode).
-	OnRateChange(h EventHandler, scope ...interface{}) HTMLVideo
+	OnRateChange(h EventHandler, scope ...any) HTMLVideo
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLVideo
+	OnReset(h EventHandler, scope ...any) HTMLVideo
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLVideo
+	OnScroll(h EventHandler, scope ...any) HTMLVideo
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLVideo
+	OnSearch(h EventHandler, scope ...any) HTMLVideo
 
 	// OnSeeked calls the given handler when the seeking attribute is set to false indicating that seeking has ended.
-	OnSeeked(h EventHandler, scope ...interface{}) HTMLVideo
+	OnSeeked(h EventHandler, scope ...any) HTMLVideo
 
 	// OnSeeking calls the given handler when the seeking attribute is set to true indicating that seeking is active.
-	OnSeeking(h EventHandler, scope ...interface{}) HTMLVideo
+	OnSeeking(h EventHandler, scope ...any) HTMLVideo
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLVideo
+	OnSelect(h EventHandler, scope ...any) HTMLVideo
 
 	// OnStalled calls the given handler when the browser is unable to fetch the media data for whatever reason.
-	OnStalled(h EventHandler, scope ...interface{}) HTMLVideo
+	OnStalled(h EventHandler, scope ...any) HTMLVideo
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLVideo
+	OnSubmit(h EventHandler, scope ...any) HTMLVideo
 
 	// OnSuspend calls the given handler when fetching the media data is stopped before it is completely loaded for whatever reason.
-	OnSuspend(h EventHandler, scope ...interface{}) HTMLVideo
+	OnSuspend(h EventHandler, scope ...any) HTMLVideo
 
 	// OnTimeUpdate calls the given handler when the playing position has changed (like when the user fast forwards to a different point in the media).
-	OnTimeUpdate(h EventHandler, scope ...interface{}) HTMLVideo
+	OnTimeUpdate(h EventHandler, scope ...any) HTMLVideo
 
 	// OnVolumeChange calls the given handler each time the volume is changed which (includes setting the volume to "mute").
-	OnVolumeChange(h EventHandler, scope ...interface{}) HTMLVideo
+	OnVolumeChange(h EventHandler, scope ...any) HTMLVideo
 
 	// OnWaiting calls the given handler when the media has paused but is expected to resume (like when the media pauses to buffer more data).
-	OnWaiting(h EventHandler, scope ...interface{}) HTMLVideo
+	OnWaiting(h EventHandler, scope ...any) HTMLVideo
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLVideo
+	OnWheel(h EventHandler, scope ...any) HTMLVideo
 }
 
 // Video returns an HTML element that defines a video or movie.
@@ -18290,7 +18290,7 @@ type HTMLWbr interface {
 	UI
 
 	// Text sets the content of the element with a text node containing the stringified given value.
-	Text(v interface{}) HTMLWbr
+	Text(v any) HTMLWbr
 
 	// Body set the content of the element.
 	Body(v ...UI) HTMLWbr
@@ -18302,7 +18302,7 @@ type HTMLWbr interface {
 	AccessKey(v string) HTMLWbr
 
 	// Aria stores accessible rich internet applications (ARIA) data.
-	Aria(k string, v interface{}) HTMLWbr
+	Aria(k string, v any) HTMLWbr
 
 	// Class specifies one or more classnames for an element (refers to a class in a style sheet).
 	Class(v ...string) HTMLWbr
@@ -18311,7 +18311,7 @@ type HTMLWbr interface {
 	ContentEditable(v bool) HTMLWbr
 
 	// DataSet stores custom data private to the page or application.
-	DataSet(k string, v interface{}) HTMLWbr
+	DataSet(k string, v any) HTMLWbr
 
 	// Dir specifies the text direction for the content in an element.
 	Dir(v string) HTMLWbr
@@ -18350,100 +18350,100 @@ type HTMLWbr interface {
 	On(event string, h EventHandler, scope ...any) HTMLWbr
 
 	// OnBlur calls the given handler when the element loses focus.
-	OnBlur(h EventHandler, scope ...interface{}) HTMLWbr
+	OnBlur(h EventHandler, scope ...any) HTMLWbr
 
 	// OnChange calls the given handler when the value of the element is changed.
-	OnChange(h EventHandler, scope ...interface{}) HTMLWbr
+	OnChange(h EventHandler, scope ...any) HTMLWbr
 
 	// OnClick calls the given handler when there is a mouse click on the element.
-	OnClick(h EventHandler, scope ...interface{}) HTMLWbr
+	OnClick(h EventHandler, scope ...any) HTMLWbr
 
 	// OnContextMenu calls the given handler when a context menu is triggered.
-	OnContextMenu(h EventHandler, scope ...interface{}) HTMLWbr
+	OnContextMenu(h EventHandler, scope ...any) HTMLWbr
 
 	// OnCopy calls the given handler when the user copies the content of an element.
-	OnCopy(h EventHandler, scope ...interface{}) HTMLWbr
+	OnCopy(h EventHandler, scope ...any) HTMLWbr
 
 	// OnCut calls the given handler when the user cuts the content of an element.
-	OnCut(h EventHandler, scope ...interface{}) HTMLWbr
+	OnCut(h EventHandler, scope ...any) HTMLWbr
 
 	// OnDblClick calls the given handler when there is a mouse double-click on the element.
-	OnDblClick(h EventHandler, scope ...interface{}) HTMLWbr
+	OnDblClick(h EventHandler, scope ...any) HTMLWbr
 
 	// OnDrag calls the given handler when an element is dragged.
-	OnDrag(h EventHandler, scope ...interface{}) HTMLWbr
+	OnDrag(h EventHandler, scope ...any) HTMLWbr
 
 	// OnDragEnd calls the given handler at the end of a drag operation.
-	OnDragEnd(h EventHandler, scope ...interface{}) HTMLWbr
+	OnDragEnd(h EventHandler, scope ...any) HTMLWbr
 
 	// OnDragEnter calls the given handler when an element has been dragged to a valid drop target.
-	OnDragEnter(h EventHandler, scope ...interface{}) HTMLWbr
+	OnDragEnter(h EventHandler, scope ...any) HTMLWbr
 
 	// OnDragLeave calls the given handler when an element leaves a valid drop target.
-	OnDragLeave(h EventHandler, scope ...interface{}) HTMLWbr
+	OnDragLeave(h EventHandler, scope ...any) HTMLWbr
 
 	// OnDragOver calls the given handler when an element is being dragged over a valid drop target.
-	OnDragOver(h EventHandler, scope ...interface{}) HTMLWbr
+	OnDragOver(h EventHandler, scope ...any) HTMLWbr
 
 	// OnDragStart calls the given handler at the start of a drag operation.
-	OnDragStart(h EventHandler, scope ...interface{}) HTMLWbr
+	OnDragStart(h EventHandler, scope ...any) HTMLWbr
 
 	// OnDrop calls the given handler when dragged element is being dropped.
-	OnDrop(h EventHandler, scope ...interface{}) HTMLWbr
+	OnDrop(h EventHandler, scope ...any) HTMLWbr
 
 	// OnFocus calls the given handler when the element gets focus.
-	OnFocus(h EventHandler, scope ...interface{}) HTMLWbr
+	OnFocus(h EventHandler, scope ...any) HTMLWbr
 
 	// OnInput calls the given handler when an element gets user input.
-	OnInput(h EventHandler, scope ...interface{}) HTMLWbr
+	OnInput(h EventHandler, scope ...any) HTMLWbr
 
 	// OnInvalid calls the given handler when an element is invalid.
-	OnInvalid(h EventHandler, scope ...interface{}) HTMLWbr
+	OnInvalid(h EventHandler, scope ...any) HTMLWbr
 
 	// OnKeyDown calls the given handler when a user is pressing a key.
-	OnKeyDown(h EventHandler, scope ...interface{}) HTMLWbr
+	OnKeyDown(h EventHandler, scope ...any) HTMLWbr
 
 	// OnKeyPress calls the given handler when a user presses a key.
-	OnKeyPress(h EventHandler, scope ...interface{}) HTMLWbr
+	OnKeyPress(h EventHandler, scope ...any) HTMLWbr
 
 	// OnKeyUp calls the given handler when a user releases a key.
-	OnKeyUp(h EventHandler, scope ...interface{}) HTMLWbr
+	OnKeyUp(h EventHandler, scope ...any) HTMLWbr
 
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
-	OnMouseDown(h EventHandler, scope ...interface{}) HTMLWbr
+	OnMouseDown(h EventHandler, scope ...any) HTMLWbr
 
 	// OnMouseMove calls the given handler when the mouse pointer is moving while it is over an element.
-	OnMouseMove(h EventHandler, scope ...interface{}) HTMLWbr
+	OnMouseMove(h EventHandler, scope ...any) HTMLWbr
 
 	// OnMouseOut calls the given handler when the mouse pointer moves out of an element.
-	OnMouseOut(h EventHandler, scope ...interface{}) HTMLWbr
+	OnMouseOut(h EventHandler, scope ...any) HTMLWbr
 
 	// OnMouseOver calls the given handler when the mouse pointer moves over an element.
-	OnMouseOver(h EventHandler, scope ...interface{}) HTMLWbr
+	OnMouseOver(h EventHandler, scope ...any) HTMLWbr
 
 	// OnMouseUp calls the given handler when a mouse button is released over an element.
-	OnMouseUp(h EventHandler, scope ...interface{}) HTMLWbr
+	OnMouseUp(h EventHandler, scope ...any) HTMLWbr
 
 	// OnPaste calls the given handler when the user pastes some content in an element.
-	OnPaste(h EventHandler, scope ...interface{}) HTMLWbr
+	OnPaste(h EventHandler, scope ...any) HTMLWbr
 
 	// OnReset calls the given handler when the Reset button in a form is clicked.
-	OnReset(h EventHandler, scope ...interface{}) HTMLWbr
+	OnReset(h EventHandler, scope ...any) HTMLWbr
 
 	// OnScroll calls the given handler when an element's scrollbar is being scrolled.
-	OnScroll(h EventHandler, scope ...interface{}) HTMLWbr
+	OnScroll(h EventHandler, scope ...any) HTMLWbr
 
 	// OnSearch calls the given handler when the user writes something in a search field.
-	OnSearch(h EventHandler, scope ...interface{}) HTMLWbr
+	OnSearch(h EventHandler, scope ...any) HTMLWbr
 
 	// OnSelect calls the given handler after some text has been selected in an element.
-	OnSelect(h EventHandler, scope ...interface{}) HTMLWbr
+	OnSelect(h EventHandler, scope ...any) HTMLWbr
 
 	// OnSubmit calls the given handler when a form is submitted.
-	OnSubmit(h EventHandler, scope ...interface{}) HTMLWbr
+	OnSubmit(h EventHandler, scope ...any) HTMLWbr
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
-	OnWheel(h EventHandler, scope ...interface{}) HTMLWbr
+	OnWheel(h EventHandler, scope ...any) HTMLWbr
 }
 
 // Wbr returns an HTML element that defines a possible line-break.
@@ -18498,7 +18498,7 @@ func (e htmlElement[T]) Alt(v string) T {
 	return e.Attr("alt", v)
 }
 
-func (e htmlElement[T]) Aria(k string, v interface{}) T {
+func (e htmlElement[T]) Aria(k string, v any) T {
 	return e.Attr("aria-"+k, fmt.Sprintf("%v", v))
 }
 
@@ -18574,7 +18574,7 @@ func (e htmlElement[T]) Data(v string) T {
 	return e.Attr("data", v)
 }
 
-func (e htmlElement[T]) DataSet(k string, v interface{}) T {
+func (e htmlElement[T]) DataSet(k string, v any) T {
 	return e.Attr("data-"+k, fmt.Sprintf("%v", v))
 }
 
@@ -18706,7 +18706,7 @@ func (e htmlElement[T]) Low(v float64) T {
 	return e.Attr("low", v)
 }
 
-func (e htmlElement[T]) Max(v interface{}) T {
+func (e htmlElement[T]) Max(v any) T {
 	return e.Attr("max", v)
 }
 
@@ -18722,7 +18722,7 @@ func (e htmlElement[T]) Method(v string) T {
 	return e.Attr("method", v)
 }
 
-func (e htmlElement[T]) Min(v interface{}) T {
+func (e htmlElement[T]) Min(v any) T {
 	return e.Attr("min", v)
 }
 
@@ -18806,7 +18806,7 @@ func (e htmlElement[T]) Rowspan(v int) T {
 	return e.Attr("rowspan", v)
 }
 
-func (e htmlElement[T]) Sandbox(v interface{}) T {
+func (e htmlElement[T]) Sandbox(v any) T {
 	return e.Attr("sandbox", v)
 }
 
@@ -18905,7 +18905,7 @@ func (e htmlElement[T]) UseMap(v string) T {
 	return e.Attr("usemap", v)
 }
 
-func (e htmlElement[T]) Value(v interface{}) T {
+func (e htmlElement[T]) Value(v any) T {
 	return e.Attr("value", v)
 }
 
@@ -18917,282 +18917,282 @@ func (e htmlElement[T]) Wrap(v string) T {
 	return e.Attr("wrap", v)
 }
 
-func (e htmlElement[T]) OnAbort(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnAbort(h EventHandler, scope ...any) T {
 	return e.On("abort", h, scope...)
 }
 
-func (e htmlElement[T]) OnAfterPrint(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnAfterPrint(h EventHandler, scope ...any) T {
 	return e.On("afterprint", h, scope...)
 }
 
-func (e htmlElement[T]) OnBeforePrint(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnBeforePrint(h EventHandler, scope ...any) T {
 	return e.On("beforeprint", h, scope...)
 }
 
-func (e htmlElement[T]) OnBeforeUnload(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnBeforeUnload(h EventHandler, scope ...any) T {
 	return e.On("beforeunload", h, scope...)
 }
 
-func (e htmlElement[T]) OnBlur(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnBlur(h EventHandler, scope ...any) T {
 	return e.On("blur", h, scope...)
 }
 
-func (e htmlElement[T]) OnCanPlay(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnCanPlay(h EventHandler, scope ...any) T {
 	return e.On("canplay", h, scope...)
 }
 
-func (e htmlElement[T]) OnCanPlayThrough(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnCanPlayThrough(h EventHandler, scope ...any) T {
 	return e.On("canplaythrough", h, scope...)
 }
 
-func (e htmlElement[T]) OnChange(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnChange(h EventHandler, scope ...any) T {
 	return e.On("change", h, scope...)
 }
 
-func (e htmlElement[T]) OnClick(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnClick(h EventHandler, scope ...any) T {
 	return e.On("click", h, scope...)
 }
 
-func (e htmlElement[T]) OnContextMenu(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnContextMenu(h EventHandler, scope ...any) T {
 	return e.On("contextmenu", h, scope...)
 }
 
-func (e htmlElement[T]) OnCopy(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnCopy(h EventHandler, scope ...any) T {
 	return e.On("copy", h, scope...)
 }
 
-func (e htmlElement[T]) OnCueChange(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnCueChange(h EventHandler, scope ...any) T {
 	return e.On("cuechange", h, scope...)
 }
 
-func (e htmlElement[T]) OnCut(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnCut(h EventHandler, scope ...any) T {
 	return e.On("cut", h, scope...)
 }
 
-func (e htmlElement[T]) OnDblClick(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDblClick(h EventHandler, scope ...any) T {
 	return e.On("dblclick", h, scope...)
 }
 
-func (e htmlElement[T]) OnDrag(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDrag(h EventHandler, scope ...any) T {
 	return e.On("drag", h, scope...)
 }
 
-func (e htmlElement[T]) OnDragEnd(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDragEnd(h EventHandler, scope ...any) T {
 	return e.On("dragend", h, scope...)
 }
 
-func (e htmlElement[T]) OnDragEnter(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDragEnter(h EventHandler, scope ...any) T {
 	return e.On("dragenter", h, scope...)
 }
 
-func (e htmlElement[T]) OnDragLeave(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDragLeave(h EventHandler, scope ...any) T {
 	return e.On("dragleave", h, scope...)
 }
 
-func (e htmlElement[T]) OnDragOver(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDragOver(h EventHandler, scope ...any) T {
 	return e.On("dragover", h, scope...)
 }
 
-func (e htmlElement[T]) OnDragStart(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDragStart(h EventHandler, scope ...any) T {
 	return e.On("dragstart", h, scope...)
 }
 
-func (e htmlElement[T]) OnDrop(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDrop(h EventHandler, scope ...any) T {
 	return e.On("drop", h, scope...)
 }
 
-func (e htmlElement[T]) OnDurationChange(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnDurationChange(h EventHandler, scope ...any) T {
 	return e.On("durationchange", h, scope...)
 }
 
-func (e htmlElement[T]) OnEmptied(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnEmptied(h EventHandler, scope ...any) T {
 	return e.On("emptied", h, scope...)
 }
 
-func (e htmlElement[T]) OnEnded(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnEnded(h EventHandler, scope ...any) T {
 	return e.On("ended", h, scope...)
 }
 
-func (e htmlElement[T]) OnError(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnError(h EventHandler, scope ...any) T {
 	return e.On("error", h, scope...)
 }
 
-func (e htmlElement[T]) OnFocus(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnFocus(h EventHandler, scope ...any) T {
 	return e.On("focus", h, scope...)
 }
 
-func (e htmlElement[T]) OnHashChange(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnHashChange(h EventHandler, scope ...any) T {
 	return e.On("hashchange", h, scope...)
 }
 
-func (e htmlElement[T]) OnInput(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnInput(h EventHandler, scope ...any) T {
 	return e.On("input", h, scope...)
 }
 
-func (e htmlElement[T]) OnInvalid(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnInvalid(h EventHandler, scope ...any) T {
 	return e.On("invalid", h, scope...)
 }
 
-func (e htmlElement[T]) OnKeyDown(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnKeyDown(h EventHandler, scope ...any) T {
 	return e.On("keydown", h, scope...)
 }
 
-func (e htmlElement[T]) OnKeyPress(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnKeyPress(h EventHandler, scope ...any) T {
 	return e.On("keypress", h, scope...)
 }
 
-func (e htmlElement[T]) OnKeyUp(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnKeyUp(h EventHandler, scope ...any) T {
 	return e.On("keyup", h, scope...)
 }
 
-func (e htmlElement[T]) OnLoad(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnLoad(h EventHandler, scope ...any) T {
 	return e.On("load", h, scope...)
 }
 
-func (e htmlElement[T]) OnLoadStart(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnLoadStart(h EventHandler, scope ...any) T {
 	return e.On("loadstart", h, scope...)
 }
 
-func (e htmlElement[T]) OnLoadedData(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnLoadedData(h EventHandler, scope ...any) T {
 	return e.On("loadeddata", h, scope...)
 }
 
-func (e htmlElement[T]) OnLoadedMetaData(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnLoadedMetaData(h EventHandler, scope ...any) T {
 	return e.On("loadedmetadata", h, scope...)
 }
 
-func (e htmlElement[T]) OnMessage(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnMessage(h EventHandler, scope ...any) T {
 	return e.On("message", h, scope...)
 }
 
-func (e htmlElement[T]) OnMouseDown(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnMouseDown(h EventHandler, scope ...any) T {
 	return e.On("mousedown", h, scope...)
 }
 
-func (e htmlElement[T]) OnMouseMove(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnMouseMove(h EventHandler, scope ...any) T {
 	return e.On("mousemove", h, scope...)
 }
 
-func (e htmlElement[T]) OnMouseOut(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnMouseOut(h EventHandler, scope ...any) T {
 	return e.On("mouseout", h, scope...)
 }
 
-func (e htmlElement[T]) OnMouseOver(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnMouseOver(h EventHandler, scope ...any) T {
 	return e.On("mouseover", h, scope...)
 }
 
-func (e htmlElement[T]) OnMouseUp(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnMouseUp(h EventHandler, scope ...any) T {
 	return e.On("mouseup", h, scope...)
 }
 
-func (e htmlElement[T]) OnOffline(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnOffline(h EventHandler, scope ...any) T {
 	return e.On("offline", h, scope...)
 }
 
-func (e htmlElement[T]) OnOnline(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnOnline(h EventHandler, scope ...any) T {
 	return e.On("online", h, scope...)
 }
 
-func (e htmlElement[T]) OnPageHide(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnPageHide(h EventHandler, scope ...any) T {
 	return e.On("pagehide", h, scope...)
 }
 
-func (e htmlElement[T]) OnPageShow(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnPageShow(h EventHandler, scope ...any) T {
 	return e.On("pageshow", h, scope...)
 }
 
-func (e htmlElement[T]) OnPaste(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnPaste(h EventHandler, scope ...any) T {
 	return e.On("paste", h, scope...)
 }
 
-func (e htmlElement[T]) OnPause(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnPause(h EventHandler, scope ...any) T {
 	return e.On("pause", h, scope...)
 }
 
-func (e htmlElement[T]) OnPlay(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnPlay(h EventHandler, scope ...any) T {
 	return e.On("play", h, scope...)
 }
 
-func (e htmlElement[T]) OnPlaying(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnPlaying(h EventHandler, scope ...any) T {
 	return e.On("playing", h, scope...)
 }
 
-func (e htmlElement[T]) OnPopState(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnPopState(h EventHandler, scope ...any) T {
 	return e.On("popstate", h, scope...)
 }
 
-func (e htmlElement[T]) OnProgress(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnProgress(h EventHandler, scope ...any) T {
 	return e.On("progress", h, scope...)
 }
 
-func (e htmlElement[T]) OnRateChange(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnRateChange(h EventHandler, scope ...any) T {
 	return e.On("ratechange", h, scope...)
 }
 
-func (e htmlElement[T]) OnReset(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnReset(h EventHandler, scope ...any) T {
 	return e.On("reset", h, scope...)
 }
 
-func (e htmlElement[T]) OnResize(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnResize(h EventHandler, scope ...any) T {
 	return e.On("resize", h, scope...)
 }
 
-func (e htmlElement[T]) OnScroll(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnScroll(h EventHandler, scope ...any) T {
 	return e.On("scroll", h, scope...)
 }
 
-func (e htmlElement[T]) OnSearch(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnSearch(h EventHandler, scope ...any) T {
 	return e.On("search", h, scope...)
 }
 
-func (e htmlElement[T]) OnSeeked(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnSeeked(h EventHandler, scope ...any) T {
 	return e.On("seeked", h, scope...)
 }
 
-func (e htmlElement[T]) OnSeeking(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnSeeking(h EventHandler, scope ...any) T {
 	return e.On("seeking", h, scope...)
 }
 
-func (e htmlElement[T]) OnSelect(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnSelect(h EventHandler, scope ...any) T {
 	return e.On("select", h, scope...)
 }
 
-func (e htmlElement[T]) OnStalled(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnStalled(h EventHandler, scope ...any) T {
 	return e.On("stalled", h, scope...)
 }
 
-func (e htmlElement[T]) OnStorage(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnStorage(h EventHandler, scope ...any) T {
 	return e.On("storage", h, scope...)
 }
 
-func (e htmlElement[T]) OnSubmit(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnSubmit(h EventHandler, scope ...any) T {
 	return e.On("submit", h, scope...)
 }
 
-func (e htmlElement[T]) OnSuspend(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnSuspend(h EventHandler, scope ...any) T {
 	return e.On("suspend", h, scope...)
 }
 
-func (e htmlElement[T]) OnTimeUpdate(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnTimeUpdate(h EventHandler, scope ...any) T {
 	return e.On("timeupdate", h, scope...)
 }
 
-func (e htmlElement[T]) OnToggle(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnToggle(h EventHandler, scope ...any) T {
 	return e.On("toggle", h, scope...)
 }
 
-func (e htmlElement[T]) OnUnload(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnUnload(h EventHandler, scope ...any) T {
 	return e.On("unload", h, scope...)
 }
 
-func (e htmlElement[T]) OnVolumeChange(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnVolumeChange(h EventHandler, scope ...any) T {
 	return e.On("volumechange", h, scope...)
 }
 
-func (e htmlElement[T]) OnWaiting(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnWaiting(h EventHandler, scope ...any) T {
 	return e.On("waiting", h, scope...)
 }
 
-func (e htmlElement[T]) OnWheel(h EventHandler, scope ...interface{}) T {
+func (e htmlElement[T]) OnWheel(h EventHandler, scope ...any) T {
 	return e.On("wheel", h, scope...)
 }
