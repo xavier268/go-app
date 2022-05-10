@@ -11,7 +11,7 @@ import (
 	"github.com/maxence-charriere/go-app/v9/pkg/errors"
 )
 
-func toString(v interface{}) string {
+func toString(v any) string {
 	switch v := v.(type) {
 	case string:
 		return v
@@ -34,6 +34,10 @@ func toString(v interface{}) string {
 	default:
 		return fmt.Sprint(v)
 	}
+}
+
+func toAttributeValue(v any) string {
+	return strings.TrimSpace(toString(v))
 }
 
 func toPath(v ...interface{}) string {
