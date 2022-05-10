@@ -442,6 +442,7 @@ func TestAudio(t *testing.T) {
 	elem.OnKeyUp(h)
 	elem.OnLoadStart(h)
 	elem.OnLoadedData(h)
+	elem.OnLoadedMetaData(h)
 	elem.OnMouseDown(h)
 	elem.OnMouseMove(h)
 	elem.OnMouseOut(h)
@@ -466,7 +467,6 @@ func TestAudio(t *testing.T) {
 	elem.OnVolumeChange(h)
 	elem.OnWaiting(h)
 	elem.OnWheel(h)
-	elem.OnloadedMetaData(h)
 	elem.Text("hello")
 }
 
@@ -2010,6 +2010,7 @@ func TestEmbed(t *testing.T) {
 	elem.OnKeyUp(h)
 	elem.OnLoadStart(h)
 	elem.OnLoadedData(h)
+	elem.OnLoadedMetaData(h)
 	elem.OnMouseDown(h)
 	elem.OnMouseMove(h)
 	elem.OnMouseOut(h)
@@ -2034,7 +2035,6 @@ func TestEmbed(t *testing.T) {
 	elem.OnVolumeChange(h)
 	elem.OnWaiting(h)
 	elem.OnWheel(h)
-	elem.OnloadedMetaData(h)
 }
 
 func TestFieldSet(t *testing.T) {
@@ -3064,6 +3064,7 @@ func TestImg(t *testing.T) {
 	elem.OnLoad(h)
 	elem.OnLoadStart(h)
 	elem.OnLoadedData(h)
+	elem.OnLoadedMetaData(h)
 	elem.OnMouseDown(h)
 	elem.OnMouseMove(h)
 	elem.OnMouseOut(h)
@@ -3088,7 +3089,6 @@ func TestImg(t *testing.T) {
 	elem.OnVolumeChange(h)
 	elem.OnWaiting(h)
 	elem.OnWheel(h)
-	elem.OnloadedMetaData(h)
 }
 
 func TestInput(t *testing.T) {
@@ -3971,6 +3971,7 @@ func TestObject(t *testing.T) {
 	elem.OnKeyUp(h)
 	elem.OnLoadStart(h)
 	elem.OnLoadedData(h)
+	elem.OnLoadedMetaData(h)
 	elem.OnMouseDown(h)
 	elem.OnMouseMove(h)
 	elem.OnMouseOut(h)
@@ -3995,7 +3996,6 @@ func TestObject(t *testing.T) {
 	elem.OnVolumeChange(h)
 	elem.OnWaiting(h)
 	elem.OnWheel(h)
-	elem.OnloadedMetaData(h)
 	elem.Text("hello")
 }
 
@@ -6399,6 +6399,7 @@ func TestVideo(t *testing.T) {
 	elem.OnKeyUp(h)
 	elem.OnLoadStart(h)
 	elem.OnLoadedData(h)
+	elem.OnLoadedMetaData(h)
 	elem.OnMouseDown(h)
 	elem.OnMouseMove(h)
 	elem.OnMouseOut(h)
@@ -6423,7 +6424,6 @@ func TestVideo(t *testing.T) {
 	elem.OnVolumeChange(h)
 	elem.OnWaiting(h)
 	elem.OnWheel(h)
-	elem.OnloadedMetaData(h)
 	elem.Text("hello")
 }
 

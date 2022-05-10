@@ -1244,6 +1244,9 @@ type HTMLAudio interface {
 	// OnLoadedData calls the given handler when media data is loaded.
 	OnLoadedData(h EventHandler, scope ...interface{}) HTMLAudio
 
+	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
+	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLAudio
+
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
 	OnMouseDown(h EventHandler, scope ...interface{}) HTMLAudio
 
@@ -1315,9 +1318,6 @@ type HTMLAudio interface {
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
 	OnWheel(h EventHandler, scope ...interface{}) HTMLAudio
-
-	// OnloadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnloadedMetaData(h EventHandler, scope ...interface{}) HTMLAudio
 }
 
 // Audio returns an HTML element that defines sound content.
@@ -5710,6 +5710,9 @@ type HTMLEmbed interface {
 	// OnLoadedData calls the given handler when media data is loaded.
 	OnLoadedData(h EventHandler, scope ...interface{}) HTMLEmbed
 
+	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
+	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLEmbed
+
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
 	OnMouseDown(h EventHandler, scope ...interface{}) HTMLEmbed
 
@@ -5781,9 +5784,6 @@ type HTMLEmbed interface {
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
 	OnWheel(h EventHandler, scope ...interface{}) HTMLEmbed
-
-	// OnloadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnloadedMetaData(h EventHandler, scope ...interface{}) HTMLEmbed
 }
 
 // Embed returns an HTML element that defines a container for an external (non-HTML) application.
@@ -8710,6 +8710,9 @@ type HTMLImg interface {
 	// OnLoadedData calls the given handler when media data is loaded.
 	OnLoadedData(h EventHandler, scope ...interface{}) HTMLImg
 
+	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
+	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLImg
+
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
 	OnMouseDown(h EventHandler, scope ...interface{}) HTMLImg
 
@@ -8781,9 +8784,6 @@ type HTMLImg interface {
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
 	OnWheel(h EventHandler, scope ...interface{}) HTMLImg
-
-	// OnloadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnloadedMetaData(h EventHandler, scope ...interface{}) HTMLImg
 }
 
 // Img returns an HTML element that defines an image.
@@ -11293,6 +11293,9 @@ type HTMLObject interface {
 	// OnLoadedData calls the given handler when media data is loaded.
 	OnLoadedData(h EventHandler, scope ...interface{}) HTMLObject
 
+	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
+	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLObject
+
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
 	OnMouseDown(h EventHandler, scope ...interface{}) HTMLObject
 
@@ -11364,9 +11367,6 @@ type HTMLObject interface {
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
 	OnWheel(h EventHandler, scope ...interface{}) HTMLObject
-
-	// OnloadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnloadedMetaData(h EventHandler, scope ...interface{}) HTMLObject
 }
 
 // Object returns an HTML element that defines an embedded object.
@@ -18201,6 +18201,9 @@ type HTMLVideo interface {
 	// OnLoadedData calls the given handler when media data is loaded.
 	OnLoadedData(h EventHandler, scope ...interface{}) HTMLVideo
 
+	// OnLoadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
+	OnLoadedMetaData(h EventHandler, scope ...interface{}) HTMLVideo
+
 	// OnMouseDown calls the given handler when a mouse button is pressed down on an element.
 	OnMouseDown(h EventHandler, scope ...interface{}) HTMLVideo
 
@@ -18272,9 +18275,6 @@ type HTMLVideo interface {
 
 	// OnWheel calls the given handler when the mouse wheel rolls up or down over an element.
 	OnWheel(h EventHandler, scope ...interface{}) HTMLVideo
-
-	// OnloadedMetaData calls the given handler when meta data (like dimensions and duration) are loaded.
-	OnloadedMetaData(h EventHandler, scope ...interface{}) HTMLVideo
 }
 
 // Video returns an HTML element that defines a video or movie.
@@ -18867,7 +18867,11 @@ func (e htmlElement[T]) Step(v float64) T {
 }
 
 func (e htmlElement[T]) Style(k, v string) T {
-	return e.Attr("style", k+":"+v)
+	var b strings.Builder
+	b.WriteString(k)
+	b.WriteByte(':')
+	b.WriteString(v)
+	return e.Attr("style", strings.Trim(b.String(), ";"))
 }
 
 func (e htmlElement[T]) Styles(s map[string]string) T {
@@ -18911,4 +18915,284 @@ func (e htmlElement[T]) Width(v int) T {
 
 func (e htmlElement[T]) Wrap(v string) T {
 	return e.Attr("wrap", v)
+}
+
+func (e htmlElement[T]) OnAbort(h EventHandler, scope ...interface{}) T {
+	return e.On("abort", h, scope...)
+}
+
+func (e htmlElement[T]) OnAfterPrint(h EventHandler, scope ...interface{}) T {
+	return e.On("afterprint", h, scope...)
+}
+
+func (e htmlElement[T]) OnBeforePrint(h EventHandler, scope ...interface{}) T {
+	return e.On("beforeprint", h, scope...)
+}
+
+func (e htmlElement[T]) OnBeforeUnload(h EventHandler, scope ...interface{}) T {
+	return e.On("beforeunload", h, scope...)
+}
+
+func (e htmlElement[T]) OnBlur(h EventHandler, scope ...interface{}) T {
+	return e.On("blur", h, scope...)
+}
+
+func (e htmlElement[T]) OnCanPlay(h EventHandler, scope ...interface{}) T {
+	return e.On("canplay", h, scope...)
+}
+
+func (e htmlElement[T]) OnCanPlayThrough(h EventHandler, scope ...interface{}) T {
+	return e.On("canplaythrough", h, scope...)
+}
+
+func (e htmlElement[T]) OnChange(h EventHandler, scope ...interface{}) T {
+	return e.On("change", h, scope...)
+}
+
+func (e htmlElement[T]) OnClick(h EventHandler, scope ...interface{}) T {
+	return e.On("click", h, scope...)
+}
+
+func (e htmlElement[T]) OnContextMenu(h EventHandler, scope ...interface{}) T {
+	return e.On("contextmenu", h, scope...)
+}
+
+func (e htmlElement[T]) OnCopy(h EventHandler, scope ...interface{}) T {
+	return e.On("copy", h, scope...)
+}
+
+func (e htmlElement[T]) OnCueChange(h EventHandler, scope ...interface{}) T {
+	return e.On("cuechange", h, scope...)
+}
+
+func (e htmlElement[T]) OnCut(h EventHandler, scope ...interface{}) T {
+	return e.On("cut", h, scope...)
+}
+
+func (e htmlElement[T]) OnDblClick(h EventHandler, scope ...interface{}) T {
+	return e.On("dblclick", h, scope...)
+}
+
+func (e htmlElement[T]) OnDrag(h EventHandler, scope ...interface{}) T {
+	return e.On("drag", h, scope...)
+}
+
+func (e htmlElement[T]) OnDragEnd(h EventHandler, scope ...interface{}) T {
+	return e.On("dragend", h, scope...)
+}
+
+func (e htmlElement[T]) OnDragEnter(h EventHandler, scope ...interface{}) T {
+	return e.On("dragenter", h, scope...)
+}
+
+func (e htmlElement[T]) OnDragLeave(h EventHandler, scope ...interface{}) T {
+	return e.On("dragleave", h, scope...)
+}
+
+func (e htmlElement[T]) OnDragOver(h EventHandler, scope ...interface{}) T {
+	return e.On("dragover", h, scope...)
+}
+
+func (e htmlElement[T]) OnDragStart(h EventHandler, scope ...interface{}) T {
+	return e.On("dragstart", h, scope...)
+}
+
+func (e htmlElement[T]) OnDrop(h EventHandler, scope ...interface{}) T {
+	return e.On("drop", h, scope...)
+}
+
+func (e htmlElement[T]) OnDurationChange(h EventHandler, scope ...interface{}) T {
+	return e.On("durationchange", h, scope...)
+}
+
+func (e htmlElement[T]) OnEmptied(h EventHandler, scope ...interface{}) T {
+	return e.On("emptied", h, scope...)
+}
+
+func (e htmlElement[T]) OnEnded(h EventHandler, scope ...interface{}) T {
+	return e.On("ended", h, scope...)
+}
+
+func (e htmlElement[T]) OnError(h EventHandler, scope ...interface{}) T {
+	return e.On("error", h, scope...)
+}
+
+func (e htmlElement[T]) OnFocus(h EventHandler, scope ...interface{}) T {
+	return e.On("focus", h, scope...)
+}
+
+func (e htmlElement[T]) OnHashChange(h EventHandler, scope ...interface{}) T {
+	return e.On("hashchange", h, scope...)
+}
+
+func (e htmlElement[T]) OnInput(h EventHandler, scope ...interface{}) T {
+	return e.On("input", h, scope...)
+}
+
+func (e htmlElement[T]) OnInvalid(h EventHandler, scope ...interface{}) T {
+	return e.On("invalid", h, scope...)
+}
+
+func (e htmlElement[T]) OnKeyDown(h EventHandler, scope ...interface{}) T {
+	return e.On("keydown", h, scope...)
+}
+
+func (e htmlElement[T]) OnKeyPress(h EventHandler, scope ...interface{}) T {
+	return e.On("keypress", h, scope...)
+}
+
+func (e htmlElement[T]) OnKeyUp(h EventHandler, scope ...interface{}) T {
+	return e.On("keyup", h, scope...)
+}
+
+func (e htmlElement[T]) OnLoad(h EventHandler, scope ...interface{}) T {
+	return e.On("load", h, scope...)
+}
+
+func (e htmlElement[T]) OnLoadStart(h EventHandler, scope ...interface{}) T {
+	return e.On("loadstart", h, scope...)
+}
+
+func (e htmlElement[T]) OnLoadedData(h EventHandler, scope ...interface{}) T {
+	return e.On("loadeddata", h, scope...)
+}
+
+func (e htmlElement[T]) OnLoadedMetaData(h EventHandler, scope ...interface{}) T {
+	return e.On("loadedmetadata", h, scope...)
+}
+
+func (e htmlElement[T]) OnMessage(h EventHandler, scope ...interface{}) T {
+	return e.On("message", h, scope...)
+}
+
+func (e htmlElement[T]) OnMouseDown(h EventHandler, scope ...interface{}) T {
+	return e.On("mousedown", h, scope...)
+}
+
+func (e htmlElement[T]) OnMouseMove(h EventHandler, scope ...interface{}) T {
+	return e.On("mousemove", h, scope...)
+}
+
+func (e htmlElement[T]) OnMouseOut(h EventHandler, scope ...interface{}) T {
+	return e.On("mouseout", h, scope...)
+}
+
+func (e htmlElement[T]) OnMouseOver(h EventHandler, scope ...interface{}) T {
+	return e.On("mouseover", h, scope...)
+}
+
+func (e htmlElement[T]) OnMouseUp(h EventHandler, scope ...interface{}) T {
+	return e.On("mouseup", h, scope...)
+}
+
+func (e htmlElement[T]) OnOffline(h EventHandler, scope ...interface{}) T {
+	return e.On("offline", h, scope...)
+}
+
+func (e htmlElement[T]) OnOnline(h EventHandler, scope ...interface{}) T {
+	return e.On("online", h, scope...)
+}
+
+func (e htmlElement[T]) OnPageHide(h EventHandler, scope ...interface{}) T {
+	return e.On("pagehide", h, scope...)
+}
+
+func (e htmlElement[T]) OnPageShow(h EventHandler, scope ...interface{}) T {
+	return e.On("pageshow", h, scope...)
+}
+
+func (e htmlElement[T]) OnPaste(h EventHandler, scope ...interface{}) T {
+	return e.On("paste", h, scope...)
+}
+
+func (e htmlElement[T]) OnPause(h EventHandler, scope ...interface{}) T {
+	return e.On("pause", h, scope...)
+}
+
+func (e htmlElement[T]) OnPlay(h EventHandler, scope ...interface{}) T {
+	return e.On("play", h, scope...)
+}
+
+func (e htmlElement[T]) OnPlaying(h EventHandler, scope ...interface{}) T {
+	return e.On("playing", h, scope...)
+}
+
+func (e htmlElement[T]) OnPopState(h EventHandler, scope ...interface{}) T {
+	return e.On("popstate", h, scope...)
+}
+
+func (e htmlElement[T]) OnProgress(h EventHandler, scope ...interface{}) T {
+	return e.On("progress", h, scope...)
+}
+
+func (e htmlElement[T]) OnRateChange(h EventHandler, scope ...interface{}) T {
+	return e.On("ratechange", h, scope...)
+}
+
+func (e htmlElement[T]) OnReset(h EventHandler, scope ...interface{}) T {
+	return e.On("reset", h, scope...)
+}
+
+func (e htmlElement[T]) OnResize(h EventHandler, scope ...interface{}) T {
+	return e.On("resize", h, scope...)
+}
+
+func (e htmlElement[T]) OnScroll(h EventHandler, scope ...interface{}) T {
+	return e.On("scroll", h, scope...)
+}
+
+func (e htmlElement[T]) OnSearch(h EventHandler, scope ...interface{}) T {
+	return e.On("search", h, scope...)
+}
+
+func (e htmlElement[T]) OnSeeked(h EventHandler, scope ...interface{}) T {
+	return e.On("seeked", h, scope...)
+}
+
+func (e htmlElement[T]) OnSeeking(h EventHandler, scope ...interface{}) T {
+	return e.On("seeking", h, scope...)
+}
+
+func (e htmlElement[T]) OnSelect(h EventHandler, scope ...interface{}) T {
+	return e.On("select", h, scope...)
+}
+
+func (e htmlElement[T]) OnStalled(h EventHandler, scope ...interface{}) T {
+	return e.On("stalled", h, scope...)
+}
+
+func (e htmlElement[T]) OnStorage(h EventHandler, scope ...interface{}) T {
+	return e.On("storage", h, scope...)
+}
+
+func (e htmlElement[T]) OnSubmit(h EventHandler, scope ...interface{}) T {
+	return e.On("submit", h, scope...)
+}
+
+func (e htmlElement[T]) OnSuspend(h EventHandler, scope ...interface{}) T {
+	return e.On("suspend", h, scope...)
+}
+
+func (e htmlElement[T]) OnTimeUpdate(h EventHandler, scope ...interface{}) T {
+	return e.On("timeupdate", h, scope...)
+}
+
+func (e htmlElement[T]) OnToggle(h EventHandler, scope ...interface{}) T {
+	return e.On("toggle", h, scope...)
+}
+
+func (e htmlElement[T]) OnUnload(h EventHandler, scope ...interface{}) T {
+	return e.On("unload", h, scope...)
+}
+
+func (e htmlElement[T]) OnVolumeChange(h EventHandler, scope ...interface{}) T {
+	return e.On("volumechange", h, scope...)
+}
+
+func (e htmlElement[T]) OnWaiting(h EventHandler, scope ...interface{}) T {
+	return e.On("waiting", h, scope...)
+}
+
+func (e htmlElement[T]) OnWheel(h EventHandler, scope ...interface{}) T {
+	return e.On("wheel", h, scope...)
 }

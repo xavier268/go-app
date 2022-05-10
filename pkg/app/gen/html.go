@@ -1888,7 +1888,7 @@ var eventHandlers = map[string]eventHandler{
 		Doc:  "calls the given handler when media data is loaded.",
 	},
 	"onloadedmetadata": {
-		Name: "OnloadedMetaData",
+		Name: "OnLoadedMetaData",
 		Doc:  "calls the given handler when meta data (like dimensions and duration) are loaded.",
 	},
 	"onloadstart": {
@@ -2172,7 +2172,15 @@ func writeHTMLElementMethods(w io.Writer) {
 		writeAttrFunction(w, a, t, false)
 	}
 
-	for _, e := range t.EventHandlers {
+	eventHandlerList := make([]eventHandler, 0, len(eventHandlers))
+	for _, h := range eventHandlers {
+		eventHandlerList = append(eventHandlerList, h)
+	}
+	sort.Slice(eventHandlerList, func(a, b int) bool {
+		return strings.Compare(eventHandlerList[a].Name, eventHandlerList[b].Name) < 0
+	})
+
+	for _, e := range eventHandlerList {
 		fmt.Fprintln(w)
 		fmt.Fprintln(w)
 
@@ -2283,15 +2291,17 @@ func writeAttrFunction(w io.Writer, a attr, t tag, isInterface bool) {
 }
 
 func writeEventFunction(w io.Writer, e eventHandler, t tag, isInterface bool) {
+	funcType := ""
+	returnType := "HTML" + t.Name
 	if !isInterface {
-		fmt.Fprintf(w, `func (e *html%s)`, t.Name)
+		funcType = fmt.Sprintf("func (e html%s)", t.Name)
+		returnType = "T"
 	}
 
-	fmt.Fprintf(w, `%s (h EventHandler, scope ...interface{}) HTML%s`, e.Name, t.Name)
+	fmt.Fprintf(w, `%s %s (h EventHandler, scope ...interface{}) %s`, funcType, e.Name, returnType)
 	if !isInterface {
 		fmt.Fprintf(w, `{
-			e.setEventHandler("%s", h, scope...)
-			return e
+			return e.On("%s", h, scope...)
 		}`, strings.TrimPrefix(strings.ToLower(e.Name), "on"))
 	}
 }
